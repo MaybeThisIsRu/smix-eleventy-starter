@@ -1,4 +1,4 @@
-# Gulp Starter - Web Apps
+# React on Gulp - Starter
 
 ## Framework
 
