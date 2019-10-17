@@ -15,10 +15,11 @@
 
 ### Local Development
 
-Run `npm run dev`.
-
-Visit `localhost:3000`
+* `nvm use`
+* `npm install`
+* `npm run dev`
+* Open `localhost:3000` on your browser
 
 ### Production
 
-Run `npm run build`.
+* `npm run build`
