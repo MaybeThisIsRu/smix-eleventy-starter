@@ -1,0 +1,5 @@
+.container { @apply w-full; }
+
+@screen lg {
+	.container { @apply w-3/4; }
+}

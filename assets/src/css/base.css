@@ -1,0 +1,24 @@
+html, body, #rApp {
+    height: 100%;
+
+    /* Cosmetic */
+    @apply bg-gray-100;
+}
+
+.body-holder {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & > header,
+    & > footer {
+        flex: none;
+        
+        /* Cosmetic */
+        @apply py-8;
+    }
+
+    & > main {
+        flex: 1 0 auto;
+    }
+}

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@import "tw";
+@import "base";
+@import "typography";
+@import "syntax";
