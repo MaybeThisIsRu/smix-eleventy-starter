@@ -1,13 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-class Header extends React.Component {
-	render() {
-		return (
-			<header class="container">
-                <h1>Gulp Starter - React Web App</h1>
-			</header>
-		);
-	}
-}
+let Header = () => (
+	<header className="container">
+		<h1 className="mb-4 lg:mb-8">React on Gulp Starter</h1>
+
+		<nav>
+			<Link to="/">Home</Link>
+			<Link to="about">About</Link>
+		</nav>
+
+		<hr/>
+	</header>
+);
 
 export default Header;

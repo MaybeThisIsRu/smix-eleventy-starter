@@ -8,17 +8,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-.body-holder > header,
-.body-holder > footer {
-	& h1, & h2, & h3, & h4, & h5, & h6 {
-		@apply mb-0;
-	
-		@screen lg {
-			@apply mb-0;
-		}
-	}
-}
-
 h1 {
 	@apply text-3xl;
 
@@ -134,6 +123,20 @@ a {
 
 	&:hover {
 		@apply underline;
+	}
+}
+
+header > nav {
+	& a {
+		@apply uppercase;
+	
+		&:hover {
+			@apply text-purple-400;
+		}
+	
+		&:not(:last-child) {
+			@apply mr-4;
+		}
 	}
 }
 

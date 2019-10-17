@@ -1,5 +1,6 @@
 import { series, watch } from "gulp";
 import browserSync from "browser-sync";
+import historyApiFallback from "connect-history-api-fallback";
 
 import { paths } from "../config.js";
 
@@ -9,7 +10,8 @@ function serverInit(done) {
 	server.init(
 		{
 			server: {
-				baseDir: "./"
+				baseDir: "./",
+				middleware: [ historyApiFallback() ]
 			},
 			browsers: "firefox"
 		},

@@ -25,6 +25,7 @@
     "babelify": "^10.0.0",
     "browser-sync": "^2.26.7",
     "browserify": "^16.5.0",
+    "connect-history-api-fallback": "^1.6.0",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "fancy-log": "^1.3.3",
@@ -43,7 +44,8 @@
   },
   "dependencies": {
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "react-router-dom": "^5.1.2"
   },
   "browserslist": ">1%, Firefox ESR, last 2 versions"
 }
