@@ -12,7 +12,7 @@ let Home = () => (
 			</p>
 		</div>
 		<div className="order-0 w-1/3 h-auto pb-6 pr-6">
-			<img className="w-full h-auto" src="https://source.unsplash.com/350x350/?laptop,magazine" />
+			<img className="w-full h-auto" src="https://source.unsplash.com/350x350/?laptop,magazine,desk" />
 		</div>
 	</div>
 );

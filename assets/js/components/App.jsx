@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
+import Header from "./Header";
+import Footer from "./Footer";
 
-import Home from "./Home.jsx";
-import About from "./About.jsx";
+import Home from "./Home";
+import About from "./About";
 
 let App = () => (
 	<div className="body-holder">

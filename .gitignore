@@ -1,5 +1,3 @@
+.vscode
 node_modules
-assets/css/**
-assets/js/**
-assets/img/**
-!assets/src/**
+dist

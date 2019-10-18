@@ -10,8 +10,8 @@ function serverInit(done) {
 	server.init(
 		{
 			server: {
-				baseDir: "./",
-				middleware: [ historyApiFallback() ]
+				baseDir: "dist",
+				middleware: [historyApiFallback()]
 			},
 			browsers: "firefox"
 		},
@@ -38,7 +38,7 @@ function serverWatch() {
 			"./**/*.md",
 			"./**/*.html",
 			"!./node_modules/**",
-			"!./assets/src/**"
+			"!./assets/**"
 		],
 		series(serverReload)
 	);

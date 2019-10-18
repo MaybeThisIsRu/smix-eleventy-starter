@@ -12,11 +12,13 @@ import watchify from "watchify";
 
 import { paths } from "../config.js";
 
-const isDevelopment = false || process.env.NODE_ENV === "development" ? true : false;
+const isDevelopment =
+	false || process.env.NODE_ENV === "development" ? true : false;
 const isNotDevelopment = !isDevelopment;
 
 const browserifyDefaultConfig = {
-	entries: `${paths.js.entryDir}/${paths.js.entry}`
+	entries: `${paths.js.entryDir}/${paths.js.entry}`,
+	extensions: [".js", ".json", ".jsx"]
 };
 
 const browserifyDevConfig = {
@@ -41,6 +43,10 @@ function js(done) {
 	function bundle() {
 		return b
 			.bundle()
+			.on("error", (e) => {
+				// Prevents watchify from swallowing browserify errors
+				done(new Error(e));
+			})
 			.pipe(source(paths.js.output)) // output filename
 			.pipe(buffer())
 			.pipe(gulpif(isNotDevelopment, uglify()))
@@ -62,16 +68,10 @@ function js(done) {
 
 		// When a file changes, update event is fired.
 		b.on("update", bundle);
-
-		// Prevent watchify from swallowing browserify errors
-		b.on("error", function(e) {
-			log(e);
-			done();
-		});
 	}
 
 	// Run bundle at least once
-	return bundle();	
+	return bundle();
 }
 
 export { js };
