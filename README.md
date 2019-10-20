@@ -6,6 +6,7 @@
   * Babel transpilation for ES6 support
   * Module bundling via Browserify
   * `react-router` for routing
+  * `axios` for API calls
 * PostCSS
   * Includes: imports, nesting, purge, minification
   * Autoprefixer
