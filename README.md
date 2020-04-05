@@ -1,16 +1,23 @@
-# React on Gulp - Starter
+# React on Gulp - Starter 🚀
+
+![What it looks like out of the box](https://srv-file16.gofile.io/download/bHVkcj/Screenshot%20from%202020-04-05%2021-47-22.png)
 
 ## Framework
 
 * React
-  * Babel transpilation for ES6 support
+  * Transpilation via Babel
+    * Support for `ES2015` JavaScript syntax
+    * Support for `async`/`await` syntax
   * Module bundling via Browserify
   * `react-router` for routing
   * `axios` for API calls
 * PostCSS
   * Includes: imports, nesting, purge, minification
   * Autoprefixer
-  * TailwindCSS
+  * TailwindCSS, configured to strip out unused classes from production builds
+* BrowserSync
+* Prettier and editorconfig
+* Modular gulp task files for easy configuration and modification
 
 ## How to Use
 
