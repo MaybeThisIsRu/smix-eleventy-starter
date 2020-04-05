@@ -116,6 +116,7 @@ ul {
 
 a {
 	@apply text-purple-800;
+	@apply underline;
 
 	&:focus {
 		@apply shadow-outline;
@@ -129,6 +130,7 @@ a {
 header > nav {
 	& a {
 		@apply uppercase;
+		@apply no-underline;
 	
 		&:hover {
 			@apply text-purple-400;
@@ -137,6 +139,12 @@ header > nav {
 		&:not(:last-child) {
 			@apply mr-4;
 		}
+	}
+}
+
+footer {
+	& a {
+		@apply no-underline;
 	}
 }
 

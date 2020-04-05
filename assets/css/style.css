@@ -6,6 +6,7 @@
 
 @import "tailwindcss/utilities";
 
+/* Remove the following to get a blank slate */
 @import "tw";
 @import "base";
 @import "typography";
