@@ -1,6 +1,6 @@
 # React on Gulp - Starter 🚀
 
-![What it looks like out of the box](https://srv-file16.gofile.io/download/bHVkcj/Screenshot%20from%202020-04-05%2021-47-22.png)
+![What it looks like out of the box](./readme.png)
 
 ## Framework
 
