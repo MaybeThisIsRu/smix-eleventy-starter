@@ -1,6 +1,8 @@
-# React on Gulp - Starter 🚀
+# React on Gulp Starter ⚛ 🚀
 
-![What it looks like out of the box](./readme.png)
+## Home page out of the box
+
+![What the default home page looks like out of the box](./readme.png)
 
 ## Framework
 
