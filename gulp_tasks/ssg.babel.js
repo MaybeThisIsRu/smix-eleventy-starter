@@ -11,4 +11,4 @@ function eleventy() {
     );
 }
 
-export { eleventy as eleventyBuild };
+export { eleventy };

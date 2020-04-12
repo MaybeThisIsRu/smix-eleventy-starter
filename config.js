@@ -18,7 +18,7 @@ const paths = {
 	},
 	js: {
 		entryDir: `${assetSrcDir}/js`,
-		entry: "index.jsx",
+		entry: "index.js",
 		outputDir: `${assetDestDir}/js`,
 		output: "index.js"
 	},
