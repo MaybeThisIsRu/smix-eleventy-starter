@@ -1,4 +1,4 @@
-# React on Gulp Starter ⚛ 🚀
+# Gulp Starter for Static Site Generators
 
 ## Home page out of the box
 
@@ -6,12 +6,12 @@
 
 ## Framework
 
-* React
+* Eleventy 0.10.0 out of the box
+* Modern JavaScript
   * Transpilation via Babel
     * Support for `ES2015` JavaScript syntax
     * Support for `async`/`await` syntax
   * Module bundling via Browserify
-  * `react-router` for routing
   * `axios` for API calls
 * PostCSS
   * Includes: imports, nesting, purge, minification

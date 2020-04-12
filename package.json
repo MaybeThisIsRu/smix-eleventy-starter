@@ -5,8 +5,8 @@
   "main": "",
   "scripts": {
     "dev": "NODE_ENV=development gulp develop",
-    "prod": "gulp build",
-    "force-prod": "NODE_ENV=production gulp build",
+    "prod": "gulp production",
+    "force-prod": "NODE_ENV=production gulp production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ru Singh",
@@ -28,6 +28,7 @@
     "babelify": "^10.0.0",
     "browser-sync": "^2.26.7",
     "browserify": "^16.5.0",
+    "child_process": "^1.0.2",
     "connect-history-api-fallback": "^1.6.0",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
@@ -46,10 +47,8 @@
     "watchify": "^3.11.1"
   },
   "dependencies": {
-    "axios": "^0.19.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-router-dom": "^5.1.2"
+    "@11ty/eleventy": "^0.10.0",
+    "axios": "^0.19.2"
   },
   "browserslist": ">1%, Firefox ESR, last 2 versions"
 }

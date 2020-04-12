@@ -27,6 +27,7 @@ const paths = {
 		dest: `${assetDestDir}/css`,
 		name: "style.css",
 		purge: {
+			// TODO Purge source files
 			content: [`${assetSrcDir}/js/**/*.{js,jsx}`]
 		}
 	},
