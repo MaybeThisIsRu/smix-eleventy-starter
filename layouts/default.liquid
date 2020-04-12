@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.liquid %}
-<body>
-	{{ content }}
+{% include head %}
+<body class="container font-sans dm:bg-black text-gray-900 dm:text-gray-100">
+
+	<div class="body-holder">
+	
+		{% include header %}
+
+		<main>{{ content }}</main>
+
+		{% include footer %}
+
+	</div>
+
 
 	<script src="/assets/js/index.js"></script>
 </body>

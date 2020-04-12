@@ -1,0 +1,16 @@
+---
+layout: default
+permalink: /blog/{{ page.fileSlug }}/
+---
+
+<article>
+    <header>
+        <h1>{{ title }}</h1>
+        <h2>{{ page.date | date: '%e %B %Y' }}</h2>
+    </header>
+
+    <hr />
+
+    {{ content }}
+
+</article>

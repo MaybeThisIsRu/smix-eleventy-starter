@@ -1,8 +1,8 @@
 import { series, watch } from "gulp";
 import browserSync from "browser-sync";
-import historyApiFallback from "connect-history-api-fallback";
+// import historyApiFallback from "connect-history-api-fallback";
 
-import { paths } from "../config.js";
+import { eleventy } from "./ssg.babel";
 
 const server = browserSync.create();
 
@@ -11,7 +11,7 @@ function serverInit(done) {
 		{
 			server: {
 				baseDir: "dist",
-				middleware: [historyApiFallback()]
+				// middleware: [historyApiFallback()]
 			},
 			browsers: "firefox"
 		},
@@ -31,17 +31,20 @@ function serverReload(done) {
 function serverWatch() {
 	return watch(
 		[
-			`${paths.js.outputDir}/${paths.js.output}`,
-			`${paths.img.dest}/**`,
-			`${paths.css.dest}/**`,
+			"./_data/**",
+			"./.eleventy.js",
+			"./.eleventyignore",
 			"./**/*.markdown",
 			"./**/*.md",
 			"./**/*.html",
+			"./**/*.liquid",
+			"./**/*.njk",
 			"!./node_modules/**",
-			"!./assets/**"
+			"!./assets/**",
+			"!./dist/**",
 		],
-		series(serverReload)
+		series(eleventy, serverReload)
 	);
 }
 
-export { serverInit, serverWatch };
+export { serverInit, serverReload, serverWatch };

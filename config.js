@@ -26,9 +26,16 @@ const paths = {
 		src: `${assetSrcDir}/css`,
 		dest: `${assetDestDir}/css`,
 		name: "style.css",
+		additionalWatch: [
+			`${projectSrcDir}/tailwind.config.js`,
+		],
 		purge: {
 			content: [`${projectDestDir}/**/*.html`]
 		}
+	},
+	font: {
+		src: `${assetSrcDir}/font/**/*`,
+		dest: `${assetDestDir}/assets/font`
 	},
 	projectDestDir: projectDestDir
 };

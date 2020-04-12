@@ -1,5 +1,5 @@
 // Gulp
-import { src, dest, watch } from "gulp";
+import { src, dest, watch, series } from "gulp";
 
 // PostCSS
 import postcss from "gulp-postcss";
@@ -11,6 +11,7 @@ import purgecss from "@fullhuman/postcss-purgecss";
 import cssnano from "cssnano";
 
 import { paths } from "../config.js";
+import { serverReload } from "./sync.babel";
 
 function css() {
 	const plugins = [cssImport, tailwindcss, cssNesting, autoprefixer];
@@ -33,15 +34,13 @@ function cssPurgeMin() {
 
 	const plugins = [purge, cssnano];
 
-	const targetDir = paths.css.dest.substring(2);
-
-	return src(`${targetDir}/${paths.css.name}`)
+	return src(`${paths.css.dest}/${paths.css.name}`)
 		.pipe(postcss(plugins))
-		.pipe(dest(targetDir));
+		.pipe(dest(paths.css.dest));
 }
 
 function cssWatcher() {
-	return watch(`${paths.css.src}/**/*.css`, css);
+	return watch([`${paths.css.src}/**/*.css`, ...paths.css.additionalWatch], series(css, serverReload));
 }
 
 export { css, cssWatcher, cssPurgeMin };

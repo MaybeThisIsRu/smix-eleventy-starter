@@ -1,8 +1,5 @@
-html, body, #rApp {
+html, body {
     height: 100%;
-
-    /* Cosmetic */
-    @apply bg-gray-100;
 }
 
 .body-holder {

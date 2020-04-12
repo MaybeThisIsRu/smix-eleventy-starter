@@ -4,5 +4,9 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Gulp Starter for SSGs</title>
 
+	{% if content-description %}
+    <meta name="Description" content="{{content-description}}">
+	{% endif %}
+
 	<link rel="stylesheet" href="/assets/css/style.css">
 </head>

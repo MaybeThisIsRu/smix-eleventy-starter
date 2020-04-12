@@ -1,77 +1,24 @@
-// TODO Separate bundles for external scripts and project scripts
+import { src, dest, watch, series } from "gulp";
 
-import { dest } from "gulp";
-import gulpif from "gulp-if";
+import babel from "gulp-babel";
 import uglify from "gulp-uglify";
-import log from "fancy-log";
+import concat from "gulp-concat";
 
-import source from "vinyl-source-stream";
-import buffer from "vinyl-buffer";
-import browserify from "browserify";
-import watchify from "watchify";
+import { paths } from "../config";
+import { serverReload } from "./sync.babel";
 
-import { paths } from "../config.js";
+// We're not really JS-heavy on this project. For now, this is fine. Maybe we could add Webpack at a later date.
 
-const isDevelopment =
-	false || process.env.NODE_ENV === "development" ? true : false;
-const isNotDevelopment = !isDevelopment;
-
-const browserifyDefaultConfig = {
-	entries: `${paths.js.entryDir}/${paths.js.entry}`,
-	extensions: [".js", ".json", ".jsx"]
-};
-
-const browserifyDevConfig = {
-	debug: true,
-	cache: {},
-	packageCache: {}
-};
-
-const browserifyProdConfig = {};
-
-const browserifyConfig = Object.assign(
-	{},
-	browserifyDefaultConfig,
-	isDevelopment ? browserifyDevConfig : browserifyProdConfig
-);
-
-function js(done) {
-	// Initiate browserify (pure module bundler)
-	var b = browserify(browserifyConfig);
-
-	// Once we configure browserify based on environment, this is what we run.
-	function bundle() {
-		return b
-			.bundle()
-			.on("error", (e) => {
-				// Prevents watchify from swallowing browserify errors
-				done(new Error(e));
-			})
-			.pipe(source(paths.js.output)) // output filename
-			.pipe(buffer())
-			.pipe(gulpif(isNotDevelopment, uglify()))
-			.pipe(dest(paths.js.outputDir));
-	}
-
-	// Transpile ES6 -> ES5
-	b.transform("babelify");
-
-	if (isDevelopment) {
-		// Plug in watchify -- needs cache and packageCache options, see above.
-		b.plugin(watchify);
-
-		// When built, log event is fired.
-		b.on("log", function(msg) {
-			log(msg);
-			done();
-		});
-
-		// When a file changes, update event is fired.
-		b.on("update", bundle);
-	}
-
-	// Run bundle at least once
-	return bundle();
+function js() {
+	return src(`${paths.js.entryDir}/${paths.js.entry}`)
+		.pipe(babel())
+		.pipe(uglify())
+		.pipe(concat(paths.js.output))
+		.pipe(dest(paths.js.outputDir));
 }
 
-export { js };
+function jsWatcher() {
+	return watch(`${paths.js.entryDir}/**/*.js`, series(js, serverReload));
+}
+
+export { js, jsWatcher };
