@@ -1,0 +1,21 @@
+---
+layout: default
+pagination:
+    data: collections.posts
+    size: 10
+permalink: /blog/
+content-description: "Blog posts by {{site.authors.owner.name}}"
+---
+<div>
+	<header class="mb-5 lg:mb-10">
+		<h1 class="my-0">Blog Posts</h1>
+	</header>
+	<main>
+		{% assign posts = pagination.items %}
+		<ul class="posts">
+			{% for post in posts %}
+    			{% include post-card post: post %}
+			{% endfor %}
+		</ul>
+	</main>
+</div>

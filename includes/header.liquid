@@ -1,3 +1,11 @@
 <header>
-    <h1 class="text-xl font-bold">{{site.title}}</h1>
+    <h1 class="text-xl lg:text-2xl">{{site.title}}</h1>
+    <h2 class="text-lg lg:text-xl mt-0 lg:mt-0">{{site.subtitle}}</h2>
+
+    <nav>
+        {% assign lastItem = navigation | last %}
+        {% for item in navigation %}
+            <a class="{% unless item == lastItem %}mr-2{% endunless %}" href="{{ item.link }}">{{ item.title }}</a>
+        {% endfor %}
+    </nav>
 </header>
