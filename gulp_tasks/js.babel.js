@@ -12,12 +12,11 @@ import watchify from "watchify";
 
 import { paths } from "../config";
 
-const isDevelopment =
-	false || process.env.NODE_ENV === "development" ? true : false;
-const isNotDevelopment = !isDevelopment;
+const isProduction =
+	false || process.env.NODE_ENV === "production" ? true : false;
 
 const browserifyDefaultConfig = {
-	entries: paths.js.src,
+	entries: paths.js.entry,
 	extensions: [".js", ".json", ".jsx"]
 };
 
@@ -32,7 +31,7 @@ const browserifyProdConfig = {};
 const browserifyConfig = Object.assign(
 	{},
 	browserifyDefaultConfig,
-	isDevelopment ? browserifyDevConfig : browserifyProdConfig
+	!isProduction ? browserifyDevConfig : browserifyProdConfig
 );
 
 function js(done) {
@@ -49,14 +48,14 @@ function js(done) {
 			})
 			.pipe(source(paths.js.output)) // output filename
 			.pipe(buffer())
-			.pipe(gulpif(isNotDevelopment, uglify()))
+			.pipe(gulpif(isProduction, uglify()))
 			.pipe(dest(paths.js.outputDir));
 	}
 
 	// Transpile ES6 -> ES5
 	b.transform("babelify");
 
-	if (isDevelopment) {
+	if (!isProduction) {
 		// Plug in watchify -- needs cache and packageCache options, see above.
 		b.plugin(watchify);
 

@@ -17,8 +17,7 @@ const paths = {
 		dest: `${assetDestDir}/img`
 	},
 	js: {
-		entryDir: `${assetSrcDir}/js`,
-		entry: "index.js",
+		entry: `${assetSrcDir}/js/index.js`,
 		outputDir: `${assetDestDir}/js`,
 		output: "index.min.js"
 	},
