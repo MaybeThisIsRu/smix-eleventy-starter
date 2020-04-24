@@ -1,10 +1,10 @@
 ---
 layout: post
-date: 2020-04-12 18:00:00 +05:30
-updated: 
+date: 2020-04-10 19:00:00 +05:30
+updated: 2020-04-11 18:00:00 +05:30
 draft: false
 
-title: "Hello world!"
+title: "Hello computer!"
 tags: ["basics"]
 
 image:
