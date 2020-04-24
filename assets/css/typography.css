@@ -1,5 +1,6 @@
-h1, h2, h3, h4, h5, h6 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	@apply font-medium;
+	@apply leading-tight;
 	@apply text-gray-700;
 	@apply mt-4 mb-1;
 
@@ -12,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h1 {
+h1, .h1 {
 	@apply text-3xl;
 
 	@screen lg {
@@ -20,7 +21,7 @@ h1 {
 	}
 }
 
-h2 {
+h2, .h2 {
 	@apply text-3xl;
 
 	@screen lg {
@@ -28,7 +29,7 @@ h2 {
 	}
 }
 
-h3 {
+h3, .h3 {
 	@apply text-2xl;
 
 	@screen lg {
@@ -36,7 +37,7 @@ h3 {
 	}
 }
 
-h4 {
+h4, .h4 {
 	@apply text-xl;
 
 	@screen lg {
@@ -44,7 +45,7 @@ h4 {
 	}
 }
 
-h5 {
+h5, .h5 {
 	@apply text-xl;
 	@apply text-gray-600;
 
@@ -53,7 +54,7 @@ h5 {
 	}
 }
 
-h6 {
+h6, .h6 {
 	@apply text-lg;
 	@apply text-gray-600;
 
@@ -75,17 +76,6 @@ p, ol, ul, li {
 
 p, ol, ul {
 	@apply mb-4;
-}
-
-.home {
-	code.highlighter-rouge {
-		@apply bg-white;
-		@apply px-1;
-
-		@screen dm {
-			@apply bg-gray-900;
-		}
-	}
 }
 
 li {
@@ -203,7 +193,7 @@ pre {
 
 img {
 	@screen dm {
-		opacity: .75;
+		opacity: .85;
 
 		&:hover {
 			opacity: 1;
