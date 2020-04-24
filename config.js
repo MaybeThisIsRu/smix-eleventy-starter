@@ -9,7 +9,7 @@ const assetDestDir = `${projectDestDir}/assets`;
 
 const paths = {
 	html: {
-		src: `${projectSrcDir}/*.html`,
+		src: `${projectDestDir}/**/*.html`,
 		dest: projectDestDir
 	},
 	img: {
@@ -20,7 +20,7 @@ const paths = {
 		entryDir: `${assetSrcDir}/js`,
 		entry: "index.js",
 		outputDir: `${assetDestDir}/js`,
-		output: "index.js"
+		output: "index.min.js"
 	},
 	css: {
 		src: `${assetSrcDir}/css`,

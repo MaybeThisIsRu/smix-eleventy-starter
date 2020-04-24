@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Home",
+        "link": "/"
+    },
+    {
+        "title": "Blog",
+        "link": "/blog"
+    }
+]
