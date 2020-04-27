@@ -1,7 +1,7 @@
 {
-  "name": "gulp-starter-static-gen",
+  "name": "smix-eleventy-starter",
   "version": "0.0.2",
-  "description": "",
+  "description": "A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleventy",
   "main": "",
   "scripts": {
     "dev": "gulp develop",
@@ -9,8 +9,8 @@
     "force-prod": "NODE_ENV=production gulp production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ru Singh",
-  "license": "",
+  "author": "Ru Singh <hello@rusingh.com>",
+  "license": "GNU GPLv3",
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/browser-sync": "^2.26.1",
