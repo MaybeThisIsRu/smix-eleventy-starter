@@ -4,9 +4,12 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>{{site.title}}{% if title %} - {{ title }}{% endif %}</title>
 
-	{% if content-description %}
+	{% if content-description != "" and content-description != nil %}
 		<meta name="Description" content="{{content-description}}">
 	{% endif %}
+	{% if draft == true %}
+        <meta name="robots" content="noindex">
+    {% endif %}
 
 	<link rel="stylesheet" href="/assets/css/style.css">
 </head>
