@@ -24,6 +24,7 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
 
 ## To-Do
 
+* Reload automatically after our assets change (filed [issue here](https://github.com/11ty/eleventy/issues/1125), waiting for response/PR approval). Please reload manually for now.
 * Comply with microformats2 - `h-card` and `h-entry`
 * Webmentions, incoming and outgoing, only from/to other IndieWeb sites
 * Forestry CMS
