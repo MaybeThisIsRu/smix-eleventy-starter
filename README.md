@@ -48,4 +48,4 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
 
 ### Production
 
-* `npm run build`
+* `npm run prod`
