@@ -1,5 +1,21 @@
 {
 	"singleQuote": false,
 	"useTabs": true,
-	"tabWidth": 4
+	"tabWidth": 4,
+	"overrides": [
+		{
+			"files": "*.{yaml,yml}",
+			"options": {
+				"useTabs": false,
+				"tabWidth": 2
+			}
+		},
+		{
+			"files": "*.css",
+			"options": {
+				"useTabs": false,
+				"tabWidth": 2
+			}
+		}
+	]
 }

@@ -6,18 +6,29 @@ import { js } from "./gulp_tasks/js.babel";
 import { img, imgWatcher } from "./gulp_tasks/img.babel";
 import { font, fontWatcher } from "./gulp_tasks/font.babel";
 import { html } from "./gulp_tasks/html.babel";
-import { serverInit, serverWatch } from "./gulp_tasks/sync.babel";
-import { eleventy } from "./gulp_tasks/ssg.babel";
+import { eleventyBuild, eleventyWatch } from "./gulp_tasks/ssg.babel";
 
 // Public Tasks
-const production = series(eleventy, parallel(css, js, img, font), cssPurgeMin, html);
+const production = series(eleventyBuild, parallel(css, js, img, font), cssPurgeMin, html);
 
 const develop = series(
 	clean,
-	eleventy,
-	parallel(css, js, img, font),
-	serverInit,
-	parallel(cssWatcher, imgWatcher, fontWatcher, serverWatch)
+	parallel(
+		eleventyWatch,
+		series(
+			parallel(css, js, img, font),
+			parallel(cssWatcher, imgWatcher, fontWatcher)
+		)
+	)
 );
 
-export { production, develop };
+// Staging is used for Forestry CMS
+// Builds assets once
+// Watch for img changes
+// Start SSG in watch mode with built-in server, ideally incremental building
+const staging = series(
+	parallel(css, js, img, font, html),
+	parallel(imgWatcher, eleventyWatch)
+);
+
+export { production, staging, develop };
