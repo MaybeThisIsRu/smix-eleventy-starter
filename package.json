@@ -4,7 +4,8 @@
   "description": "A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleventy",
   "main": "",
   "scripts": {
-    "dev": "gulp develop",
+		"dev": "gulp develop",
+		"staging": "gulp staging",
     "prod": "gulp production",
     "force-prod": "NODE_ENV=production gulp production",
     "test": "echo \"Error: no test specified\" && exit 1"
