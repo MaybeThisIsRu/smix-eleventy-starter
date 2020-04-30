@@ -44,7 +44,7 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
 * `nvm use`
 * `npm install`
 * `npm run dev`
-* Open `localhost:3000` on your browser
+* Open `localhost:8080` on your browser
 
 ### Production
 
