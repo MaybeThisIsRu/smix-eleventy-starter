@@ -1,7 +1,6 @@
 import { src, dest, watch, series, lastRun } from "gulp";
 
 import { paths } from "../config.js";
-import { serverReload } from "./sync.babel";
 
 function font() {
     return src(paths.font.src, { since: lastRun(font) })
@@ -9,7 +8,7 @@ function font() {
 }
 
 function fontWatcher() {
-    return watch(paths.font.src, series(font, serverReload));
+    return watch(paths.font.src, series(font));
 }
 
 export { font, fontWatcher };

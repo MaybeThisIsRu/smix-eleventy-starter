@@ -1,7 +1,6 @@
 import { src, dest, watch, series } from "gulp";
 import htmlmin from "gulp-htmlmin";
 import { paths } from "../config";
-import { serverReload } from "./sync.babel";
 
 const html = () => {
     return src(paths.html.src)
@@ -10,7 +9,7 @@ const html = () => {
 };
     
 const htmlWatcher = () => {
-    return watch(paths.html.src, series(html, serverReload));
+    return watch(paths.html.src, series(html));
 };
 
 export { html, htmlWatcher };

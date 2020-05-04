@@ -11,7 +11,6 @@ import purgecss from "@fullhuman/postcss-purgecss";
 import cssnano from "cssnano";
 
 import { paths } from "../config.js";
-import { serverReload } from "./sync.babel";
 
 function css() {
 	const plugins = [cssImport, tailwindcss, cssNesting, autoprefixer];
@@ -40,7 +39,7 @@ function cssPurgeMin() {
 }
 
 function cssWatcher() {
-	return watch([`${paths.css.src}/**/*.css`, ...paths.css.additionalWatch], series(css, serverReload));
+	return watch([`${paths.css.src}/**/*.css`, ...paths.css.additionalWatch], series(css));
 }
 
 export { css, cssWatcher, cssPurgeMin };
