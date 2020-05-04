@@ -34,7 +34,7 @@ const paths = {
 	},
 	font: {
 		src: `${assetSrcDir}/font/**/*`,
-		dest: `${assetDestDir}/assets/font`
+		dest: `${assetDestDir}/font`
 	},
 	projectDestDir: projectDestDir
 };
