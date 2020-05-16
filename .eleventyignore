@@ -1,9 +1,8 @@
 gulpfile.babel.js
 gulp_tasks
-assets
+src/assets
 tailwind.config.js
-gulpfile.js
-config.js
+paths.js
 npm-debug.log
 package.json
 package-lock.json

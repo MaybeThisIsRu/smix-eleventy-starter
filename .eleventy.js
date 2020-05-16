@@ -1,23 +1,33 @@
 module.exports = function(config) {
-	const filters = require("./ssg/filters");
-	const shortcodes = require("./ssg/shortcodes");
-	const utils = require("./ssg/utils");
+	// *** Collection imports
+	const collections = require("./eleventy/collections");
 
-	const isProduction = process.env.NODE_ENV === "production" ? true : false;
+	// *** Filter imports
+	const collectionFilters = require("./eleventy/filters/collections");
+	const urlFilters = require("./eleventy/filters/urls");
+	const dateFilters = require("./eleventy/filters/dates");
+
+	// *** Shortcode imports
+	const shortcodes = require("./eleventy/shortcodes");
+
+	// *** Misc imports
+	const env = require("./eleventy/env");
 
 	// *** Misc Options
 	// Additional files to watch for changes
-	config.addWatchTarget("./ssg/");
+	config.addWatchTarget("./eleventy/");
 
 	// *** Forestry CMS Config
 	// Run serve on 0.0.0.0 on staging
-	if (process.env.ELEVENTY_ENV == "staging") {
+	if (env.is11tyStaging)
 		config.setBrowserSyncConfig({
 			host: "0.0.0.0"
 		});
-	}
+
 	// Copy as-is from root to output path
-	config.addPassthroughCopy("admin");
+	// We can avoid this on development env
+	if (env.is11tyStaging || env.is11tyProduction)
+		config.addPassthroughCopy("admin");
 
 	// *** Plugins
 	// Nothing here right now.
@@ -29,32 +39,27 @@ module.exports = function(config) {
 
 	// *** Filters
 	// Dates
-	config.addFilter("friendlyDate", filters.friendlyDate);
-	config.addFilter("dateInISO8601", filters.dateInISO8601);
-	// Filter specified collection by tag
-	config.addFilter("byTag", filters.byTag);
-
-	// *** Internal filter functions
-	// const liveItems = item => item.date <= new Date();
-	const publishedItems = item => (isProduction ? !item.data.draft : true);
+	config.addFilter("friendlyDate", dateFilters.friendlyDate);
+	config.addFilter("dateInISO8601", dateFilters.dateInISO8601);
+	// Filter posts per tag
+	config.addFilter("byTag", collectionFilters.byTag);
+	// Optional - absolute url
+	config.addFilter("absoluteUrl", urlFilters.absoluteUrl);
+	// Optional - overriding RSS plugin's filter so we can parse the date using our own date filters
+	config.addNunjucksFilter("rssLastUpdatedDate", dateFilters.lastUpdatedDate);
 
 	// *** Collections
-	// Blog posts
-	config.addCollection("posts", collection => {
-		return collection
-			.getFilteredByGlob("posts/*.md")
-			.filter(publishedItems)
-			.reverse();
-	});
+	// Articles
+	config.addCollection("articles", collections.articles);
 
 	return {
 		pathPrefix: "/", // useful for GitHub pages
 		dir: {
 			input: "./",
-			output: "./dist",
-			includes: "includes",
-			layouts: "layouts",
-			data: "data"
+			output: "dist",
+			includes: "src/includes",
+			layouts: "src/layouts",
+			data: "src/data"
 		}
 	};
 };

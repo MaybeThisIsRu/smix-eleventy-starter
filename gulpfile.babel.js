@@ -6,7 +6,7 @@ import { js } from "./gulp_tasks/js.babel";
 import { img, imgWatcher } from "./gulp_tasks/img.babel";
 import { font, fontWatcher } from "./gulp_tasks/font.babel";
 import { html } from "./gulp_tasks/html.babel";
-import { eleventyBuild, eleventyWatch } from "./gulp_tasks/ssg.babel";
+import { eleventyBuild, eleventyWatch } from "./gulp_tasks/eleventy.babel";
 
 // Public Tasks
 const production = series(eleventyBuild, parallel(css, js, img, font), cssPurgeMin, html);

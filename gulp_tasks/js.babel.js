@@ -9,11 +9,10 @@ import source from "vinyl-source-stream";
 import buffer from "vinyl-buffer";
 import browserify from "browserify";
 import watchify from "watchify";
+import _merge from "lodash.merge";
 
-import { paths } from "../config";
-
-const isProduction =
-	false || process.env.NODE_ENV === "production" ? true : false;
+import { paths } from "../paths";
+const env = require("../eleventy/env");
 
 const browserifyDefaultConfig = {
 	entries: paths.js.entry,
@@ -28,10 +27,10 @@ const browserifyDevConfig = {
 
 const browserifyProdConfig = {};
 
-const browserifyConfig = Object.assign(
+const browserifyConfig = _merge(
 	{},
 	browserifyDefaultConfig,
-	!isProduction ? browserifyDevConfig : browserifyProdConfig
+	env.isNodeDevelopment ? browserifyDevConfig : browserifyProdConfig
 );
 
 function js(done) {
@@ -42,25 +41,25 @@ function js(done) {
 	function bundle() {
 		return b
 			.bundle()
-			.on("error", (e) => {
+			.on("error", e => {
 				// Prevents watchify from swallowing browserify errors
 				done(new Error(e));
 			})
 			.pipe(source(paths.js.output)) // output filename
 			.pipe(buffer())
-			.pipe(gulpif(isProduction, uglify()))
+			.pipe(gulpif(env.isNodeProduction, uglify()))
 			.pipe(dest(paths.js.outputDir));
 	}
 
 	// Transpile ES6 -> ES5
 	b.transform("babelify");
 
-	if (!isProduction) {
+	if (env.isNodeDevelopment) {
 		// Plug in watchify -- needs cache and packageCache options, see above.
 		b.plugin(watchify);
 
 		// When built, log event is fired.
-		b.on("log", function (msg) {
+		b.on("log", function(msg) {
 			log(msg);
 			done();
 		});

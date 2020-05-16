@@ -1,0 +1,24 @@
+---
+layout: default
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+      - articles
+permalink: /articles/tag/{{ tag }}/
+content-description: Tag-based archive page of articles by {{site.authors.owner.name}}
+---
+<div>
+	<header class="mb-5 lg:mb-10">
+		<h1 class="my-0">Archive of articles with tag '{{tag}}'</h1>
+	</header>
+	<main>
+		{% assign articles = collections.articles | byTag: tag %}
+		<ul class="articles">
+			{% for article in articles %}
+    			{% include article-card article:article %}
+			{% endfor %}
+		</ul>
+	</main>
+</div>

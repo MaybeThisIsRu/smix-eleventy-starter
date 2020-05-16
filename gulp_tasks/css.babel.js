@@ -10,7 +10,7 @@ import autoprefixer from "autoprefixer";
 import purgecss from "@fullhuman/postcss-purgecss";
 import cssnano from "cssnano";
 
-import { paths } from "../config.js";
+import { paths } from "../paths";
 
 function css() {
 	const plugins = [cssImport, tailwindcss, cssNesting, autoprefixer];
@@ -39,7 +39,10 @@ function cssPurgeMin() {
 }
 
 function cssWatcher() {
-	return watch([`${paths.css.src}/**/*.css`, ...paths.css.additionalWatch], series(css));
+	return watch(
+		[`${paths.css.src}/**/*.css`, ...paths.css.additionalWatch],
+		series(css)
+	);
 }
 
 export { css, cssWatcher, cssPurgeMin };

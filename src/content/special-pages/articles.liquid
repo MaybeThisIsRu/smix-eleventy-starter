@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Articles"
+pagination:
+  data: collections.articles
+  size: 10
+  alias: articles
+permalink: "/articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+content-description: "Articles by {{site.authors.owner.name}}"
+---
+<div>
+	<header class="mb-5 lg:mb-10">
+		<h1 class="my-0">Articles</h1>
+	</header>
+	<main>
+		<ul class="articles">
+			{% for article in articles %}
+    			{% include article-card article:article %}
+			{% endfor %}
+		</ul>
+	</main>
+</div>

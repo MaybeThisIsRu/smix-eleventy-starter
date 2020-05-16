@@ -1,5 +1,0 @@
-.container { @apply w-full; }
-
-@screen lg {
-	.container { @apply w-7/12; }
-}

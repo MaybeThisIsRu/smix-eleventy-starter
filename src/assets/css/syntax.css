@@ -1,0 +1,15 @@
+/* Both inline and blocks */
+code {
+  @apply text-sm;
+  @apply mx-1;
+  @apply px-2 py-1;
+  @apply bg-gray-200;
+  @apply text-gray-800;
+}
+
+/* Code block */
+pre {
+  @apply mt-1 mb-8;
+  @apply px-4 py-4;
+  overflow-x: scroll;
+}

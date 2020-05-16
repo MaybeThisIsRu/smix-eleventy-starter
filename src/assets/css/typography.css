@@ -1,0 +1,221 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  @apply font-medium;
+  @apply leading-tight;
+  @apply text-gray-700;
+  @apply mt-4 mb-1;
+
+  @screen lg {
+    @apply mt-8 mb-1;
+  }
+
+  @screen dm {
+    @apply text-gray-100;
+  }
+}
+
+h1,
+.h1 {
+  @apply text-3xl;
+
+  @screen lg {
+    @apply text-5xl;
+  }
+}
+
+h2,
+.h2 {
+  @apply text-3xl;
+
+  @screen lg {
+    @apply text-4xl;
+  }
+}
+
+h3,
+.h3 {
+  @apply text-2xl;
+
+  @screen lg {
+    @apply text-3xl;
+  }
+}
+
+h4,
+.h4 {
+  @apply text-xl;
+
+  @screen lg {
+    @apply text-2xl;
+  }
+}
+
+h5,
+.h5 {
+  @apply text-xl;
+  @apply text-gray-600;
+
+  @screen dm {
+    @apply text-gray-200;
+  }
+}
+
+h6,
+.h6 {
+  @apply text-lg;
+  @apply text-gray-600;
+
+  @screen dm {
+    @apply text-gray-200;
+  }
+}
+
+p,
+ol,
+ul,
+li {
+  @apply text-lg;
+  @apply text-gray-800;
+  @apply leading-relaxed;
+
+  @screen dm {
+    @apply text-gray-100;
+  }
+}
+
+p,
+ol,
+ul {
+  @apply mb-4;
+}
+
+li {
+  @apply mb-1;
+}
+
+ol {
+  @apply list-decimal;
+  @apply list-outside;
+
+  & ol {
+    @apply list-decimal;
+    @apply ml-6;
+    @apply mb-0;
+
+    & li {
+      @apply text-gray-700;
+
+      @screen dm {
+        @apply text-gray-100;
+      }
+
+      &:first-child {
+        @apply mt-1;
+      }
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+  }
+}
+
+ul {
+  @apply list-disc;
+  @apply list-outside;
+
+  & ul {
+    @apply list-disc;
+    @apply ml-6;
+    @apply mb-0;
+
+    & li {
+      @apply text-gray-700;
+
+      @screen dm {
+        @apply text-gray-100;
+      }
+
+      &:first-child {
+        @apply mt-1;
+      }
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+  }
+}
+
+a {
+  @apply text-green-700;
+
+  @screen dm {
+    @apply text-green-500;
+  }
+
+  &:focus {
+    @apply shadow-outline;
+  }
+
+  &:hover {
+    @apply underline;
+  }
+}
+
+hr {
+  @apply border-0;
+  @apply bg-gray-200;
+  @apply w-4/5;
+  @apply h-px;
+  @apply mb-8 mt-8 mx-auto;
+
+  @screen dm {
+    @apply bg-gray-900;
+  }
+}
+
+blockquote {
+  @apply border-l-4 border-gray-700;
+  @apply pl-4 mt-2 mb-4 -ml-5;
+
+  @screen dm {
+    @apply border-gray-300;
+  }
+
+  & p {
+    @apply text-gray-700;
+
+    @screen dm {
+      @apply text-gray-300;
+    }
+  }
+}
+
+pre {
+  @apply my-2;
+
+  @screen lg {
+    @apply my-4;
+  }
+}
+
+img {
+  @screen dm {
+    opacity: 0.85;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

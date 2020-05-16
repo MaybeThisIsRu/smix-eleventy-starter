@@ -1,0 +1,32 @@
+{
+	"title": "Quick-start kit for eleventy",
+	"subtitle": "eleventy v0.10 with defaults",
+	"authors": {
+		"owner": {
+			"name": "Jane Doe",
+			"slug": "jane-doe",
+			"website": "/",
+			"socials": {
+				"email": "",
+				"linkedin": "",
+				"facebook": "",
+				"twitter": "",
+				"instagram": ""
+			}
+		},
+		"guests": [
+			{
+				"name": "John",
+				"slug": "john",
+				"website": "/",
+				"socials": {
+					"email": "",
+					"linkedin": "",
+					"facebook": "",
+					"twitter": "",
+					"instagram": ""
+				}
+			}
+		]
+	}
+}
