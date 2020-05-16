@@ -1,13 +1,13 @@
 # 🌻 Smix
-__A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleventy__
+__A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleventy and Forestry CMS__
 
 ## Framework
 
-* ♥ Eleventy 0.10.0 out of the box
+* ♥ Eleventy 0.11.0 out of the box
   * Date filters for a friendly version such as `10 March 2020`, and ISO8601 (also RFC822 compatible)
   * `getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags
 * 🛋 Preconfigured for [Forestry CMS](forestry.io/).
-  * Log in and follow their setup instructions.
+  * Sign up, log in, look for the `Deploy admin` option. Everything else is set up for you already. :)
   * Set `ELEVENTY_ENV` to `staging`.
   * Set `npm install` as the install script, and `npm run staging` as the development server script.
 * 👩‍💻 Modern JavaScript
@@ -29,13 +29,16 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
 ## To-Do
 
 * Reload automatically after our assets change (filed [issue here](https://github.com/11ty/eleventy/issues/1125), waiting for response/PR approval). Please reload manually for now.
-* Comply with microformats2 - `h-card` and `h-entry`
+* Comply with microformats2 - `h-card` for author and `h-entry` for articles
 * Webmentions, incoming and outgoing, only from/to other IndieWeb sites
-* Meta tags for social networks
-* `sitemap.xml`
+* Meta tags for social networks (Open Graph/Twitter)
+* Generate a `sitemap.xml`
+* Generate an RSS feed
 * System default serif font class
 * Scheduled blog posts
 * Lazy-load images
+* Responsive images
+* Integrate type-set
 
 ## How to Use
 
