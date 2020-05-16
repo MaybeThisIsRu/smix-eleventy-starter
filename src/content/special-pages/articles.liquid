@@ -8,10 +8,8 @@ pagination:
 permalink: "/articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
 content-description: "Articles by {{site.authors.owner.name}}"
 ---
-<div>
-	<header class="mb-5 lg:mb-10">
-		<h1 class="my-0">Articles</h1>
-	</header>
+<section>
+	{% include page-title title:title %}
 	<main>
 		<ul class="articles">
 			{% for article in articles %}
@@ -19,4 +17,4 @@ content-description: "Articles by {{site.authors.owner.name}}"
 			{% endfor %}
 		</ul>
 	</main>
-</div>
+</section>

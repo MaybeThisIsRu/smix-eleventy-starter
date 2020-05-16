@@ -6,13 +6,14 @@ pagination:
     alias: tag
     filter:
       - articles
+      - all
 permalink: /articles/tag/{{ tag }}/
 content-description: Tag-based archive page of articles by {{site.authors.owner.name}}
+eleventyComputed:
+  title: "Archive of articles with tag '{{tag}}'"
 ---
 <div>
-	<header class="mb-5 lg:mb-10">
-		<h1 class="my-0">Archive of articles with tag '{{tag}}'</h1>
-	</header>
+	{% include page-title title:title %}
 	<main>
 		{% assign articles = collections.articles | byTag: tag %}
 		<ul class="articles">
