@@ -7,9 +7,8 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
   * Date filters for a friendly version such as `10 March 2020`, and ISO8601 (also RFC822 compatible)
   * `getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags
 * 🛋 Preconfigured for [Forestry CMS](forestry.io/).
-  * Sign up, log in, look for the `Deploy admin` option. Everything else is set up for you already. :)
-  * Set `ELEVENTY_ENV` to `staging`.
-  * Set `npm install` as the install script, and `npm run staging` as the development server script.
+  * Sign up, log in, look for the `Deploy admin` option.
+  * Everything else is set up for you already. :)
 * 👩‍💻 Modern JavaScript
   * Transpilation via Babel
     * Support for `ES2015` JavaScript syntax
