@@ -1,6 +1,5 @@
 // Gulp tasks
 import { series, parallel } from "gulp";
-import { clean } from "./gulp_tasks/operations.babel";
 import { css, cssPurgeMin, cssWatcher } from "./gulp_tasks/css.babel";
 import { js } from "./gulp_tasks/js.babel";
 import { img, imgWatcher } from "./gulp_tasks/img.babel";
@@ -9,10 +8,14 @@ import { html } from "./gulp_tasks/html.babel";
 import { eleventyBuild, eleventyWatch } from "./gulp_tasks/eleventy.babel";
 
 // Public Tasks
-const production = series(eleventyBuild, parallel(css, js, img, font), cssPurgeMin, html);
+const production = series(
+	eleventyBuild,
+	parallel(css, js, img, font),
+	cssPurgeMin,
+	html
+);
 
 const develop = series(
-	clean,
 	parallel(
 		eleventyWatch,
 		series(
