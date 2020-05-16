@@ -106,3 +106,4 @@ fields:
 pages:
   - src/content/articles/hello-computer.md
   - src/content/articles/hello-world.md
+  - src/content/articles/hello-you.md
