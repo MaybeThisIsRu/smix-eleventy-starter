@@ -7,7 +7,7 @@ module.exports = () => {
 				return env.is11tyProduction
 					? data.draft
 						? false
-						: true
+						: data.permalink
 					: data.permalink;
 			}
 		}
