@@ -43,10 +43,10 @@ module.exports = function(config) {
 	config.addFilter("dateInISO8601", dateFilters.dateInISO8601);
 	// Filter posts per tag
 	config.addFilter("byTag", collectionFilters.byTag);
-	// Optional - absolute url
+	// Absolute url
 	config.addFilter("absoluteUrl", urlFilters.absoluteUrl);
-	// Optional - overriding RSS plugin's filter so we can parse the date using our own date filters
-	config.addNunjucksFilter("rssLastUpdatedDate", dateFilters.lastUpdatedDate);
+	// Parse the date using our own date filters to account for any article updates
+	config.addFilter("rssLastUpdatedDate", dateFilters.lastUpdatedDate);
 
 	// *** Collections
 	// Articles

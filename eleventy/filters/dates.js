@@ -1,5 +1,5 @@
 const utils = require("../utils");
-const { parseISO, format, formatISO } = require("date-fns");
+const { parseISO, format, formatISO, max } = require("date-fns");
 const { utcToZonedTime } = require("date-fns-tz");
 
 module.exports = {
@@ -28,13 +28,53 @@ module.exports = {
 		return formatISO(module.exports.prepareDate(d));
 	},
 	lastUpdatedDate: collection => {
+		// Newest date in the collection (of published or updated)
 		if (!collection || !collection.length) {
-			throw new Error(
-				"Collection is empty in rssLastUpdatedDate filter."
+			throw new Error("Collection is empty in lastUpdatedDate filter.");
+		}
+		let lastPublishedDate, lastUpdatedDate;
+
+		// Filter those items which have an update date
+		let itemsWithUpdatedKey = collection.filter(
+			item =>
+				item.data.updated &&
+				item.data.updated != null &&
+				item.data.updated != ""
+		);
+
+		// Compare for highest and store that date
+		if (!itemsWithUpdatedKey.length) lastUpdatedDate = null;
+		else if (itemsWithUpdatedKey.length === 1)
+			lastUpdatedDate = module.exports.dateInISO8601(
+				itemsWithUpdatedKey[0].data.updated
 			);
+		else {
+			for (
+				let index = 0, endIndex = itemsWithUpdatedKey.length - 1;
+				index < endIndex;
+				index++
+			) {
+				let currentDate = module.exports.dateInISO8601(
+					itemsWithUpdatedKey[index].data.updated
+				);
+				let nextDate = module.exports.dateInISO8601(
+					itemsWithUpdatedKey[index + 1].data.updated
+				);
+				if (nextDate > currentDate) currentDate = nextDate;
+				if (index === endIndex - 1) lastUpdatedDate = currentDate;
+			}
 		}
 
-		// Newest date in the collection
-		return module.exports.dateInISO8601(collection[0].date);
+		// Collection should be sorted in descending order by date. We can then just pick out the most recent entry using the first index.
+		lastPublishedDate = module.exports.dateInISO8601(collection[0].date);
+
+		return !lastUpdatedDate
+			? lastPublishedDate
+			: module.exports.dateInISO8601(
+					max([
+						parseISO(lastPublishedDate),
+						parseISO(lastUpdatedDate)
+					])
+			  );
 	}
 };

@@ -1,0 +1,41 @@
+---
+permalink: "/feed.xml"
+eleventyExcludeFromCollections: true
+metadata:
+  title: "Article by/from Site Name"
+  subtitle: "Site description/subtitle"
+  url: "http://localhost:8080"
+  author:
+    name: "Site author"
+    email: "Email"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ metadata.title }}</title>
+    <subtitle>{{ metadata.subtitle }}</subtitle>
+    <link href="{{ permalink | absoluteUrl: metadata.url }}" rel="self"/>
+    <link href="{{ metadata.url }}"/>
+    <id>{{ metadata.url }}</id>
+    <author>
+        <name>{{ metadata.author.name }}</name>
+        <email>{{ metadata.author.email }}</email>
+    </author>
+    {% assign collectionSize = collections.articles.length %}
+    {% if collectionSize %}
+    <updated>{{ collections.articles | rssLastUpdatedDate }}</updated>
+    {% for article in collections.articles %}
+    {% capture absolutePostUrl %}{{ article.url | url | absoluteUrl: metadata.url }}{% endcapture %}
+    <entry>
+        <title>{{ article.data.title }}</title>
+        <link href="{{ absolutePostUrl }}"/>
+        <updated>{% if article.data.updated %}{{ article.data.updated | dateInISO8601 }}{% else %}{{ article.date | dateInISO8601 }}{% endif %}</updated>
+        <id>{{ absolutePostUrl }}</id>
+        <content type="html">
+            <![CDATA[
+    {{ article.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
+]]>
+        </content>
+    </entry>
+    {% endfor %}
+    {% endif %}
+</feed>
