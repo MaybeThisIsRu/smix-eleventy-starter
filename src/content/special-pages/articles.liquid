@@ -6,7 +6,8 @@ pagination:
   size: 10
   alias: articles
 permalink: "/articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
-content-description: "Articles by {{site.authors.owner.name}}"
+eleventyComputed:
+  content-description: "Articles by {{site.authors.owner.name}}"
 ---
 <section>
 	{% include page-title title:title %}

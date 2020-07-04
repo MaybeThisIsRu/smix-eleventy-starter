@@ -4,7 +4,7 @@ module.exports = function() {
 	var src = {
 		default: {},
 		development: {
-			siteBaseUrl: "http://localhost:3000/"
+			siteBaseUrl: "http://localhost:8080/"
 		},
 		production: {
 			siteBaseUrl: "https://rusingh.com/"
