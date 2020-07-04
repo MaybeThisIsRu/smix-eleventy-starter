@@ -20,7 +20,7 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
   * Easily build a dark mode using the included `dm` screen type: `dm:bg-gray-900`
 * 🔍 SEO and more
   * Meta tags for social networks (Open Graph/Twitter)
-  * Sitemap and `robots.txt` (please see issue [#7](https://github.com/hirusi/smix-eleventy-starter/issues/7))
+  * Sitemap with `changeFrequency`; `robots.txt` (please also see [issue #7](https://github.com/hirusi/smix-eleventy-starter/issues/7))
   * An Atom feed with support for both `published` and `updated` dates on articles
   * Support for `content-description` meta tag
 * 📖 A sane fonts setup
