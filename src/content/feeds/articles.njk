@@ -1,4 +1,4 @@
----
+---yaml
 permalink: "/feed.xml"
 eleventyExcludeFromCollections: true
 metadata:
@@ -13,18 +13,18 @@ metadata:
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ metadata.title }}</title>
     <subtitle>{{ metadata.subtitle }}</subtitle>
-    <link href="{{ permalink | absoluteUrl: metadata.url }}" rel="self"/>
+    <link href="{{ permalink | absoluteUrl(config.siteBaseUrl) }}" rel="self"/>
     <link href="{{ metadata.url }}"/>
     <id>{{ metadata.url }}</id>
     <author>
         <name>{{ metadata.author.name }}</name>
         <email>{{ metadata.author.email }}</email>
     </author>
-    {% assign collectionSize = collections.articles.length %}
+    {% set collectionSize = collections.articles.length %}
     {% if collectionSize %}
     <updated>{{ collections.articles | rssLastUpdatedDate }}</updated>
     {% for article in collections.articles %}
-    {% capture absolutePostUrl %}{{ article.url | url | absoluteUrl: metadata.url }}{% endcapture %}
+    {% set absolutePostUrl %}{{ article.url | absoluteUrl(config.siteBaseUrl) }}{% endset %}
     <entry>
         <title>{{ article.data.title }}</title>
         <link href="{{ absolutePostUrl }}"/>
@@ -32,7 +32,7 @@ metadata:
         <id>{{ absolutePostUrl }}</id>
         <content type="html">
             <![CDATA[
-    {{ article.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
+    {{ article.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl) | safe }}
 ]]>
         </content>
     </entry>

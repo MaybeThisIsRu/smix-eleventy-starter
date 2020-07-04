@@ -30,7 +30,7 @@ module.exports = function(config) {
 		config.addPassthroughCopy("admin");
 
 	// *** Plugins
-	// Nothing here right now.
+	config.addPlugin(require("@11ty/eleventy-plugin-rss"));
 
 	// *** Shortcodes
 	// Jekyll replacement for post_url tag as an 11ty shortcode
@@ -45,8 +45,9 @@ module.exports = function(config) {
 	config.addFilter("byTag", collectionFilters.byTag);
 	// Absolute url
 	config.addFilter("absoluteUrl", urlFilters.absoluteUrl);
-	// Parse the date using our own date filters to account for any article updates
-	config.addFilter("rssLastUpdatedDate", dateFilters.lastUpdatedDate);
+	// Parse the date using our own date filters to account for any article updates; overriding 11ty's RSS plugin
+	config.addNunjucksFilter("rssLastUpdatedDate", dateFilters.lastUpdatedDate);
+	// config.addFilter("htmlToAbsoluteUrls", feedFilters.htmlToAbsoluteUrls);
 
 	// *** Collections
 	// Articles
