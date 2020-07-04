@@ -12,21 +12,8 @@
 				"facebook": "",
 				"twitter": "",
 				"instagram": ""
-			}
-		},
-		"guests": [
-			{
-				"name": "John",
-				"slug": "john",
-				"website": "/",
-				"socials": {
-					"email": "",
-					"linkedin": "",
-					"facebook": "",
-					"twitter": "",
-					"instagram": ""
-				}
-			}
-		]
+			},
+			"picture": ""
+		}
 	}
 }
