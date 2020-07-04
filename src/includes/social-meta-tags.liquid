@@ -1,0 +1,24 @@
+    {% comment %} Facebook Open Graph + Twitter {% endcomment %}
+    <meta property="og:site_name" content="{{site.title}}" key="ogsitename"/>
+    <meta property="og:title" content="{{title}}" key="ogtitle"/>
+    <meta property="twitter:title" content="{{title}}"/>
+
+    <meta property="og:url" content="{{ page.url | absoluteUrl: site.siteBaseUrl }}" key="ogurl"/>
+
+    {% if content-description %}
+    <meta property="og:description" content="{{content-description}}" key="ogdesc"/>
+    <meta property="twitter:description" content="{{content-description}}"/>
+    {% endif %}
+
+    {% if cover-image %}
+    <meta property="og:image" content="{{ cover-image.image | absoluteUrl: site.siteBaseUrl }}" key="ogimage"/>
+    <meta property="twitter:image" content="{{ cover-image.image | absoluteUrl: site.siteBaseUrl }}"/>
+    <meta content="summary_large_image" key="twcard" name="twitter:card"/>
+    {% else %}
+    <meta property="og:image" content="{{ authors["owner"].picture | absoluteUrl: site.siteBaseUrl }}" key="ogimage"/>
+    <meta property="twitter:image" content="{{ authors["owner"].picture | absoluteUrl: site.siteBaseUrl }}"/>
+    {% comment %}Since we are falling back on the author picture here, show the smaller twitter card.{% endcomment %}
+    <meta content="summary" key="twcard" name="twitter:card"/>
+    {% endif%}
+
+    <meta name="twitter:creator" content="{{site.authors['owner'].socials.twitter}}" key="twhandle"/>
