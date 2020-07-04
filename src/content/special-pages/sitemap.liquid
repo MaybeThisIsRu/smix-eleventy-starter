@@ -5,18 +5,10 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for page in collections.all %}
-        <url>
-            <loc>{{ config.siteBaseUrl }}{{ page.url }}</loc>
-            <lastmod>
-                {% if page.updated %}
-                    {{ page.updated | dateInISO8601 }}
-                {% else %}
-                    {{ page.date | dateInISO8601 }}
-                {% endif %}
-            </lastmod>
-            {% if page.data.changeFrequency %}
-                <changefreq>{{page.data.changeFrequency}}</changefreq>
-            {% endif %}
-        </url>
+    <url>
+        <loc>{{ page.url | absoluteUrl: config.siteBaseUrl }}</loc>
+        <lastmod>{% if page.updated %}{{ page.updated | dateInISO8601 }}{% else %}{{ page.date | dateInISO8601 }}{% endif %}</lastmod>
+        {% if page.data.changeFrequency %}<changefreq>{{page.data.changeFrequency}}</changefreq>{% endif %}
+    </url>
     {% endfor %}
 </urlset>
