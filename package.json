@@ -17,7 +17,11 @@
 			"pre-commit": "pretty-quick --staged"
 		}
 	},
-	"author": "Ru Singh <hello@rusingh.com>",
+	"author": {
+		"name": "Ru Singh",
+		"email": "hello@rusingh.com",
+		"url": "https://rusingh.com/"
+	},
 	"license": "GNU GPLv3",
 	"devDependencies": {
 		"@types/gulp": "^4.0.6",
