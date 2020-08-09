@@ -17,10 +17,9 @@ const production = series(
 
 const develop = series(
 	parallel(
-		eleventyWatch,
 		series(
 			parallel(css, js, img, font),
-			parallel(cssWatcher, imgWatcher, fontWatcher)
+			parallel(cssWatcher, imgWatcher, fontWatcher, eleventyWatch)
 		)
 	)
 );
