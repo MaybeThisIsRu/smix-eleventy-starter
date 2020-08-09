@@ -3,7 +3,7 @@
     <meta property="og:title" content="{{title}}" key="ogtitle"/>
     <meta property="twitter:title" content="{{title}}"/>
 
-    <meta property="og:url" content="{{ page.url | absoluteUrl: site.siteBaseUrl }}" key="ogurl"/>
+    <meta property="og:url" content="{{ page.url | absoluteUrl: config.siteBaseUrl }}" key="ogurl"/>
 
     {% if content-description %}
     <meta property="og:description" content="{{content-description}}" key="ogdesc"/>
@@ -11,12 +11,12 @@
     {% endif %}
 
     {% if cover-image %}
-    <meta property="og:image" content="{{ cover-image.image | absoluteUrl: site.siteBaseUrl }}" key="ogimage"/>
-    <meta property="twitter:image" content="{{ cover-image.image | absoluteUrl: site.siteBaseUrl }}"/>
+    <meta property="og:image" content="{{ cover-image.image | absoluteUrl: config.siteBaseUrl }}" key="ogimage"/>
+    <meta property="twitter:image" content="{{ cover-image.image | absoluteUrl: config.siteBaseUrl }}"/>
     <meta content="summary_large_image" key="twcard" name="twitter:card"/>
     {% else %}
-    <meta property="og:image" content="{{ authors["owner"].picture | absoluteUrl: site.siteBaseUrl }}" key="ogimage"/>
-    <meta property="twitter:image" content="{{ authors["owner"].picture | absoluteUrl: site.siteBaseUrl }}"/>
+    <meta property="og:image" content="{{ authors['owner'].picture | absoluteUrl: config.siteBaseUrl }}" key="ogimage"/>
+    <meta property="twitter:image" content="{{ authors['owner'].picture | absoluteUrl: config.siteBaseUrl }}"/>
     {% comment %}Since we are falling back on the author picture here, show the smaller twitter card.{% endcomment %}
     <meta content="summary" key="twcard" name="twitter:card"/>
     {% endif%}
