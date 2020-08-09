@@ -53,6 +53,16 @@ module.exports = function(config) {
 	// Articles
 	config.addCollection("articles", collections.articles);
 
+	const { Liquid } = require("liquidjs");
+	const liquidJsOptions = {
+		extname: ".liquid",
+		dynamicPartials: false,
+		strict_filters: true,
+		root: ["src/includes", "src/layouts"]
+	};
+	const liquidEngine = new Liquid(liquidJsOptions);
+	config.setLibrary("liquid", liquidEngine);
+
 	return {
 		pathPrefix: "/", // useful for GitHub pages
 		dir: {

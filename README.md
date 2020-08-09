@@ -6,6 +6,8 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
 * ♥ Eleventy 0.11.0 out of the box
   * Date filters for a friendly version such as `10 March 2020`, and ISO8601 (also RFC822 compatible)
   * `getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags
+  * Custom rendering engine for HTML files - `Liquid v9`
+    * Adds support for missing filters such as `where` and improves performance
 * 🛋 Preconfigured for [Forestry CMS](forestry.io/).
   * Sign up, log in, look for the `Deploy admin` option.
   * Everything else is set up for you already. :)

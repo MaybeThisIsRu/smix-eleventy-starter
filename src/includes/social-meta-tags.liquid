@@ -15,10 +15,13 @@
     <meta property="twitter:image" content="{{ cover-image.image | absoluteUrl: config.siteBaseUrl }}"/>
     <meta content="summary_large_image" key="twcard" name="twitter:card"/>
     {% else %}
-    <meta property="og:image" content="{{ authors['owner'].picture | absoluteUrl: config.siteBaseUrl }}" key="ogimage"/>
-    <meta property="twitter:image" content="{{ authors['owner'].picture | absoluteUrl: config.siteBaseUrl }}"/>
+    {% comment %} if no cover image, fallback to author's picture {% endcomment %}
+    <meta property="og:image" content="{{ site.authors['owner'].picture | absoluteUrl: config.siteBaseUrl }}" key="ogimage"/>
+    <meta property="twitter:image" content="{{ site.authors['owner'].picture | absoluteUrl: config.siteBaseUrl }}"/>
     {% comment %}Since we are falling back on the author picture here, show the smaller twitter card.{% endcomment %}
     <meta content="summary" key="twcard" name="twitter:card"/>
     {% endif%}
 
-    <meta name="twitter:creator" content="{{site.authors['owner'].socials.twitter}}" key="twhandle"/>
+    {% comment %} where will return an array, even if of one element {% endcomment %}
+    {% assign twitterInfo = site.authors['owner'].socials | where: "slug", "twitter" | first %}
+    <meta name="twitter:creator" content="{{ twitterInfo.username }}" key="twhandle"/>

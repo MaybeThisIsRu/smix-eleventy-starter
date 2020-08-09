@@ -6,13 +6,26 @@
 			"name": "Jane Doe",
 			"slug": "jane-doe",
 			"website": "/",
-			"socials": {
-				"email": "",
-				"linkedin": "",
-				"facebook": "",
-				"twitter": "",
-				"instagram": ""
-			},
+			"socials": [
+				{
+					"slug": "email",
+					"label": "Email",
+					"username": "",
+					"link": ""
+				},
+				{
+					"slug": "twitter",
+					"label": "Twitter",
+					"username": "",
+					"link": ""
+				},
+				{
+					"slug": "github",
+					"label": "GitHub",
+					"username": "",
+					"link": ""
+				}
+			],
 			"picture": ""
 		}
 	}

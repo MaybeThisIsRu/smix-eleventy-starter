@@ -5,7 +5,7 @@ pagination:
   data: collections.articles
   size: 10
   alias: articles
-permalink: "/articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+permalink: "/articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}/{% endif %}"
 eleventyComputed:
   content-description: "Articles by {{site.authors.owner.name}}"
 ---
