@@ -1,0 +1,34 @@
+.author-card {
+  @apply mx-auto;
+  @apply w-full;
+  @apply text-center;
+
+  @screen lg {
+    @apply w-2/3;
+  }
+}
+
+.author-picture-container {
+  @apply flex-none;
+  @apply mx-auto;
+  @apply w-40 h-40;
+  @apply mb-4;
+}
+
+.author-picture {
+  @apply rounded-full;
+  @apply w-full h-auto;
+  @apply object-cover;
+}
+
+.author-name {
+  @apply mt-0;
+
+  @screen lg {
+    @apply mt-0;
+  }
+}
+
+.author-socials {
+  @apply flex flex-row flex-wrap gap-2 justify-center;
+}

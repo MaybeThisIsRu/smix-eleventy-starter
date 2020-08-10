@@ -6,6 +6,8 @@
 
 @import "tailwindcss/utilities";
 
+@import "author-card.css";
+
 /* Remove the following to get a blank slate */
 @import "tw";
 @import "base";
