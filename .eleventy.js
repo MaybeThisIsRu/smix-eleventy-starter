@@ -31,8 +31,19 @@ module.exports = function(config) {
 
 	// *** Plugins
 	config.addPlugin(require("@11ty/eleventy-plugin-rss"));
+	// Typeset
 	if (env.is11tyProduction || env.is11tyStaging)
 		config.addPlugin(require("eleventy-plugin-typeset")());
+	// Safe external links
+	config.addPlugin(require("@hirusi/eleventy-plugin-safe-external-links"), {
+		pattern: "https{0,1}://", // RegExp pattern for external links
+		noopener: true, // Whether to include noopener
+		noreferrer: true, // Whether to include noreferrer
+		files: [
+			// What output file extensions to work on
+			".html"
+		]
+	});
 
 	// *** Shortcodes
 	// Jekyll replacement for post_url tag as an 11ty shortcode
