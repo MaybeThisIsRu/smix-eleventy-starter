@@ -28,6 +28,7 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
 * 📖 A sane fonts setup
   * The `font-sans` class is configured to use system-default fonts
   * Include fonts locally for enhanced privacy of your visitors
+  * `typeset` for professional looking content
 * 💪 Minified assets on production
 * 📔 Prettier and editorconfig
 * 🔧 Modular gulp task files for easy configuration and modification
@@ -35,13 +36,11 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
 ## To-Do
 
 * Reload automatically after our assets change (filed [issue here](https://github.com/11ty/eleventy/issues/1125), waiting for response/PR approval). Please reload manually for now.
-* Comply with microformats2 - `h-card` for author and `h-entry` for articles
 * Webmentions, incoming and outgoing, only from/to other IndieWeb sites
 * System default serif font class
 * Scheduled blog posts
 * Lazy-load images
 * Responsive images
-* Integrate type-set
 
 ## How to Use
 
