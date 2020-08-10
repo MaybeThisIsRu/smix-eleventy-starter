@@ -46,6 +46,7 @@
 		"cssnano": "^4.1.10",
 		"date-fns": "^2.15.0",
 		"date-fns-tz": "^1.0.10",
+		"eleventy-plugin-typeset": "github:liamfiddler/eleventy-plugin-typeset",
 		"fancy-log": "^1.3.3",
 		"gulp": "^4.0.2",
 		"gulp-babel": "^8.0.0",

@@ -31,6 +31,8 @@ module.exports = function(config) {
 
 	// *** Plugins
 	config.addPlugin(require("@11ty/eleventy-plugin-rss"));
+	if (env.is11tyProduction || env.is11tyStaging)
+		config.addPlugin(require("eleventy-plugin-typeset")());
 
 	// *** Shortcodes
 	// Jekyll replacement for post_url tag as an 11ty shortcode
@@ -54,6 +56,7 @@ module.exports = function(config) {
 	// Articles
 	config.addCollection("articles", collections.articles);
 
+	// *** Custom rendering engine
 	const { Liquid } = require("liquidjs");
 	const liquidJsOptions = {
 		extname: ".liquid",
