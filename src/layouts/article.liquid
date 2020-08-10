@@ -3,30 +3,30 @@ layout: default
 permalink: "/articles/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}/"
 ---
 
-<article>
+<article class="h-entry">
     <header class="mb-5 lg:mb-10">
-        <h1>{{ title }}</h1>
+        <h1 class="p-name">{{ title }}</h1>
         <p class="text-sm my-0">
-            <a href="{{page.url}}"><time datetime="{{page.date | dateInISO8601}}">{{ page.date | friendlyDate }}</time></a>
+            <a href="{{page.url}}" class="u-url u-uid"><time datetime="{{page.date | dateInISO8601}}" class="dt-published">{{ page.date | friendlyDate }}</time></a>
             {% if updated %}
                 {% assign publishDate = page.date | friendlyDate %}
                 {% assign updateDate = updated | friendlyDate %}
                 {% unless publishDate == updateDate %}
-                    <span class="h5 text-xs lg:text-sm my-1 lg:mt-1 dt-updated text-italic">(last updated on <time datetime="{{ updated | dateInISO8601 }}">{{ updated | friendlyDate }}</time>)</span>
+                    <span class="h5 text-xs lg:text-sm my-1 lg:mt-1 text-italic">(last updated on <time class="dt-updated" datetime="{{ updated | dateInISO8601 }}">{{ updated | friendlyDate }}</time>)</span>
                 {% endunless %}
             {% endif %}
         </p>
         {%- if tags.size > 0 -%}
-			<div class="post-tag mb-4 mb-1 flex flex-row flex-wrap items-top lg:items-center">
+			<div class="post-tag mb-4 flex flex-row flex-wrap items-top lg:items-center">
 				<span class="text-gray-800 dm:text-gray-300 text-sm mr-1">Tagged</span>
 				{% for tag in tags %}
 				{% assign tag_name = tag | slug %}
-					<a href="{{ '/articles/tag/' | append: tag_name }}" class="text-gray-600 dm:text-gray-400 text-sm hover:text-indiple-regular mr-1">#{{tag}}</a>
+					<a href="{{ '/articles/tag/' | append: tag_name }}" class="text-gray-600 dm:text-gray-400 text-sm hover:text-indiple-regular mr-1 p-category">#{{tag}}</a>
 				{% endfor %}
 			</div>
 		{%- endif -%}
     </header>
-    <main>
+    <main class="e-content">
         {{ content }}
     </main>
 </article>
