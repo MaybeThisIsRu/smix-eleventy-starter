@@ -5,7 +5,12 @@
 
 	<div class="body-holder">
 	
-		{% include header %}
+		{% render header,
+			url:page.url, 
+			title:site.title,
+			subtitle:site.subtitle,
+			navigation:navigation
+		%}
 
 		<main>{{ content }}</main>
 

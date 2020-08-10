@@ -1,11 +1,11 @@
 {
-	"title": "Quick-start kit for Eleventy",
-	"subtitle": "Blog-aware Eleventy v0.11 with a good foundation for customization",
+	"title": "Jane Doe",
+	"subtitle": "",
 	"authors": [
 		{
 			"name": "Jane Doe",
 			"slug": "jane-doe",
-			"introduction": "I'm a florist and a mother of two kids. I work at <a href='https://thispersondoesnotexist.com'>This Person Does Not Exist</a>. I enjoy taking long walks at the beach and practicing yoga at my studio.",
+			"introduction": "I'm a florist and a mother of two kids. I work at <a href='https://thispersondoesnotexist.com'>This Person Does Not Exist</a>. I enjoy taking long walks at the beach and playing games on my Nintendo Switch.",
 			"roles": ["owner"],
 			"website": "/",
 			"socials": [
