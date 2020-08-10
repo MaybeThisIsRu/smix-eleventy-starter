@@ -6,6 +6,7 @@ draft: true
 
 title: "Hello you!"
 tags: ["advanced"]
+author: 'jane-doe'
 ---
 
 This is a draft post and will only be visible on the development and staging environments.
