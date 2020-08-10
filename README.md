@@ -11,6 +11,8 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
 * 🛋 Preconfigured for [Forestry CMS](forestry.io/).
   * Sign up, log in, look for the `Deploy admin` option.
   * Everything else is set up for you already. :)
+* 💁Indie publishing and reading experience
+  * microformats2 support for `h-card`, `h-entry`, and `h-feed` out of the box
 * 👩‍💻 Modern JavaScript
   * Transpilation via Babel
     * Support for `ES2015` JavaScript syntax
