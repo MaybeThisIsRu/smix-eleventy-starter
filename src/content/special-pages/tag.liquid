@@ -8,7 +8,7 @@ pagination:
       - articles
       - all
 permalink: /articles/tag/{{ tag }}/
-content-description: Tag-based archive page of articles by {{site.authors.owner.name}}
+content-description: Tag-based archive page of articles by {% getOwnerInfo 'name' %}
 eleventyComputed:
   title: "Archive of articles with tag '{{tag}}'"
 ---

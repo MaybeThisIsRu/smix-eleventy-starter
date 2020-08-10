@@ -33,5 +33,17 @@ module.exports = {
 		} else {
 			return true;
 		}
+	},
+	/**
+	 * @param {string} key
+	 * @returns {any}
+	 */
+	getOwnerInfo: key => {
+		const { authors } = require(process.cwd() + "/src/data/site.json");
+		const owner = authors.filter(author =>
+			author.roles.includes("owner")
+		)[0];
+
+		return owner[key];
 	}
 };

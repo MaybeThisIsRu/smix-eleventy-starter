@@ -1,0 +1,23 @@
+{% assign author = authors | where: 'slug', slug | first %}
+<section class="h-card flex flex-col lg:flex-row{% if hide %} hidden{% endif %}">
+    <div class="flex-none w-40 h-40 mb-4 lg:mr-4 lg:mb-0">
+        <img
+            src="{{ author.picture }}"
+            alt="{{ author.name }}'s picture"
+            class="rounded-full w-full h-auto object-cover u-photo"
+        >
+    </div>
+    <div class="flex-1">
+        <h1 class="h2 mt-0 lg:mt-0"><a href="/" class="p-name u-url">{{ author.name }}</a></h1>
+        <p class="p-note">{{ author.introduction }}</p>
+        <div class="flex flex-row flex-wrap gap-2">
+            {% for social in author.socials %}
+            <a
+                href="{{social.link}}"
+                target="_blank"
+                rel="me"
+            >{{ social.label }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</section> 
