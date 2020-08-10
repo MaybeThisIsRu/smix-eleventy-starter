@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-{% include head %}
+<html lang="en" {% if page.url == '/articles/' %}class="h-feed"{% endif %}>
+{% render head,
+	siteTitle: site.title,
+	pageTitle:title,
+	content-description:content-description,
+	draft:draft,
+	cover-image:cover-image,
+	config:config,
+	pageUrl:page.url,
+-%}
 <body class="container font-sans dm:bg-black text-gray-900 dm:text-gray-100">
 
 	<div class="body-holder">
@@ -14,7 +22,7 @@
 
 		<main>{{ content }}</main>
 
-		{% include footer %}
+		{% render footer %}
 
 	</div>
 

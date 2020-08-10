@@ -2,18 +2,50 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>{{site.title}}{% if title %} - {{ title }}{% endif %}</title>
+	<title>{{siteTitle}}{% if pageTitle %} - {{ pageTitle }}{% endif %}</title>
 
-	{% if content-description != "" and content-description != nil %}
+	{%- if content-description != "" and content-description != nil -%}
 		<meta name="Description" content="{{content-description}}">
-	{% endif %}
-	{% if draft == true %}
+	{%- endif -%}
+	{%- if draft == true -%}
         <meta name="robots" content="noindex">
-	{% endif %}
+	{%- endif %}
 	
-	<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Articles by/from Site Name" />
+	<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Articles by {% getOwnerInfo 'name' %}" />
+    {% if pageUrl == '/' -%}
+        {% comment %} Add any links to h-feeds here {% endcomment %}
+        <link rel="feed" href="/articles/">
+    {%- endif -%}
 
-	{% include social-meta-tags %}
+	{% comment %} Facebook Open Graph + Twitter {% endcomment %}
+    <meta property="og:site_name" content="{{siteTitle}}" key="ogsitename"/>
+    <meta property="og:title" content="{{pageTitle}}" key="ogtitle"/>
+    <meta property="twitter:title" content="{{pageTitle}}"/>
+
+    <meta property="og:url" content="{{ pageUrl | absoluteUrl: config.siteBaseUrl }}" key="ogurl"/>
+
+    {%- if content-description -%}
+    <meta property="og:description" content="{{content-description}}" key="ogdesc"/>
+    <meta property="twitter:description" content="{{content-description}}"/>
+    {%- endif -%}
+
+    {%- if cover-image -%}
+    <meta property="og:image" content="{{ cover-image.image | absoluteUrl: config.siteBaseUrl }}" key="ogimage"/>
+    <meta property="twitter:image" content="{{ cover-image.image | absoluteUrl: config.siteBaseUrl }}"/>
+    <meta content="summary_large_image" key="twcard" name="twitter:card"/>
+    {%- else -%}
+    {% comment %} if no cover image, fallback to author's picture {% endcomment %}
+    {% capture ownerPicture %}{% getOwnerInfo "picture" %}{% endcapture %}
+    <meta property="og:image" content="{{ ownerPicture | absoluteUrl: config.siteBaseUrl }}" key="ogimage"/>
+    <meta property="twitter:image" content="{{ ownerPicture | absoluteUrl: config.siteBaseUrl }}"/>
+    {% comment %}Since we are falling back on the author picture here, show the smaller twitter card.{% endcomment %}
+    <meta content="summary" key="twcard" name="twitter:card"/>
+    {%- endif -%}
+
+    {% comment %} where will return an array, even if of one element {% endcomment %}
+    {% capture ownerSocials %}{% getOwnerInfo 'socials' %}{% endcapture %}
+    {%- assign twitterInfo = ownerSocials | where: "slug", "twitter" | first -%}
+    <meta name="twitter:creator" content="{{ twitterInfo.username }}" key="twhandle"/>
 
 	<link rel="stylesheet" href="/assets/css/style.css">
 </head>

@@ -1,4 +1,8 @@
-<li class="mb-4 lg:mb-6">
-    <a href="{{ article.url }}">{{ article.data.title }}</a>
-    <p class="text-sm">{{ article.date | friendlyDate }}</p>
+<li class="mb-4 lg:mb-6 h-entry">
+    <a
+        class="u-url u-uid p-name"
+        href="{{ article.url }}"
+    >{{ article.data.title -}}
+    </a>
+    <p class="text-sm dt-published">{{ article.date | friendlyDate }}</p>
 </li>
