@@ -1,5 +1,52 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## v0.0.7 - 21 October 2020
+
+### Added
+
+* A central `CHANGELOG.md` file.
+
+### Changed
+
+* SEO improvements for demo site
+* Fix the URL to forestry.io in README (@drnic)
+* Dependencies updated/affected per npm log:
+  * **@11ty/eleventy-plugin-rss@1.0.9**
+  * **@hirusi/eleventy-plugin-safe-external-links@0.14.3**
+  * @11ty/eleventy@0.11.0
+  * **autoprefixer@9.8.6**
+  * browserify@16.5.2
+  * @fullhuman/postcss-purgecss@1.3.0
+  * babelify@10.0.0
+  * @babel/runtime@7.12.1
+  * @babel/plugin-transform-runtime@7.12.1
+  * @babel/register@7.12.1
+  * @babel/core@7.12.3
+  * @babel/preset-env@7.12.1
+  * child_process@1.0.2
+  * cssnano@4.1.10
+  * **date-fns@2.16.1**
+  * gulp-imagemin@6.2.0
+  * fancy-log@1.3.3
+  * gulp-babel@8.0.0
+  * gulp-concat@2.6.1
+  * gulp@4.0.2
+  * gulp-if@3.0.0
+  * gulp-htmlmin@5.0.1
+  * **date-fns-tz@1.0.12**
+  * **liquidjs@9.16.1**
+  * gulp-postcss@8.0.0
+  * gulp-uglify@3.0.2
+  * **postcss-import@12.0.1**
+  * watchify@3.11.1
+  * **lodash.merge@4.6.2**
+  * vinyl-buffer@1.0.1
+  * vinyl-source-stream@2.0.0
+  * **postcss-nesting@7.0.1**
+  * npm-run-all@4.1.5
+  * **tailwindcss@1.9.5**
+  * **eleventy-plugin-typeset@1.0.1**
+
 ## v0.0.6 - 10 August 2020
 
 ### Added
