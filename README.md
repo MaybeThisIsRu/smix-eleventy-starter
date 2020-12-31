@@ -8,12 +8,13 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
   * `getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags
   * Custom rendering engine for HTML files - `Liquid v9`
     * Adds support for missing filters such as `where` and improves performance
-* 🛋 Preconfigured for [Forestry CMS](https://forestry.io/).
-  * Sign up, log in, look for the `Deploy admin` option.
-  * Everything else is set up for you already. :)
-* 🚀 Preconfigured for [Netlify](https://netlify.com/).
-  * Sign up, log in, add a `New site`.
-  * Out of the box staging builds include Forestry drafts and production builds do not
+* 🛋 Preconfigured for [Forestry CMS](https://forestry.io/) _and_ [Netlify](https://netlify.com/).
+  * For Forestry...
+    * Sign up, log in, look for the `Deploy admin` option.
+    * Everything else is set up for you already. :)
+  * For Netlify...
+    * Sign up, log in, add a `New site`.
+    * Out of the box staging builds include Forestry drafts whereas production builds do not.
 * 💁Indie publishing and reading experience
   * microformats2 support for `h-card`, `h-entry`, and `h-feed` out of the box
 * 👩‍💻 Modern JavaScript
