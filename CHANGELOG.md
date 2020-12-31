@@ -1,5 +1,13 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## Unreleased
+
+### Added
+
+* Compatibility with asdf-nodejs. #24 
+* MIT license.
+* Netlify configuration to keep draft posts out from the production site, but include in staging site. #26
+
 ## v0.0.7 - 21 October 2020
 
 ### Added
