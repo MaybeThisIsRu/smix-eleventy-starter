@@ -67,7 +67,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * Work started on removing usage of deprecated include liquid tag
 * Cleanup of extra spacing in head
 
-\## Fixed
+### Fixed
 * Use correct siteBaseUrl in meta tags
 * Ran npm audit fix to fix automatically fix-able dependency issues
 * Fix pagination for articles based on new liquid syntax
