@@ -1,53 +1,19 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## Unreleased
+## v0.0.8 - 2021-04-12
 
 ### Added
 
 * Compatibility with asdf-nodejs. #24 
 * MIT license.
-* Netlify configuration to keep draft posts out from the production site, but include in staging site. #26
+* Netlify configuration to keep draft posts out from the production site, but include in staging site. #25 closed by #26
+* One-click Forestry import. #31
 
 ### Changed
 
-* Dependencies updated/affected per npm log:
-```
-  + @11ty/eleventy-plugin-rss@1.0.9
-  + @hirusi/eleventy-plugin-safe-external-links@0.14.3
-  + babelify@10.0.0
-  + autoprefixer@9.8.6
-  + @babel/core@7.12.10
-  + @babel/runtime@7.12.5
-  + @babel/preset-env@7.12.11
-  + @fullhuman/postcss-purgecss@1.3.0
-  + @babel/plugin-transform-runtime@7.12.10
-  + browserify@16.5.2
-  + date-fns-tz@1.0.12
-  + @babel/register@7.12.10
-  + cssnano@4.1.10
-  + date-fns@2.16.1
-  + gulp@4.0.2
-  + fancy-log@1.3.3
-  + gulp-babel@8.0.0
-  + gulp-concat@2.6.1
-  + child_process@1.0.2
-  + gulp-imagemin@6.2.0
-  + gulp-if@3.0.0
-  + gulp-postcss@8.0.0
-  + gulp-uglify@3.0.2
-  + lodash.merge@4.6.2
-  + postcss-import@12.0.1
-  + npm-run-all@4.1.5
-  + gulp-htmlmin@5.0.1
-  + vinyl-source-stream@2.0.0
-  + postcss-nesting@7.0.1
-  + vinyl-buffer@1.0.1
-  + watchify@3.11.1
-  + liquidjs@9.19.0
-  + @11ty/eleventy@0.11.1
-  + tailwindcss@1.9.6
-  + eleventy-plugin-typeset@1.0.1
-```
+* Dependencies updated per SemVer.
+  * Includes development dependencies.
+* Upgrade to Eleventy v0.12.1. #32.
 ## v0.0.7 - 21 October 2020
 
 ### Added
