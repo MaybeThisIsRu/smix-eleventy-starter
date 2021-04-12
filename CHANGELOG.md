@@ -2,6 +2,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## v0.0.8 - 2021-04-12
 
+[All changes](https://github.com/hirusi/smix-eleventy-starter/compare/v0.0.7...v0.0.8).
+
 ### Added
 
 * Compatibility with asdf-nodejs. #24 
