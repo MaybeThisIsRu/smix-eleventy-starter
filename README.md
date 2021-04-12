@@ -9,9 +9,10 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
   * Custom rendering engine for HTML files - `Liquid v9`
     * Adds support for missing filters such as `where` and improves performance
 * 🛋 Preconfigured for [Forestry CMS](https://forestry.io/) _and_ [Netlify](https://netlify.com/).
-  * For Forestry...
-    * Sign up, log in, look for the `Deploy admin` option.
-    * Everything else is set up for you already. :)
+  * For Forestry
+    * [![Import into Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=hirusi/smix-eleventy-starter&engine=other)
+    * In the general site settings click on `Deploy admin` option to host the CMS on your domain.
+    * Everything else is already set up for you :)
   * For Netlify...
     * Sign up, log in, add a `New site`.
     * Out of the box staging builds include Forestry drafts whereas production builds do not.
