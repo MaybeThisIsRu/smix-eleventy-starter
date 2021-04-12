@@ -1,9 +1,9 @@
 # 🌻 Smix
-__A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleventy and Forestry CMS__
+__A gulp-based starter for Static Site Generators, preconfigured for Eleventy and Forestry CMS.__
 
 ## Framework
 
-* ♥ Eleventy 0.11.1 out of the box
+* ♥ Eleventy 0.12.1 out of the box
   * Date filters for a friendly version such as `10 March 2020`, and ISO8601 (also RFC822 compatible)
   * `getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags
   * Custom rendering engine for HTML files - `Liquid v9`
