@@ -11,7 +11,7 @@ __A gulp-based starter for Static Site Generators, preconfigured for @11ty/eleve
 * 🛋 Preconfigured for [Forestry CMS](https://forestry.io/) _and_ [Netlify](https://netlify.com/).
   * For Forestry
     * [![Import into Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=hirusi/smix-eleventy-starter&engine=other)
-    * In the general site settings click on `Deploy admin` option, to host the CMS on your domain.
+    * In the general site settings click on `Deploy admin` option to host the CMS on your domain.
     * Everything else is already set up for you :)
   * For Netlify...
     * Sign up, log in, add a `New site`.
