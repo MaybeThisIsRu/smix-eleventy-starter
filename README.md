@@ -20,18 +20,18 @@ __A gulp-based starter for Static Site Generators, preconfigured for Eleventy an
   * microformats2 support for `h-card`, `h-entry`, and `h-feed` out of the box.
 * Modern __JavaScript__.
   * Transpilation via Babel.
-    * Support for `ES2015` JavaScript syntax.
-    * Support for `ES2017` `async`/`await` syntax.
+    * Support for __ES2015__ JavaScript syntax.
+    * Support for __ES2017__ `async`/`await` syntax.
   * Module bundling via Browserify.
 * __PostCSS__ as the choice of CSS transpiler.
   * Includes: imports, nesting, purge, minification, autoprefixer.
   * TailwindCSS (v1), configured to strip out unused classes from production builds.
   * Easily build a dark mode using the included `dm` screen type: `dm:bg-gray-900`.
-* __SEO__ and more.
-  * Meta tags for social networks (Open Graph/Twitter)
-  * Sitemap with `changeFrequency`; `robots.txt` (please also see [issue #7](https://github.com/hirusi/smix-eleventy-starter/issues/7))
-  * An Atom feed with support for both `published` and `updated` dates on articles
-  * Support for `content-description` meta tag
+* __SEO__ and other behind-the-scenes goodies.
+  * Meta tags for social networks (Open Graph/Twitter).
+  * Sitemap with `changeFrequency`; `robots.txt` (please also see [issue #7](https://github.com/hirusi/smix-eleventy-starter/issues/7)).
+  * An Atom feed with support for both `published` and `updated` dates on articles.
+  * Support for `content-description` meta tag.
 * A sane __fonts__ setup.
   * The `font-sans` class is configured to use system-default fonts.
   * Include fonts locally for enhanced privacy of your visitors.
@@ -57,6 +57,14 @@ __A gulp-based starter for Static Site Generators, preconfigured for Eleventy an
 * `npm run dev`
 * Open `localhost:8080` on your browser
 
+### Staging
+
+`ELEVENTY_ENV` must be set to `staging`. 
+
+* `npm run staging`
+
 ### Production
+
+`ELEVENTY_ENV` must be set to `production`.
 
 * `npm run prod`
