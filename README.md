@@ -15,7 +15,7 @@ __A gulp-based starter for Static Site Generators, preconfigured for Eleventy an
     * Everything else is already set up for you. :)
   * For Netlify...
     * Sign up, log in, add a `New site`.
-    * Out of the box staging builds include Forestry drafts whereas production builds do not.
+    * Out of the box staging builds include drafts whereas production builds do not.
 * __Indie__ publishing and reading experience.
   * microformats2 support for `h-card`, `h-entry`, and `h-feed` out of the box.
 * Modern __JavaScript__.
@@ -52,7 +52,7 @@ __A gulp-based starter for Static Site Generators, preconfigured for Eleventy an
 
 ### Local Development
 
-* `nvm use`
+* `nvm use` or `asdf install`
 * `npm install`
 * `npm run dev`
 * Open `localhost:8080` on your browser
