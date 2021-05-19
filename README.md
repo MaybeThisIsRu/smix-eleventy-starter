@@ -8,14 +8,7 @@ __A gulp-based starter for Static Site Generators, preconfigured for Eleventy an
   * `getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags.
   * Custom rendering engine for HTML files - `Liquid v9`.
     * Adds support for missing filters such as `where` and improves performance.
-* __Preconfigured__ for [Forestry CMS](https://forestry.io/) _and_ [Netlify](https://netlify.com/).
-  * For Forestry
-    * [![Import into Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=hirusi/smix-eleventy-starter&engine=other)
-    * In the general site settings click on `Deploy admin` option to host the CMS on your domain.
-    * Everything else is already set up for you. :)
-  * For Netlify...
-    * Sign up, log in, add a `New site`.
-    * Out of the box staging builds include drafts whereas production builds do not.
+* __Preconfigured__ for [Forestry CMS](https://forestry.io/) _and_ [Netlify](https://netlify.com/). Find more [instructions in the docs](docs/publishing.md).
 * __Indie__ publishing and reading experience.
   * microformats2 support for `h-card`, `h-entry`, and `h-feed` out of the box.
 * Modern __JavaScript__.
@@ -52,10 +45,7 @@ __A gulp-based starter for Static Site Generators, preconfigured for Eleventy an
 
 ### Local Development
 
-* `nvm use` or `asdf install`
-* `npm install`
-* `npm run dev`
-* Open `localhost:8080` on your browser
+See [development docs](docs/development.md).
 
 ### Staging
 

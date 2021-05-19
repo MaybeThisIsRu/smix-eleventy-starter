@@ -1,5 +1,29 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## v0.0.9 - Unreleased
+
+[All changes](https://github.com/hirusi/smix-eleventy-starter/compare/v0.0.8...main)
+
+### Added
+
+- To-do.
+
+### Changed
+
+- Instructions for local development have moved from `README.md` to `docs/development.md`.
+- Instructions for publishing on Forestry/Netlify have moved from `README.md` to `docs/development.md`.
+- Specify installation of Node.js via `asdf` as an alternate option to `nvm` in the development docs.
+- Remove emojis from `README.md` and use bold highlighting instead.
+- Remove webmentions from `To-Do` as I no longer wish to implement those.
+- Add note about setting `ELEVENTY_ENV` on staging and production environments.
+- Dependency updates (security-related PRs opened by @dependabot)
+  - `lodash` from 4.17.20 to 4.17.21
+  - `hosted-git-info` from 2.8.8 to 2.8.9
+
+### Removed
+
+- To-do.
+
 ## v0.0.8 - 2021-04-12
 
 [All changes](https://github.com/hirusi/smix-eleventy-starter/compare/v0.0.7...v0.0.8).
