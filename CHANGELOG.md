@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Dependency updates (security-related PRs opened by @dependabot)
   - `lodash` from 4.17.20 to 4.17.21
   - `hosted-git-info` from 2.8.8 to 2.8.9
+- Upgrade to Node LTS v14 and npm v7.
 
 ### Removed
 
