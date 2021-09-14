@@ -46,6 +46,8 @@
     {% capture ownerSocials %}{% getOwnerInfo 'socials' %}{% endcapture %}
     {%- assign twitterInfo = ownerSocials | where: "slug", "twitter" | first -%}
     <meta name="twitter:creator" content="{{ twitterInfo.username }}" key="twhandle"/>
+    
+    <script defer data-domain="smix.netlify.app" src="https://plausible.io/js/plausible.js"></script>
 
 	<link rel="stylesheet" href="/assets/css/style.css">
 </head>
