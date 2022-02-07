@@ -4,7 +4,7 @@
 	"description": "A gulp-based starter kit for @11ty/eleventy and Forestry CMS",
 	"main": "",
 	"engines": {
-		"npm": "^7"
+		"npm": "^8"
 	},
 	"scripts": {
 		"clean": "rm -rf dist && mkdir -p dist/assets",
