@@ -8,7 +8,6 @@ __A gulp-based starter for Static Site Generators, preconfigured for Eleventy an
   * `getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags.
   * Custom rendering engine for HTML files - `Liquid v9`.
     * Adds support for missing filters such as `where` and improves performance.
-* __Preconfigured__ for [Forestry CMS](https://forestry.io/) _and_ [Netlify](https://netlify.com/). Find more [instructions in the docs](docs/publishing.md).
 * __Indie__ publishing and reading experience.
   * microformats2 support for `h-card`, `h-entry`, and `h-feed` out of the box.
 * Modern __JavaScript__.
