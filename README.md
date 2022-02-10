@@ -1,5 +1,5 @@
 # 🌻 Smix
-__A gulp-based starter for Static Site Generators, preconfigured for Eleventy and Forestry CMS.__
+__A gulp-based starter for Static Site Generators, preconfigured for Eleventy.__
 
 ## Framework
 
