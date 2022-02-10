@@ -30,7 +30,7 @@ permalink: "/articles/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}/"
         {{ content }}
     </main>
     <footer>
-        {% render author-card,
+        {% render 'author-card',
             authors: site.authors,
             slug: page.author,
             hide: true,

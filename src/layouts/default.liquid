@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" {% if page.url == '/articles/' %}class="h-feed"{% endif %}>
-{% render head,
+{% render 'head',
 	siteTitle: site.title,
 	pageTitle:title,
 	content-description:content-description,
@@ -13,7 +13,7 @@
 
 	<div class="body-holder">
 	
-		{% render header,
+		{% render 'header',
 			url:page.url, 
 			title:site.title,
 			subtitle:site.subtitle,
@@ -22,7 +22,7 @@
 
 		<main>{{ content }}</main>
 
-		{% render footer %}
+		{% render 'footer' %}
 
 	</div>
 
