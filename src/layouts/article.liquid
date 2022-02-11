@@ -20,7 +20,7 @@ permalink: "/articles/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}/"
 			<div class="post-tag mb-4 flex flex-row flex-wrap items-top lg:items-center">
 				<span class="text-gray-800 dm:text-gray-300 text-sm mr-1">Tagged</span>
 				{% for tag in tags %}
-				{% assign tag_name = tag | slug %}
+				{% assign tag_name = tag | slugify %}
 					<a href="{{ '/articles/tag/' | append: tag_name }}" class="text-gray-600 dm:text-gray-400 text-sm hover:text-indiple-regular mr-1 p-category">#{{tag}}</a>
 				{% endfor %}
 			</div>
