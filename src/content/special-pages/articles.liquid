@@ -10,11 +10,11 @@ eleventyComputed:
   content-description: "Articles by {% getOwnerInfo 'name' %}"
 ---
 <section>
-	{% include page-title title:title %}
+	{% include 'page-title' title:title %}
 	<main>
 		<ul class="articles">
 			{% for article in articles %}
-    			{% include article-card article:article %}
+    			{% include 'article-card' article:article %}
 			{% endfor %}
 		</ul>
 	</main>

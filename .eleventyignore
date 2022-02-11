@@ -11,3 +11,5 @@ LICENSE
 .editorconfig
 .babelrc
 .prettierrc
+CHANGELOG.md
+docs

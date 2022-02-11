@@ -13,12 +13,12 @@ eleventyComputed:
   title: "Archive of articles with tag '{{tag}}'"
 ---
 <div>
-	{% include page-title title:title %}
+	{% include 'page-title' title:title %}
 	<main>
 		{% assign articles = collections.articles | byTag: tag %}
 		<ul class="articles">
 			{% for article in articles %}
-    			{% include article-card article:article %}
+    			{% include 'article-card' article:article %}
 			{% endfor %}
 		</ul>
 	</main>
