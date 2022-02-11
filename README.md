@@ -6,7 +6,6 @@ __A gulp-based starter for Static Site Generators, preconfigured for Eleventy.__
 * __Eleventy__ 1.0.0 out of the box.
   * Date filters for a friendly version such as `10 March 2020`, and ISO8601 (also RFC822 compatible).
   * `getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags.
-  * Adds support for missing filters such as `where` and improves performance.
 * __Indie__ publishing and reading experience.
   * microformats2 support for `h-card`, `h-entry`, and `h-feed` out of the box.
 * Modern __JavaScript__.
