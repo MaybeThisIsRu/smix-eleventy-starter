@@ -9,10 +9,14 @@ function build() {
 }
 
 function watch() {
-	return spawn("npx", ["@11ty/eleventy", "--port 8080", "--serve"], {
-		shell: true,
-		stdio: "inherit"
-	});
+	return spawn(
+		"npx",
+		["@11ty/eleventy", "--port 8080", "--serve", "--incremental"],
+		{
+			shell: true,
+			stdio: "inherit"
+		}
+	);
 }
 
 // Reload after asset tasks finish running etc.
