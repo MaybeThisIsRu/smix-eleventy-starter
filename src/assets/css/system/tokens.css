@@ -1,0 +1,68 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Primary color - TailwindCSS' pink */
+  /* https://tailwindcss.com/docs/customizing-colors#default-color-palette */
+  --pink-100: #fff5f7;
+  --pink-200: #fed7e2;
+  --pink-300: #fbb6ce;
+  --pink-400: #f687b3;
+  --pink-500: #ed64a6;
+  --pink-600: #d53f8c;
+  --pink-700: #b83280;
+  --pink-800: #97266d;
+  --pink-900: #702459;
+  --pink-1000: #32031f;
+
+  /* Hand-picked personal colors */
+  --mine-100: #ffffff;
+  --mine-200: #ffffff;
+  --mine-300: #ffffff;
+  --mine-400: #ffffff;
+  --mine-500: #ffffff;
+  --mine-600: #4a1b70;
+  --mine-700: #ffffff;
+  --mine-800: #1f0534;
+  --mine-900: #150324;
+
+  /* Grays - TailwindCSS 3.0's neutral gray */
+  /* https://tailwindcss.com/docs/customizing-colors#default-color-palette */
+  --gray-100: #f7fafc;
+  --gray-200: #edf2f7;
+  --gray-300: #e2e8f0;
+  --gray-400: #cbd5e0;
+  --gray-500: #a0aec0;
+  --gray-600: #718096;
+  --gray-700: #4a5568;
+  --gray-800: #2d3748;
+  --gray-900: #1a202c;
+
+  /* ** Typography */
+
+  --sans-fontset: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --serif-fontset: "serif";
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  /* ** Spacing */
+
+  /* ** Borders */
+  --rounded-sm: 0.125rem;
+  --rounded: 0.25rem;
+  --rounded-lg: 0.5rem;
+  --rounded-full: 9999px;
+
+  /* ** Responsiveness */
+  --multiplier: 1;
+}

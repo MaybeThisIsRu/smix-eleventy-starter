@@ -4,16 +4,27 @@ import { src, dest, watch, series } from "gulp";
 // PostCSS
 import postcss from "gulp-postcss";
 import cssImport from "postcss-import";
-import tailwindcss from "tailwindcss";
-import cssNesting from "postcss-nesting";
+import cssPresetEnv from "postcss-preset-env";
 import autoprefixer from "autoprefixer";
 import purgecss from "@fullhuman/postcss-purgecss";
 import cssnano from "cssnano";
 
+import { reload } from "./eleventy.babel";
 import { paths } from "../paths";
 
 function css() {
-	const plugins = [cssImport, tailwindcss, cssNesting, autoprefixer];
+	const plugins = [
+		cssImport,
+		cssPresetEnv({
+			stage: 2,
+			features: {
+				"nesting-rules": true,
+				"custom-media-queries": true,
+				"custom-selectors": true
+			}
+		}),
+		autoprefixer
+	];
 
 	return src(`${paths.css.src}/${paths.css.name}`)
 		.pipe(postcss(plugins))

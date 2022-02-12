@@ -1,0 +1,7 @@
+@custom-selector :--hx h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6;
+@custom-selector :--h1 h1, .h1;
+@custom-selector :--h2 h2, .h2;
+@custom-selector :--h3 h3, .h3;
+@custom-selector :--h4 h4, .h4;
+@custom-selector :--h5 h5, .h5;
+@custom-selector :--h6 h6, .h6;

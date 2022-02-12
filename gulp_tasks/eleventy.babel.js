@@ -1,6 +1,5 @@
 import { spawn } from "child_process";
-// import browserSync from "browser-sync";
-// const server = browserSync.get("eleventyServer");
+import browserSync from "browser-sync";
 
 function build() {
 	return spawn("npx", ["@11ty/eleventy", "--quiet"], {
@@ -16,9 +15,10 @@ function watch() {
 	});
 }
 
-// TODO
 // Reload after asset tasks finish running etc.
-// Waiting on https://github.com/11ty/eleventy/issues/1125
-// function reload() {}
+function reload() {
+	const server = browserSync.get("eleventy-server");
+	if (server) server.reload();
+}
 
-export { build as eleventyBuild, watch as eleventyWatch };
+export { build as eleventyBuild, watch as eleventyWatch, reload };

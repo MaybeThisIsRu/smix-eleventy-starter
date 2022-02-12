@@ -1,6 +1,7 @@
 import { src, dest, watch, series, lastRun } from "gulp";
 
 import { paths } from "../paths";
+import { reload } from "./eleventy.babel";
 
 function font() {
 	return src(paths.font.src, { since: lastRun(font) }).pipe(

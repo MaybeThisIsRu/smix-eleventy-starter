@@ -17,18 +17,6 @@ module.exports = function(config) {
 	// Additional files to watch for changes
 	config.addWatchTarget("./eleventy/");
 
-	// *** Forestry CMS Config
-	// Run serve on 0.0.0.0 on staging
-	if (env.is11tyStaging)
-		config.setBrowserSyncConfig({
-			host: "0.0.0.0"
-		});
-
-	// Copy as-is from root to output path
-	// We can avoid this on development env
-	if (env.is11tyStaging || env.is11tyProduction)
-		config.addPassthroughCopy("admin");
-
 	// *** Plugins
 	config.addPlugin(require("@11ty/eleventy-plugin-rss"));
 	// Typeset
@@ -67,16 +55,9 @@ module.exports = function(config) {
 	// Articles
 	config.addCollection("articles", collections.articles);
 
-	// *** Custom rendering engine
-	const { Liquid } = require("liquidjs");
-	const liquidJsOptions = {
-		extname: ".liquid",
-		dynamicPartials: false,
-		strict_filters: true,
-		root: ["src/includes", "src/layouts"]
-	};
-	const liquidEngine = new Liquid(liquidJsOptions);
-	config.setLibrary("liquid", liquidEngine);
+	// *** Watch targets
+	// Assets
+	config.addWatchTarget("./dist/assets/");
 
 	return {
 		pathPrefix: "/", // useful for GitHub pages

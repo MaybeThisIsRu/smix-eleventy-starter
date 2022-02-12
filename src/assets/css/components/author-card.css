@@ -1,0 +1,33 @@
+/* When included with an article, we want to distance the author card from the content body. */
+article > footer > .author-card {
+  margin-top: 6rem;
+}
+
+.author-picture-container {
+  flex: none;
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+.author-picture {
+  border-radius: 9999px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.author-name {
+  margin-top: 0;
+
+  @media screen and (--lg) {
+    margin-top: 0;
+  }
+}
+
+.author-socials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

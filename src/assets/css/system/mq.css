@@ -1,0 +1,13 @@
+/* ** Accessibility */
+/* Dark mode */
+@custom-media --dm (prefers-color-scheme: dark);
+
+/* Reduced motion */
+@custom-media --rm (prefers-reduced-motion);
+
+/* Responsive breakpoints */
+@custom-media --xs (min-width: 320px);
+@custom-media --sm (min-width: 640px);
+@custom-media --md (min-width: 768px);
+@custom-media --lg (min-width: 1024px);
+@custom-media --xl (min-width: 1280px);
