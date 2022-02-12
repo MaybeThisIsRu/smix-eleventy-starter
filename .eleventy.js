@@ -55,10 +55,6 @@ module.exports = function(config) {
 	// Articles
 	config.addCollection("articles", collections.articles);
 
-	// *** Watch targets
-	// Assets
-	config.addWatchTarget("./dist/assets/");
-
 	return {
 		pathPrefix: "/", // useful for GitHub pages
 		dir: {
