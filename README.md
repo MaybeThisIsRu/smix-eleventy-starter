@@ -1,6 +1,8 @@
 # 🌻 Smix
 __A gulp-based starter for Static Site Generators, preconfigured for Eleventy.__
 
+⚠️ Currently undergoing maintenance along with some updates.
+
 ## Framework
 
 * __Eleventy__ 1.0.0 out of the box.
