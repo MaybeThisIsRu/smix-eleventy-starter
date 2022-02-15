@@ -27,15 +27,15 @@ Write in Markdown, much loved among developers. If you don't already know it, it
 
 ### Linking to pages or posts.
 
-* `getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags.
+`getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags.
 
 ### Code blocks.
 
-Code blocks are made possible via [an Eleventy plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/). A few Prism themes are included for you to pick from.
+Code blocks are made possible via [an Eleventy plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/). A few [Prism](https://prismjs.com/) themes are included for you to pick from.
 
 ## Future-ready.
 
-The CSS is written with upcoming CSS standards in mind. This is made possible thanks to PostCSS. Inclusions: imports, nesting, purge, minification, autoprefixer, custom properties, custom media queries (this makes a dark mode easy to build!), custom selectors, and LCH color coding.
+The CSS is written with upcoming CSS standards in mind. This is made possible thanks to PostCSS. Inclusions: imports, nesting, purge, minification, autoprefixer, custom properties, custom media queries (this makes a dark mode easy to build!), custom selectors, and [LCH color coding](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/).
 
 JavaScript is transpiled via Babel, leaving you free to write ES2015+ JavaScript. Specifically, await/async syntax from ES2017 is also included.
 
@@ -47,7 +47,6 @@ Care is taken to have good contrast all around.
 
 ## Under The Hood.
 
-* Minified assets on production.
 * __Prettier and editorconfig__ for consistent formatting.
 * __Modular gulp task files__ for easy configuration and modification.
 
