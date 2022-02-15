@@ -45,6 +45,8 @@ JavaScript is transpiled via Babel, leaving you free to write ES2015+ JavaScript
 
 Care is taken to have good contrast all around.
 
+Should you choose to include some animations, do make use of a custom media query for those who prefer no motion.
+
 ## Under The Hood.
 
 * __Prettier and editorconfig__ for consistent formatting.
