@@ -56,6 +56,7 @@ Should you choose to include some animations, do make use of a custom media quer
 
 * System default serif font class.
 * Feed per tag (this could easily go into 10s or 100s, but you know, choice is important!)
+* Syntax highlighting.
 * Scheduled blog posts.
 * Lazy-load images.
 * Responsive images.
