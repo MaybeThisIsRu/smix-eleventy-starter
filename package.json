@@ -1,7 +1,7 @@
 {
 	"name": "smix-eleventy-starter",
 	"version": "0.0.8",
-	"description": "A gulp-based starter kit for @11ty/eleventy and Forestry CMS",
+	"description": "A gulp-based starter kit for @11ty/eleventy.",
 	"main": "",
 	"engines": {
 		"npm": "^8"
