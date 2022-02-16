@@ -63,7 +63,7 @@ npm run dev:jsb --in=portfolio.js --out=portfolio.js
 
 This will create a JS bunlde (hence `jsb`), entering at `src/assets/js/portfolio.js` and outputting at `dist/assets/js/portfolio.js`
 
-Include them in the required page by using the `extrahead` [`block`](https://liquidjs.com/tutorials/partials-and-layouts.html#Layout-Templates-Extends):
+Include them in the required page by using the `pageJavaScript` [`block`](https://liquidjs.com/tutorials/partials-and-layouts.html#Layout-Templates-Extends):
 
 ```liquid
 {% block pageJavascript %}
