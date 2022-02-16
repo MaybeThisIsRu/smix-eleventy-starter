@@ -93,7 +93,6 @@ My content here.
 
 ## To-Do
 
-* System default serif font class.
 * Feed per tag (this could easily go into 10s or 100s, but you know, choice is important!)
 * Syntax highlighting.
 * Scheduled blog posts.
