@@ -49,7 +49,33 @@ Should you choose to include some animations, do make use of a custom media quer
 
 ## Under The Hood.
 
-* __Prettier and editorconfig__ for consistent formatting.
+### Handling JavaScript.
+
+ES Modules are [now well supported](https://caniuse.com/es6-module) and you should move to them. In that spirit, we use [`esbuild`](https://esbuild.github.io/).
+
+If you want to bundle a single file and that is the default `index.js` source, running `npm run dev:js` is enough.
+
+To allow for page-specific JavaScript files, we have a convenience command to put together a new JS bundle.
+
+```sh
+npm run dev:jsb --in=portfolio.js --out=portfolio.js
+```
+
+This will create a JS bunlde (hence `jsb`), entering at `src/assets/js/portfolio.js` and outputting at `dist/assets/js/portfolio.js`
+
+Include them in the required page by using the `extrahead` [`block`]():
+
+```liquid
+{% block pageJavascript %}
+<script type="module" src="/assets/js/portfolio.js">
+{% endblock}
+
+My content here.
+```
+
+### Misc Features
+
+* __Prettier and editorconfig__ for consistent formatting of the codebase.
 * __Modular gulp task files__ for easy configuration and modification.
 
 ## To-Do
