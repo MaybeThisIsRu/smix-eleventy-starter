@@ -41,7 +41,7 @@ Code blocks are made possible via [an Eleventy plugin](https://www.11ty.dev/docs
 
 The CSS is written with upcoming CSS standards in mind. This is made possible thanks to PostCSS. Inclusions: imports, nesting, purge, minification, autoprefixer, custom properties, custom media queries (this makes a dark mode easy to build!), custom selectors, and [LCH color coding](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/).
 
-JavaScript is transpiled via Babel, leaving you free to write ES2015+ JavaScript. Specifically, await/async syntax from ES2017 is also included.
+JavaScript is transpiled via `esbuild`.
 
 ## Accessible.
 
