@@ -35,7 +35,7 @@ Write in Markdown, much loved among developers. If you don't already know it, it
 
 ### Code blocks.
 
-Code blocks are made possible via [an Eleventy plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/). A few [Prism](https://prismjs.com/) themes are included for you to pick from.
+Code blocks are made possible via [an Eleventy plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/). A few [Prism](https://prismjs.com/) themes are [included for you to pick from](src/assets/css/themes).
 
 ## Future-ready.
 
