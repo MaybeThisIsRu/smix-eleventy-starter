@@ -27,7 +27,11 @@ Write in Markdown, much loved among developers. If you don't already know it, it
 
 ### Linking to pages or posts.
 
-`getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags.
+`postUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags:
+
+```liquid
+{% postUrl collections.articles 'on-burnout' %}
+```
 
 ### Code blocks.
 
