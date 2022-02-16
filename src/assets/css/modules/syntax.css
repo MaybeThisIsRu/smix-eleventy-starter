@@ -14,6 +14,7 @@ pre {
 /* Inline code */
 /* WARNING Be careful, this can affect code inside pre blocks */
 code {
+  font-family: var(--mono-fontset);
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   padding: 0.25rem;
@@ -33,6 +34,7 @@ code {
 
 /* Code inside pre blocks */
 pre > code[class*="language-"] {
+  font-family: var(--mono-fontset);
   margin-bottom: 0;
   padding-left: 0;
   padding-right: 0;

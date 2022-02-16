@@ -44,6 +44,15 @@
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+  /* As seen on https://systemfontstack.com/ on 2022-02-17. */
+  --serif-fontset: "Iowan Old Style", "Apple Garamond", Baskerville,
+    "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* As seen on https://systemfontstack.com/ on 2022-02-17. */
+  --mono-fontset: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console",
+    monospace;
+
   --serif-fontset: "serif";
 
   --text-sm: 0.875rem;
