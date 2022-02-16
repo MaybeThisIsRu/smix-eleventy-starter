@@ -7,11 +7,13 @@
 		"npm": "^8"
 	},
 	"scripts": {
-		"clean": "rm -rf dist && mkdir -p dist/assets",
-		"develop": "gulp develop",
-		"dev": "run-s clean develop",
-		"staging": "gulp staging",
+		"dev:clean": "rm -rf dist && mkdir -p dist/assets",
+		"dev:gulp": "gulp develop",
+		"dev:js": "esbuild --watch --bundle --sourcemap --outfile=dist/assets/js/index.js src/assets/js/index.js",
+		"dev:jsm": "esbuild --watch --bundle --sourcemap --outfile=dist/assets/js/$npm_config_outfile src/assets/js/$npm_config_input",
+		"dev": "run-s dev:clean dev:gulp dev:js",
 		"prod": "gulp production",
+		"prod:js": "esbuild --minify --bundle --outfile=dist/assets/js/index.js src/assets/js/index.js",
 		"force-prod": "NODE_ENV=production gulp production",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -29,6 +31,7 @@
 	"devDependencies": {
 		"@types/gulp": "^4.0.8",
 		"@types/gulp-postcss": "^8.0.0",
+		"esbuild": "^0.14.21",
 		"husky": "^4.3.8",
 		"postcss-preset-env": "^7.3.1",
 		"prettier": "^1.19.1",
@@ -37,16 +40,9 @@
 	"dependencies": {
 		"@11ty/eleventy": "^1.0.0",
 		"@11ty/eleventy-plugin-rss": "^1.1.1",
-		"@babel/core": "^7.13.15",
-		"@babel/plugin-transform-runtime": "^7.13.15",
-		"@babel/preset-env": "^7.13.15",
-		"@babel/register": "^7.13.14",
-		"@babel/runtime": "^7.13.10",
 		"@fullhuman/postcss-purgecss": "^1.3.0",
 		"@hirusi/eleventy-plugin-safe-external-links": "^0.14.3",
 		"autoprefixer": "^10.4.2",
-		"babelify": "^10.0.0",
-		"browserify": "^16.5.2",
 		"child_process": "^1.0.2",
 		"cssnano": "^4.1.11",
 		"date-fns": "^2.20.2",
@@ -54,20 +50,15 @@
 		"eleventy-plugin-typeset": "github:liamfiddler/eleventy-plugin-typeset",
 		"fancy-log": "^1.3.3",
 		"gulp": "^4.0.2",
-		"gulp-babel": "^8.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-htmlmin": "^5.0.1",
 		"gulp-if": "^3.0.0",
 		"gulp-imagemin": "^6.2.0",
 		"gulp-postcss": "^9.0.1",
-		"gulp-uglify": "^3.0.2",
 		"lodash.merge": "^4.6.2",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.4.6",
-		"postcss-import": "^12.0.1",
-		"vinyl-buffer": "^1.0.1",
-		"vinyl-source-stream": "^2.0.0",
-		"watchify": "^3.11.1"
+		"postcss-import": "^12.0.1"
 	},
 	"browserslist": ">1%, Firefox ESR, last 2 versions"
 }
