@@ -10,7 +10,7 @@
 		"dev:clean": "rm -rf dist && mkdir -p dist/assets",
 		"dev:gulp": "gulp develop",
 		"dev:js": "esbuild --watch --bundle --sourcemap --outfile=dist/assets/js/index.js src/assets/js/index.js",
-		"dev:jsm": "esbuild --watch --bundle --sourcemap --outfile=dist/assets/js/$npm_config_outfile src/assets/js/$npm_config_input",
+		"dev:jsb": "esbuild --watch --bundle --sourcemap --outfile=dist/assets/js/$npm_config_out src/assets/js/$npm_config_in",
 		"dev": "run-s dev:clean dev:gulp dev:js",
 		"prod": "gulp production",
 		"prod:js": "esbuild --minify --bundle --outfile=dist/assets/js/index.js src/assets/js/index.js",
