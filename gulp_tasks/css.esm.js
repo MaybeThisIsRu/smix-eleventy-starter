@@ -9,7 +9,7 @@ import autoprefixer from "autoprefixer";
 import purgecss from "@fullhuman/postcss-purgecss";
 import cssnano from "cssnano";
 
-import { reload } from "./eleventy.babel";
+import { reload } from "./eleventy.esm";
 import { paths } from "../paths";
 
 function css() {

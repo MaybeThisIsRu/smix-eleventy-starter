@@ -2,7 +2,6 @@ import { src, dest, watch, lastRun, series } from "gulp";
 import imagemin from "gulp-imagemin";
 
 import { paths } from "../paths";
-import { reload } from "./eleventy.babel";
 
 function img() {
 	return src(paths.img.src, { since: lastRun(img) })

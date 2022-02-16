@@ -6,11 +6,12 @@
 @import "./system/mq.css";
 
 /*
- ** Remove this comment and the following imports to get a blank slate.
- */
+** Remove this comment and the following imports to get a blank slate.
+*/
 
 @import "./modules/typography.css";
 @import "./modules/syntax.css";
+@import "./modules/atkinson-hyperlegible-font.css";
 @import "base.css";
 
 /* Pre-built components in use. */

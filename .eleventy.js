@@ -13,10 +13,6 @@ module.exports = function(config) {
 	// *** Misc imports
 	const env = require("./eleventy/env");
 
-	// *** Misc Options
-	// Additional files to watch for changes
-	config.addWatchTarget("./eleventy/");
-
 	// *** Plugins
 	config.addPlugin(require("@11ty/eleventy-plugin-rss"));
 	// Typeset
@@ -32,6 +28,10 @@ module.exports = function(config) {
 			".html"
 		]
 	});
+	// Minified HTML.
+	if (env.is11tyProduction || env.is11tyStaging) {
+		config.addPlugin(require("@sardine/eleventy-plugin-tinyhtml"));
+	}
 
 	// *** Shortcodes
 	// Jekyll replacement for post_url tag as an 11ty shortcode
@@ -54,6 +54,10 @@ module.exports = function(config) {
 	// *** Collections
 	// Articles
 	config.addCollection("articles", collections.articles);
+
+	// *** Misc
+	// Copy fonts as-is.
+	config.addPassthroughCopy({ "src/assets/font": "assets/font" });
 
 	return {
 		pathPrefix: "/", // useful for GitHub pages

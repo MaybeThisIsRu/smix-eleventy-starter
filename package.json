@@ -29,9 +29,11 @@
 	},
 	"license": "GNU GPLv3",
 	"devDependencies": {
+		"@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
 		"@types/gulp": "^4.0.8",
 		"@types/gulp-postcss": "^8.0.0",
 		"esbuild": "^0.14.21",
+		"esm": "^3.2.25",
 		"husky": "^4.3.8",
 		"postcss-preset-env": "^7.3.1",
 		"prettier": "^1.19.1",

@@ -17,8 +17,8 @@ code {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   padding: 0.25rem;
-  border-radius: 0.25rme;
-  font-size: var(--text-xs);
+  border-radius: 0.25rem;
+  font-size: var(--text-sm);
   background-color: var(--pink-100);
   color: var(--pink-700);
   vertical-align: middle;
