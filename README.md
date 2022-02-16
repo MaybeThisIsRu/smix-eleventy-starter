@@ -1,39 +1,62 @@
 # 🌻 Smix
-__A gulp-based starter for Static Site Generators, preconfigured for Eleventy.__
+__A gulp-based starter for Static Site Generators, preconfigured for Eleventy v1.0.__
 
-## Framework
+⚠️ Currently undergoing maintenance along with some updates. Pivoting to an opinionated starter kit.
 
-* __Eleventy__ 1.0.0 out of the box.
-  * Date filters for a friendly version such as `10 March 2020`, and ISO8601 (also RFC822 compatible).
-  * `getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags.
-* __Indie__ publishing and reading experience.
-  * microformats2 support for `h-card`, `h-entry`, and `h-feed` out of the box.
-* Modern __JavaScript__.
-  * Transpilation via Babel.
-    * Support for __ES2015__ JavaScript syntax.
-    * Support for __ES2017__ `async`/`await` syntax.
-  * Module bundling via Browserify.
-* __PostCSS__ as the choice of CSS transpiler.
-  * Includes: imports, nesting, purge, minification, autoprefixer.
-  * TailwindCSS (v1), configured to strip out unused classes from production builds.
-  * Easily build a dark mode using the included `dm` screen type: `dm:bg-gray-900`.
-* __SEO__ and other behind-the-scenes goodies.
-  * Meta tags for social networks (Open Graph/Twitter).
-  * Sitemap with `changeFrequency`; `robots.txt` (please also see [issue #7](https://github.com/hirusi/smix-eleventy-starter/issues/7)).
-  * An Atom feed with support for both `published` and `updated` dates on articles.
-  * Support for `content-description` meta tag.
-* A sane __fonts__ setup.
-  * The `font-sans` class is configured to use system-default fonts.
-  * Include fonts locally for enhanced privacy of your visitors.
-  * `typeset` for professional looking content.
-* Minified assets on production.
+## Reading.
+
+For nice text, there's [Typeset](https://www.npmjs.com/package/typeset). While it adds to the build time, it makes for a more polished reading experience.
+
+It seems [people do rely on RSS feeds](https://twitter.com/mxbck/status/1490698469312536578) even in 2022! Cheers to that; there's an Atom feed that is standards-compliant. It understands the published and updated datetime stamps on posts, and uses the RFC822 date format.
+
+For those pushing #IndieWeb, some basic Microformats2 support is included. From h-card to understand authorship, h-entry to understand a post, and h-feed to have Microformat feeds. This allows following a website in Microsub readers.
+
+Dark mode is included out of the box using a custom media query. (More in future-ready section below).
+
+Date filters such as for friendly dates (10 March 2020) and machine-parseable dates (ISO8601) are available to use via filters.
+
+## Discoverability/SEO.
+
+* Meta tags for social networks (Open Graph/Twitter).
+* Sitemap with `changeFrequency`; `robots.txt` (please also see [issue #7](https://github.com/hirusi/smix-eleventy-starter/issues/7)).
+* Support for `content-description` meta tag.
+
+## Writing
+
+Write in Markdown, much loved among developers. If you don't already know it, it's [easy to get started](https://commonmark.org/help/tutorial/). You can also use separate apps and then copy-paste your content into a new file. This allows for focusing on content first, before messing with any technicals. I recommend [Bear](https://bear.app/).
+
+### Linking to pages or posts.
+
+`getUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags.
+
+### Code blocks.
+
+Code blocks are made possible via [an Eleventy plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/). A few [Prism](https://prismjs.com/) themes are included for you to pick from.
+
+## Future-ready.
+
+The CSS is written with upcoming CSS standards in mind. This is made possible thanks to PostCSS. Inclusions: imports, nesting, purge, minification, autoprefixer, custom properties, custom media queries (this makes a dark mode easy to build!), custom selectors, and [LCH color coding](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/).
+
+JavaScript is transpiled via Babel, leaving you free to write ES2015+ JavaScript. Specifically, await/async syntax from ES2017 is also included.
+
+## Accessible.
+
+[Atkinson font by The Braille Institute](https://brailleinstitute.org/freefont) is included if you wish to use it. If not, there's a sans and serif fallback to system fonts.
+
+Care is taken to have good contrast all around.
+
+Should you choose to include some animations, do make use of a custom media query for those who prefer no motion.
+
+## Under The Hood.
+
 * __Prettier and editorconfig__ for consistent formatting.
 * __Modular gulp task files__ for easy configuration and modification.
 
 ## To-Do
 
-* Reload automatically after our assets change (filed [issue here](https://github.com/11ty/eleventy/issues/1125), waiting for response/PR approval). Please reload manually for now.
 * System default serif font class.
+* Feed per tag (this could easily go into 10s or 100s, but you know, choice is important!)
+* Syntax highlighting.
 * Scheduled blog posts.
 * Lazy-load images.
 * Responsive images.
