@@ -24,3 +24,12 @@
     background: var(--black);
   }
 }
+
+/* Although the universal selector does not have a specificity of its own, source order comes into play and can affect your overrides. To prevent this situation, we tuck this in at the end, acting as a sane default when nothing is specified. */
+* {
+  font-size: var(--text-base);
+  color: var(--gray-800);
+  line-height: 1.625;
+  margin-bottom: 1rem;
+}
+

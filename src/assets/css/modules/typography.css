@@ -2,13 +2,6 @@ body {
   font-family: var(--sans-fontset);
 }
 
-* {
-  font-size: var(--text-lg);
-  color: var(--gray-800);
-  line-height: 1.625;
-  margin-bottom: 1rem;
-}
-
 /* Exclusions to margin-bottom. */
 a {
   margin-bottom: 0;
