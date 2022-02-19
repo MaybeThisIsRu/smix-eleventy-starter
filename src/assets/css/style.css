@@ -10,7 +10,7 @@
 */
 @import "./modules/typography.css";
 @import "./modules/syntax.css";
-@import "./modules/atkinson-hyperlegible-font.css";
+/* @import "./modules/atkinson-hyperlegible-font.css"; */
 @import "./modules/sticky-footer.css";
 
 /* Pre-built components in use. */
