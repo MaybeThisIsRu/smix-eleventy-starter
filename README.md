@@ -10,7 +10,7 @@ For nice text, there's [Typeset](https://www.npmjs.com/package/typeset). While i
 
 It seems [people do rely on RSS feeds](https://twitter.com/mxbck/status/1490698469312536578) even in 2022! Cheers to that; there's an Atom feed that is standards-compliant. It understands the published and updated datetime stamps on posts, and uses the RFC822 date format.
 
-For those pushing #IndieWeb, some basic Microformats2 support is included. From h-card to understand authorship, h-entry to understand a post, and h-feed to have Microformat feeds. This allows following a website in Microsub readers.
+For those pushing #IndieWeb, some basic Microformats2 support is included. From h-card to understand authorship, h-entry to understand a post, and h-feed to have Microformat feeds. This allows following a website in [Microsub readers](https://indieweb.org/Microsub).
 
 Dark mode is included out of the box using a custom media query. (More in future-ready section below).
 
@@ -18,7 +18,7 @@ Date filters such as for friendly dates (10 March 2020) and machine-parseable da
 
 ## Discoverability/SEO.
 
-Meta tags for social networks (Open Graph as well as Twitter). This allows for a nice card display when you (or someone else) shares a link to your post or site. Support for `content-description` meta tag. This helps decide what text to show for a page/post when shared on social media, as well as in search engines.
+Meta tags for social networks (Open Graph as well as Twitter). This allows for a nice card display when you (or someone else) shares a link to your post or site. Support for `content-description` meta tag -- this helps decide what text to show for a page/post when shared on social media, as well as in search engines.
 
 Sitemap with `changeFrequency` -- so bots only come back when they need to. (please also see [issue #7](https://github.com/hirusi/smix-eleventy-starter/issues/7)). `robots.txt` is a cherry on the top -- I would also recommend using it to [hide your personal picture](https://rusingh.com/block-images-appearing-in-search/) if so desired.
 
@@ -43,15 +43,15 @@ Code blocks are made possible via [an Eleventy plugin](https://www.11ty.dev/docs
 
 The CSS is written with upcoming CSS standards in mind. This is made possible thanks to PostCSS. Inclusions: imports, nesting, purge, minification, autoprefixer, custom properties, custom media queries (this makes a dark mode easy to build!), custom selectors, and [LCH color coding](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/).
 
-JavaScript is transpiled via `esbuild`.
+JavaScript is transpiled and bundled via `esbuild`.
 
 ## Accessible.
 
-[Atkinson font by The Braille Institute](https://brailleinstitute.org/freefont) is included if you wish to use it. If not, there's a sans and serif fallback to system fonts.
+[Atkinson font by The Braille Institute](https://brailleinstitute.org/freefont) is included if you wish to use it. If not, there's a sans, serif, and mono fallback to system fonts.
 
 Care is taken to have good contrast all around.
 
-Should you choose to include some animations, do make use of a custom media query for those who prefer no motion:
+Should you choose to include some animations, do make use of a custom media query for those who prefer less motion:
 
 ```css
 /* Prefers reduced motion. */
