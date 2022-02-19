@@ -1,0 +1,9 @@
+.post-datetime,
+.post-tags {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+
+  & * {
+    font-size: var(--text-sm);
+  }
+}

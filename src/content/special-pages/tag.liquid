@@ -18,7 +18,7 @@ eleventyComputed:
 		{% assign articles = collections.articles | byTag: tag %}
 		<ul class="articles">
 			{% for article in articles %}
-    			{% include 'article-card' article:article %}
+    			{% include 'post-card' article:article %}
 			{% endfor %}
 		</ul>
 	</main>

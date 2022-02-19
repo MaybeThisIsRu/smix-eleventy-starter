@@ -8,12 +8,19 @@
 /*
 ** Remove this comment and the following imports to get a blank slate.
 */
-
 @import "./modules/typography.css";
 @import "./modules/syntax.css";
 @import "./modules/atkinson-hyperlegible-font.css";
-@import "base.css";
+@import "./modules/sticky-footer.css";
 
 /* Pre-built components in use. */
+@import "./components/container.css";
+@import "./components/post.css";
 @import "./components/author-card.css";
-@import "./components/article-card.css";
+@import "./components/post-card.css";
+
+@media screen and (--dm) {
+  body {
+    background: var(--black);
+  }
+}

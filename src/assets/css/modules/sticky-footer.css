@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+}
+
+.body-holder {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  & > header,
+  & > footer {
+    flex: none;
+
+    /* Cosmetic */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  & > main {
+    flex: 1 0 auto;
+  }
+}

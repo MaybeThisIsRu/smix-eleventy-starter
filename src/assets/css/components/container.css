@@ -1,0 +1,13 @@
+.container {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (--lg) {
+  .container {
+    width: 41.666667%;
+    margin-left: 20vw;
+    margin-right: auto;
+  }
+}
