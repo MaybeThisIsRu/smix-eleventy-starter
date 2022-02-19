@@ -1,5 +1,6 @@
 # 🌻 Smix
-__A gulp-based starter for Static Site Generators, preconfigured for Eleventy v1.0.__
+
+A standards-respecting starter kit for Eleventy. Go Indie.
 
 ⚠️ Currently undergoing maintenance along with some updates. Pivoting to an opinionated starter kit.
 
