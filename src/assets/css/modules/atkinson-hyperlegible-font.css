@@ -44,7 +44,6 @@
   font-display: swap;
 }
 
-html,
 body {
-  font-family: "Atkinson Hyperlegible";
+  font-family: "Atkinson Hyperlegible", var(--sans-fontset);
 }
