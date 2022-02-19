@@ -100,3 +100,4 @@ My content here.
 * Image pipeline.
 * Move PostCSS to its own npm script.
 * Re-do development and production docs as needed.
+* Searching posts.
