@@ -30,8 +30,6 @@
 	"license": "GNU GPLv3",
 	"devDependencies": {
 		"@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
-		"@types/gulp": "^4.0.8",
-		"@types/gulp-postcss": "^8.0.0",
 		"esbuild": "^0.14.21",
 		"esm": "^3.2.25",
 		"husky": "^4.3.8",
@@ -53,7 +51,6 @@
 		"fancy-log": "^1.3.3",
 		"gulp": "^4.0.2",
 		"gulp-concat": "^2.6.1",
-		"gulp-htmlmin": "^5.0.1",
 		"gulp-if": "^3.0.0",
 		"gulp-imagemin": "^6.2.0",
 		"gulp-postcss": "^9.0.1",
