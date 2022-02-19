@@ -10,7 +10,7 @@ For nice text, there's [Typeset](https://www.npmjs.com/package/typeset). While i
 
 It seems [people do rely on RSS feeds](https://twitter.com/mxbck/status/1490698469312536578) even in 2022! Cheers to that; there's an Atom feed that is standards-compliant. It understands the published and updated datetime stamps on posts, and uses the RFC822 date format.
 
-For those pushing #IndieWeb, some basic Microformats2 support is included. From h-card to understand authorship, h-entry to understand a post, and h-feed to have Microformat feeds. This allows following a website in [Microsub readers](https://indieweb.org/Microsub).
+For those pushing [#IndieWeb](https://www.smashingmagazine.com/2020/08/autonomy-online-indieweb/), some basic [Microformats2](https://indieweb.org/microformats2) support is included. From h-card to understand authorship, h-entry to understand a post, and h-feed to have Microformat feeds. This allows following a website in [Microsub readers](https://indieweb.org/Microsub).
 
 Dark mode is included out of the box using a custom media query. (More in future-ready section below).
 
