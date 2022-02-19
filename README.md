@@ -17,9 +17,10 @@ Date filters such as for friendly dates (10 March 2020) and machine-parseable da
 
 ## Discoverability/SEO.
 
-* Meta tags for social networks (Open Graph/Twitter).
-* Sitemap with `changeFrequency`; `robots.txt` (please also see [issue #7](https://github.com/hirusi/smix-eleventy-starter/issues/7)).
-* Support for `content-description` meta tag.
+Meta tags for social networks (Open Graph as well as Twitter). This allows for a nice card display when you (or someone else) shares a link to your post or site. Support for `content-description` meta tag. This helps decide what text to show for a page/post when shared on social media, as well as in search engines.
+
+Sitemap with `changeFrequency` -- so bots only come back when they need to. (please also see [issue #7](https://github.com/hirusi/smix-eleventy-starter/issues/7)). `robots.txt` is a cherry on the top -- I would also recommend using it to [hide your personal picture](https://rusingh.com/block-images-appearing-in-search/) if so desired.
+
 
 ## Writing
 
@@ -89,30 +90,12 @@ My content here.
 ### Misc Features
 
 * __Prettier and editorconfig__ for consistent formatting of the codebase.
-* __Modular gulp task files__ for easy configuration and modification.
 
 ## To-Do
 
 * Feed per tag (this could easily go into 10s or 100s, but you know, choice is important!)
 * Syntax highlighting.
 * Scheduled blog posts.
-* Lazy-load images.
-* Responsive images.
-
-## How to Use
-
-### Local Development
-
-See [development docs](docs/development.md).
-
-### Staging
-
-`ELEVENTY_ENV` must be set to `staging`. 
-
-* `npm run staging`
-
-### Production
-
-`ELEVENTY_ENV` must be set to `production`.
-
-* `npm run prod`
+* Image pipeline.
+* Move PostCSS to its own npm script.
+* Re-do development and production docs as needed.
