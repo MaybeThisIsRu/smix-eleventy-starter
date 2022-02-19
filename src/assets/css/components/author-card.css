@@ -20,7 +20,13 @@ article > footer > .author-card {
 .author-name {
   margin-top: 0;
 
-  @media screen and (--lg) {
+  & a {
+    font-size: inherit;
+  }
+}
+
+@media screen and (--lg) {
+  .author-name {
     margin-top: 0;
   }
 }
