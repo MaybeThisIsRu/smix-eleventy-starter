@@ -11,7 +11,10 @@
         <meta name="robots" content="noindex">
 	{%- endif %}
 	
+    {% comment %} RSS/Atom feed {% endcomment %}
 	<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Articles by {% getOwnerInfo 'name' %}" />
+    
+    {% comment %} IndieWeb/microformats2 {% endcomment %}
     {% if pageUrl == '/' -%}
         {% comment %} Add any links to h-feeds here {% endcomment %}
         <link rel="feed" href="/articles/">
