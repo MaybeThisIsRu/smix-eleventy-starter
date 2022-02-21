@@ -95,7 +95,6 @@ My content here.
 ## To-Do
 
 * Feed per tag (this could easily go into 10s or 100s, but you know, choice is important!)
-* Syntax highlighting.
 * Scheduled blog posts.
 * Image pipeline.
 * Move PostCSS to its own npm script.
