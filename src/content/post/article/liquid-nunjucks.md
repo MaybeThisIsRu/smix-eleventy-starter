@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post/article
 date: 2020-04-22 09:00:00 +05:30
 draft: false
 

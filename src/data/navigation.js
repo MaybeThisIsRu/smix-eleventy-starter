@@ -5,7 +5,7 @@ module.exports = [
 	},
 	{
 		title: "Articles",
-		link: "/articles/"
+		link: "/archive/post/article/"
 	},
 	{
 		title: "About",

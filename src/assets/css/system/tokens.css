@@ -63,6 +63,12 @@
   --text-5xl: 3rem;
 
   /* ** Spacing */
+  --space-xs: 0.625rem;
+  --space-sm: 0.875rem;
+  --space-base: 1rem;
+  --space-lg: 1.25rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 1.875rem;
 
   /* ** Borders */
   --rounded-sm: 0.125rem;

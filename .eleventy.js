@@ -55,7 +55,8 @@ module.exports = function(config) {
 
 	// *** Collections
 	// Articles
-	config.addCollection("articles", collections.articles);
+	config.addCollection("primary", collections.primary);
+	// config.addCollection("secondary", );
 
 	// *** Misc
 	// Copy fonts as-is.

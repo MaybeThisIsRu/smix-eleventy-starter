@@ -3,12 +3,25 @@ const collectionFilters = require("./filters/collections");
 const utils = require("./utils");
 
 // *** Content Globs
-const articlesDir = "src/content/articles/*.md";
+const articleDir = "src/content/post/article/*.md";
+const noteDir = "src/content/post/note/*.md";
 
 module.exports = {
-	articles: collection => {
+	article: collection => {
 		return collection
-			.getFilteredByGlob(articlesDir)
+			.getFilteredByGlob(articleDir)
+			.filter(collectionFilters.publishedItems)
+			.sort(collectionFilters.sortByDate);
+	},
+	note: collection => {
+		return collection
+			.getFilteredByGlob(noteDir)
+			.filter(collectionFilters.publishedItems)
+			.sort(collectionFilters.sortByDate);
+	},
+	primary: collection => {
+		return collection
+			.getFilteredByGlob([articleDir, noteDir])
 			.filter(collectionFilters.publishedItems)
 			.sort(collectionFilters.sortByDate);
 	}

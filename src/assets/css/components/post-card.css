@@ -1,4 +1,16 @@
-.post__published-date {
-  font-size: var(--text-sm);
+.post {
   margin-top: 0;
+  margin-bottom: var(--space-2xl);
+}
+
+.post__published-date {
+  font-size: var(--text-base);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.post__title {
+  color: inherit;
+  margin-top: var(--space-xs);
+  margin-bottom: 0;
 }

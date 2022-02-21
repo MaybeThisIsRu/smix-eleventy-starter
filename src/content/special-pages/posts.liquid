@@ -1,0 +1,19 @@
+---
+layout: default
+title: "Articles, notes, images, and replies."
+pagination:
+  data: collections.primary
+  size: 10
+  alias: posts
+permalink: "/archive/post/article/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}/{% endif %}"
+eleventyComputed:
+  content-description: "Articles, notes, images, and replies by {% getOwnerInfo 'name' %}"
+---
+<section>
+	{% include 'page-title' title:title %}
+	<main>
+		{% for post in posts %}
+			{% include 'post-card' post:post %}
+		{% endfor %}
+	</main>
+</section>

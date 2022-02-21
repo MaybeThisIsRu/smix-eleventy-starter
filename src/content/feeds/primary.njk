@@ -2,7 +2,7 @@
 permalink: "/feed.xml"
 eleventyExcludeFromCollections: true
 metadata:
-  title: "Article by/from Site Name"
+  title: "Articles, notes, replies, and photos by/from Site Name"
   subtitle: "Site description/subtitle"
   url: "http://localhost:8080"
   author:
@@ -20,10 +20,10 @@ metadata:
         <name>{{ metadata.author.name }}</name>
         <email>{{ metadata.author.email }}</email>
     </author>
-    {% set collectionSize = collections.articles.length %}
+    {% set collectionSize = collections.primary.length %}
     {% if collectionSize %}
-    <updated>{{ collections.articles | rssLastUpdatedDate }}</updated>
-    {% for article in collections.articles %}
+    <updated>{{ collections.primary | rssLastUpdatedDate }}</updated>
+    {% for article in collections.primary %}
     {% set absolutePostUrl %}{{ article.url | absoluteUrl(config.siteBaseUrl) }}{% endset %}
     <entry>
         <title>{{ article.data.title }}</title>

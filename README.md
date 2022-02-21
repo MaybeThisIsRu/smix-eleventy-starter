@@ -10,8 +10,6 @@ For nice text, there's [Typeset](https://www.npmjs.com/package/typeset). While i
 
 It seems [people do rely on RSS feeds](https://twitter.com/mxbck/status/1490698469312536578) even in 2022! Cheers to that; there's an Atom feed that is standards-compliant. It understands the published and updated datetime stamps on posts, and uses the RFC822 date format.
 
-For those pushing [#IndieWeb](https://www.smashingmagazine.com/2020/08/autonomy-online-indieweb/), some basic [Microformats2](https://indieweb.org/microformats2) support is included. From h-card to understand authorship, h-entry to understand a post, and h-feed to have Microformat feeds. This allows following a website in [Microsub readers](https://indieweb.org/Microsub).
-
 Dark mode is included out of the box using a custom media query. (More in future-ready section below).
 
 Date filters such as for friendly dates (10 March 2020) and machine-parseable dates (ISO8601) are available to use via filters.
@@ -32,12 +30,30 @@ Write in Markdown, much loved among developers. If you don't already know it, it
 `postUrl` shortcode similar to Jekyll's `post_url` and `link` liquid tags:
 
 ```liquid
-{% postUrl collections.articles 'on-burnout' %}
+{% postUrl collections.primary 'on-burnout' %}
 ```
 
 ### Code blocks.
 
 Code blocks are made possible via [an Eleventy plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/). Many [Prism](https://prismjs.com/) themes are [available to use](https://github.com/PrismJS/prism-themes/tree/master/themes).
+
+## IndieWeb
+
+For those pushing [#IndieWeb](https://www.smashingmagazine.com/2020/08/autonomy-online-indieweb/), some basic [Microformats2](https://indieweb.org/microformats2) support is included. From h-card to understand authorship, h-entry to understand a post, and h-feed to have Microformat feeds. This allows following a website in [Microsub readers](https://indieweb.org/Microsub).
+
+The following [post-types](https://indieweb.org/posts#Types_of_Posts) are (or will be) supported:
+
+- 📄 Article
+- 📔 Note
+- Reply
+- Photo
+- Like
+- Repost
+
+Two microformats2 feeds will be offered via `h-feed`:
+
+- Primary, which includes article, note, reply, and image.
+- Secondary, which includes like and repost.
 
 ## Future-ready.
 

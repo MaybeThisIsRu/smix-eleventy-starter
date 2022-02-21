@@ -5,20 +5,20 @@ pagination:
     size: 1
     alias: tag
     filter:
-      - articles
+      - primary
       - all
-permalink: /articles/tag/{{ tag }}/
-content-description: Tag-based archive page of articles by {% getOwnerInfo 'name' %}
+permalink: /archive/tag/{{ tag }}/
+content-description: Archive for tagged posts by  {% getOwnerInfo 'name' %}
 eleventyComputed:
-  title: "Archive of articles with tag '{{tag}}'"
+  title: "Archive of posts with tag '{{tag}}'"
 ---
 <div>
 	{% include 'page-title' title:title %}
 	<main>
-		{% assign articles = collections.articles | byTag: tag %}
+		{% assign posts = collections.primary | byTag: tag %}
 		<ul class="articles">
-			{% for article in articles %}
-    			{% include 'post-card' article:article %}
+			{% for post in posts %}
+    			{% include 'post-card' post:post %}
 			{% endfor %}
 		</ul>
 	</main>

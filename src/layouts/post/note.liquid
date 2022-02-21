@@ -1,11 +1,11 @@
 ---
 layout: default
-permalink: "/articles/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}/"
+permalink: "/post/note/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
 ---
 
 <article class="h-entry">
     <header class="mb-5 lg:mb-10">
-        <h1 class="p-name">{{ title }}</h1>
+        <h1 class="p-name"></h1>
         <p class="post-datetime">
             <a href="{{page.url}}" class="u-url u-uid"><time datetime="{{page.date | dateInISO8601}}" class="dt-published">{{ page.date | friendlyDate }}</time></a>
             {% if updated %}
@@ -21,7 +21,7 @@ permalink: "/articles/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}/"
 				<span class="text-gray-800 dm:text-gray-300 text-sm mr-1">Tagged</span>
 				{% for tag in tags %}
 				{% assign tag_name = tag | slugify %}
-					<a href="{{ '/articles/tag/' | append: tag_name }}" class="text-gray-600 dm:text-gray-400 text-sm hover:text-indiple-regular mr-1 p-category">#{{tag}}</a>
+					<a href="{{ '/archive/tag/' | append: tag_name }}" class="text-gray-600 dm:text-gray-400 text-sm hover:text-indiple-regular mr-1 p-category">#{{tag}}</a>
 				{% endfor %}
 			</div>
 		{%- endif -%}

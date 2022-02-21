@@ -1,8 +1,21 @@
-<li class="post h-entry">
-    <a
-        class="post__title u-url u-uid p-name"
-        href="{{ article.url }}"
-    >{{ article.data.title -}}
+<article class="post h-entry">
+    <a class="u-url u-uid" href="{{ post.url }}">
+        <time
+            class="post__published-date dt-published"
+            datetime="{{ post.date | dateInISO8601 }}"
+        >
+            {{- post.date | friendlyDate -}}
+        </time>
     </a>
-    <p class="post__published-date dt-published">{{ article.date | friendlyDate }}</p>
-</li>
+
+    {% if post.data.layout == "post/article" %}
+        <h1
+            class="p post__title p-name"
+        >{{ post.data.title -}}
+        </h1>
+    {% elsif post.data.layout == "post/note" %}
+        <p class="e-content">{{ post.templateContent }}</p>
+    {% endif %}
+
+</article>
+
