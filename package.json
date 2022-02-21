@@ -12,7 +12,8 @@
 		"dev:js": "esbuild --watch --bundle --sourcemap --outfile=dist/assets/js/index.js src/assets/js/index.js",
 		"dev:jsb": "esbuild --watch --bundle --sourcemap --outfile=dist/assets/js/$npm_config_out src/assets/js/$npm_config_in",
 		"dev": "run-s dev:clean dev:gulp dev:js",
-		"prod": "gulp production",
+		"prod": "run-s prod:js prod:gulp",
+		"prod:gulp": "gulp production",
 		"prod:js": "esbuild --minify --bundle --outfile=dist/assets/js/index.js src/assets/js/index.js",
 		"force-prod": "NODE_ENV=production gulp production",
 		"test": "echo \"Error: no test specified\" && exit 1"
