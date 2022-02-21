@@ -13,19 +13,19 @@
 					"slug": "email",
 					"label": "Email",
 					"username": "",
-					"link": "mailto:inbox@rusingh.com"
+					"link": "mailto:smix@rusingh.com"
 				},
 				{
 					"slug": "twitter",
 					"label": "Twitter",
-					"username": "hirusi",
-					"link": "https://twitter.com/hirusi"
+					"username": "MaybeThisIsRu",
+					"link": "https://twitter.com/MaybeThisIsRu"
 				},
 				{
 					"slug": "github",
 					"label": "GitHub",
-					"username": "hirusi",
-					"link": "https://github.com/hirusi"
+					"username": "MaybeThisIsRu",
+					"link": "https://github.com/MaybeThisIsRu"
 				}
 			],
 			"picture": "/assets/img/jane-doe-this-person-does-not-exist.jpeg"
