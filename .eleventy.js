@@ -15,6 +15,8 @@ module.exports = function(config) {
 
 	// *** Plugins
 	config.addPlugin(require("@11ty/eleventy-plugin-rss"));
+	// Syntax highlighting
+	config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
 	// Typeset
 	if (env.is11tyProduction || env.is11tyStaging)
 		config.addPlugin(require("eleventy-plugin-typeset")());

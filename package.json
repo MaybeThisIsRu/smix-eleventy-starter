@@ -29,6 +29,7 @@
 	},
 	"license": "GNU GPLv3",
 	"devDependencies": {
+		"@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
 		"@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
 		"esbuild": "^0.14.21",
 		"esm": "^3.2.25",
