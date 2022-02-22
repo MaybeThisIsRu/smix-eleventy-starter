@@ -1,4 +1,4 @@
-<article class="post h-entry" data-type="{% if post.data.layout == 'post/article' %}article{% elsif post.data.layout == 'post/note' %}note{% elsif post.data.layout == "post/photo"%}photo{% elsif post.data.layout == "post/reply-context"%}reply{% endif%}">
+<article class="post h-entry" data-type="{% if post.data.layout == 'post/article' %}article{% elsif post.data.layout == 'post/note' %}note{% elsif post.data.layout == "post/photo"%}photo{% elsif post.data.layout == "post/reply-context" or post.data.layout == "post/reply" %}reply{% endif%}">
     <a class="u-url u-uid" href="{{ post.url }}">
         <time
             class="post__published-date dt-published"
