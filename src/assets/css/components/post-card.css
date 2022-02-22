@@ -54,3 +54,28 @@
     }
   }
 }
+
+.post[data-type^="photo"] {
+  position: relative;
+
+  & .u-photo {
+    margin-top: var(--space-lg);
+    margin-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: calc(var(--space-lg) * -1);
+    content: "📷";
+  }
+}
+
+@media screen and (--lg) {
+  .post[data-type^="photo"] {
+    &::before {
+      left: calc(var(--space-lg) * -4);
+      content: "📷 Photo";
+    }
+  }
+}

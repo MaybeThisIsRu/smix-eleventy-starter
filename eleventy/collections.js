@@ -5,6 +5,7 @@ const utils = require("./utils");
 // *** Content Globs
 const articleDir = "src/content/post/article/*.md";
 const noteDir = "src/content/post/note/*.md";
+const photoDir = "src/content/post/photo/*.md";
 
 module.exports = {
 	article: collection => {
@@ -19,9 +20,15 @@ module.exports = {
 			.filter(collectionFilters.publishedItems)
 			.sort(collectionFilters.sortByDate);
 	},
+	photo: collection => {
+		return collection
+			.getFilteredByGlob(photoDir)
+			.filter(collectionFilters.publishedItems)
+			.sort(collectionFilters.sortByDate);
+	},
 	primary: collection => {
 		return collection
-			.getFilteredByGlob([articleDir, noteDir])
+			.getFilteredByGlob([articleDir, noteDir, photoDir])
 			.filter(collectionFilters.publishedItems)
 			.sort(collectionFilters.sortByDate);
 	}

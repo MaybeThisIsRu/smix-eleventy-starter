@@ -1,4 +1,4 @@
-<article class="post h-entry" data-type="{% if post.data.layout == 'post/article' %}article{% elsif post.data.layout == 'post/note' %}note{% endif%}">
+<article class="post h-entry" data-type="{% if post.data.layout == 'post/article' %}article{% elsif post.data.layout == 'post/note' %}note{% elsif post.data.layout == "post/photo"%}photo{% endif%}">
     <a class="u-url u-uid" href="{{ post.url }}">
         <time
             class="post__published-date dt-published"
@@ -15,6 +15,9 @@
         </h1>
     {% elsif post.data.layout == "post/note" %}
         <div class="e-content">{{ post.templateContent }}</div>
+    {% elsif post.data.layout == "post/photo" %}
+        <img src="/assets/img/{{ post.data.photo }}" alt="{{ post.data.photo-alt }}" class="u-photo">
+        <div class="p-content">{{ post.templateContent }}</div>
     {% endif %}
 
 </article>
