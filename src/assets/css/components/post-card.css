@@ -21,8 +21,8 @@
   &::before {
     position: absolute;
     top: 0;
-    left: calc(var(--space-xl) * -1);
-    content: "📄";
+    left: calc(var(--space-xl) * -4);
+    content: "📄 Article";
   }
 }
 
@@ -32,7 +32,7 @@
   &::before {
     position: absolute;
     top: 0;
-    left: calc(var(--space-xl) * -1);
-    content: "📔";
+    left: calc(var(--space-xl) * -4);
+    content: "📔 Note";
   }
 }
