@@ -26,14 +26,14 @@ permalink: "/post/reply/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
 		{%- endif -%}
     </header>
     <main>
+        <section class="p-name e-content">
+            {{ content }}
+        </section>
         <section clas="u-in-reply-to h-cite">In reply to <a     href="{{ reply-to }}" class="u-url">{{ reply-to }}</a>:
             <blockquote class="p-content">
                 {{ reply-context }}
             </blockquote>
         </section>
-        <div class="p-name e-content">
-            {{ content }}
-        </div>
     </main>
     <footer>
         {% render 'author-card',
