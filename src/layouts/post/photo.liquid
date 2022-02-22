@@ -3,7 +3,7 @@ layout: default
 permalink: "/post/photo/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
 ---
 
-<article class="h-entry">
+<article class="post h-entry" data-type="photo">
     <header class="mb-5 lg:mb-10">
         <p class="post-datetime">
             <a href="{{page.url}}" class="u-url u-uid"><time datetime="{{page.date | dateInISO8601}}" class="dt-published">{{ page.date | friendlyDate }}</time></a>
@@ -26,7 +26,11 @@ permalink: "/post/photo/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
 		{%- endif -%}
     </header>
     <main>
-        <img src="/assets/img/{{ photo }}" alt="{{ photo-alt }}" class="u-photo">
+        <section class="post-photos">
+        {% for photo in photo %}
+            <img src="/assets/img/{{ photo.src }}" alt="{{ photo.alt }}" class="u-photo">
+        {% endfor %}
+        </section>
         <div class="p-content">{{ content }}</div>
     </main>
     <footer>

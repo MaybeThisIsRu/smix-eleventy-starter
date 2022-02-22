@@ -61,6 +61,7 @@
   & .u-photo {
     margin-top: var(--space-lg);
     margin-bottom: 0;
+    max-width: 100%;
   }
 
   &::before {
@@ -73,6 +74,17 @@
 
 @media screen and (--lg) {
   .post[data-type^="photo"] {
+    & .post-photos {
+      display: flex;
+      flex-wrap: row;
+      gap: var(--space-sm);
+      grid-gap: var(--space-sm);
+    }
+
+    & .u-photo {
+      flex: 0 1 auto;
+    }
+
     &::before {
       left: calc(var(--space-lg) * -4);
       content: "📷 Photo";

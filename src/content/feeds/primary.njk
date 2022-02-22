@@ -33,9 +33,11 @@ metadata:
         <updated>{% if post.data.updated %}{{ post.data.updated | dateInISO8601 }}{% else %}{{ post.date | dateInISO8601 }}{% endif %}</updated>
         <id>{{ absolutePostUrl }}</id>
         <content type="html">
-            {% if post.data.photo and post.data['photo-alt'] %}
+            {% if post.data.photo %}
             <![CDATA[
-    <img src="{{ post.data.photo | absoluteUrl(config.siteBaseUrl + 'images/') }}" alt="{{ post.data['photo-alt']}}">
+    {% for photo in post.data.photo %}
+    <img src="{{ photo.src | absoluteUrl(config.siteBaseUrl + 'images/') }}" alt="{{ photo.alt }}">
+    {% endfor %}
     {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl) | safe }}
 ]]>
             {% else %}

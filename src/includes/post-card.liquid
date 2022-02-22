@@ -16,7 +16,11 @@
     {% elsif post.data.layout == "post/note" %}
         <div class="e-content">{{ post.templateContent }}</div>
     {% elsif post.data.layout == "post/photo" %}
-        <img src="/assets/img/{{ post.data.photo }}" alt="{{ post.data.photo-alt }}" class="u-photo">
+        <section class="post-photos">
+        {% for photo in post.data.photo %}
+            <img src="/assets/img/{{ photo.src }}" alt="{{ photo.alt }}" class="u-photo">
+        {% endfor %}
+        </section>
         <div class="p-content">{{ post.templateContent }}</div>
     {% endif %}
 
