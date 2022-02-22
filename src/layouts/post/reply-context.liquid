@@ -1,0 +1,46 @@
+---
+layout: default
+permalink: "/post/reply/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
+---
+
+<article class="post h-entry" data-type="reply">
+    <header class="mb-5 lg:mb-10">
+        <p class="post-datetime">
+            <a href="{{page.url}}" class="u-url u-uid"><time datetime="{{page.date | dateInISO8601}}" class="dt-published">{{ page.date | friendlyDate }}</time></a>
+            {% if updated %}
+                {% assign publishDate = page.date | friendlyDate %}
+                {% assign updateDate = updated | friendlyDate %}
+                {% unless publishDate == updateDate %}
+                    <span class=" text-italic">(last updated on <time class="dt-updated" datetime="{{ updated | dateInISO8601 }}">{{ updated | friendlyDate }}</time>)</span>
+                {% endunless %}
+            {% endif %}
+        </p>
+        {%- if tags.size > 0 -%}
+			<div class="post-tags mb-4 flex flex-row flex-wrap items-top lg:items-center">
+				<span class="text-gray-800 dm:text-gray-300 text-sm mr-1">Tagged</span>
+				{% for tag in tags %}
+				{% assign tag_name = tag | slugify %}
+					<a href="{{ '/archive/tag/' | append: tag_name }}" class="text-gray-600 dm:text-gray-400 text-sm hover:text-indiple-regular mr-1 p-category">#{{tag}}</a>
+				{% endfor %}
+			</div>
+		{%- endif -%}
+    </header>
+    <main>
+        <section clas="u-in-reply-to h-cite">In reply to <a     href="{{ reply-to }}" class="u-url">{{ reply-to }}</a>:
+            <blockquote class="p-content">
+                {{ reply-context }}
+            </blockquote>
+        </section>
+        <div class="p-name e-content">
+            {{ content }}
+        </div>
+    </main>
+    <footer>
+        {% render 'author-card',
+            authors: site.authors,
+            slug: page.author,
+            hide: true,
+            post: true
+        %}
+    </footer>
+</article>

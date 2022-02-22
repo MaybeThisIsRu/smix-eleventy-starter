@@ -1,4 +1,4 @@
-<article class="post h-entry" data-type="{% if post.data.layout == 'post/article' %}article{% elsif post.data.layout == 'post/note' %}note{% elsif post.data.layout == "post/photo"%}photo{% endif%}">
+<article class="post h-entry" data-type="{% if post.data.layout == 'post/article' %}article{% elsif post.data.layout == 'post/note' %}note{% elsif post.data.layout == "post/photo"%}photo{% elsif post.data.layout == "post/reply-context"%}reply{% endif%}">
     <a class="u-url u-uid" href="{{ post.url }}">
         <time
             class="post__published-date dt-published"
@@ -22,6 +22,15 @@
         {% endfor %}
         </section>
         <div class="p-content">{{ post.templateContent }}</div>
+    {% elsif post.data.layout == "post/reply-context" %}
+        <section clas="u-in-reply-to h-cite">In reply to <a     href="{{ post.data.reply-to }}" class="u-url">{{ post.data.reply-to }}</a>:
+            <blockquote class="p-content">
+            {{ post.data.reply-context }}
+            </blockquote>
+        </section>
+        <div class="p-name e-content">
+            {{ post.templateContent }}
+        </div>
     {% endif %}
 
 </article>

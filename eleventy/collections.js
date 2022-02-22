@@ -6,6 +6,7 @@ const utils = require("./utils");
 const articleDir = "src/content/post/article/*.md";
 const noteDir = "src/content/post/note/*.md";
 const photoDir = "src/content/post/photo/*.md";
+const replyDir = "src/content/post/reply/*.md";
 
 module.exports = {
 	article: collection => {
@@ -26,9 +27,15 @@ module.exports = {
 			.filter(collectionFilters.publishedItems)
 			.sort(collectionFilters.sortByDate);
 	},
+	reply: collection => {
+		return collection
+			.getFilteredByGlob(replyDir)
+			.filter(collectionFilters.publishedItems)
+			.sort(collectionFilters.sortByDate);
+	},
 	primary: collection => {
 		return collection
-			.getFilteredByGlob([articleDir, noteDir, photoDir])
+			.getFilteredByGlob([articleDir, noteDir, photoDir, replyDir])
 			.filter(collectionFilters.publishedItems)
 			.sort(collectionFilters.sortByDate);
 	}

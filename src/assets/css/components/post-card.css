@@ -91,3 +91,23 @@
     }
   }
 }
+
+.post[data-type^="reply"] {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: calc(var(--space-lg) * -1);
+    content: "📔";
+  }
+}
+
+@media screen and (--lg) {
+  .post[data-type^="reply"] {
+    &::before {
+      left: calc(var(--space-lg) * -4);
+      content: "↪ Reply";
+    }
+  }
+}
