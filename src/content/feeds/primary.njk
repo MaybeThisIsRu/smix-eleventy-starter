@@ -36,7 +36,7 @@ metadata:
             {% if post.data.photo %}
             <![CDATA[
     {% for photo in post.data.photo %}
-    <img src="{{ photo.src | absoluteUrl(config.siteBaseUrl + '/images/') }}" alt="{{ photo.alt }}">
+    <img src="{{ photo.src | absoluteUrl(config.siteBaseUrl + '/assets/img/') }}" alt="{{ photo.alt }}">
     {% endfor %}
     {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
 ]]>
