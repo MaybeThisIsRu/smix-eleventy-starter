@@ -45,15 +45,12 @@ The following [post-types](https://indieweb.org/posts#Types_of_Posts) are (or wi
 
 - 📄 Article
 - 📔 Note
-- Reply
-- Photo
-- Like
-- Repost
+- ↪ Reply
+- 📷 Photo
 
-Two microformats2 feeds will be offered via `h-feed`:
+A single microformats2 feeds will be offered via `h-feed`. This will include articles, notes, replies (with or without context), and image(s).
 
-- Primary, which includes article, note, reply, and image.
-- Secondary, which includes like and repost.
+To ease the publishing process for these post types, a [companion CLI utility is being developed](https://github.com/MaybeThisIsRu/smix-post-creator).
 
 ## Future-ready.
 
@@ -115,4 +112,3 @@ My content here.
 * Image pipeline.
 * Move PostCSS to its own npm script.
 * Re-do development and production docs as needed.
-* Searching posts.
