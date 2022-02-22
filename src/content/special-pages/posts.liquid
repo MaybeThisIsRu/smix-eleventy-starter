@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Articles, notes, images, and replies."
+title: "Articles, notes, photos, and replies."
 pagination:
   data: collections.primary
   size: 10
   alias: posts
 permalink: "/archive/post/primary/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}/{% endif %}"
 eleventyComputed:
-  content-description: "Articles, notes, images, and replies by {% getOwnerInfo 'name' %}"
+  content-description: "Articles, notes, photos, and replies by {% getOwnerInfo 'name' %}"
 ---
 <section>
 	{% include 'page-title' title:title %}
