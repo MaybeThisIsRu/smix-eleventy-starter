@@ -21,8 +21,17 @@
   &::before {
     position: absolute;
     top: 0;
-    left: calc(var(--space-xl) * -4);
-    content: "📄 Article";
+    left: calc(var(--space-lg) * -1);
+    content: "📄";
+  }
+}
+
+@media screen and (--lg) {
+  .post[data-type^="article"] {
+    &::before {
+      left: calc(var(--space-lg) * -4);
+      content: "📄 Article";
+    }
   }
 }
 
@@ -32,7 +41,16 @@
   &::before {
     position: absolute;
     top: 0;
-    left: calc(var(--space-xl) * -4);
-    content: "📔 Note";
+    left: calc(var(--space-lg) * -1);
+    content: "📔";
+  }
+}
+
+@media screen and (--lg) {
+  .post[data-type^="note"] {
+    &::before {
+      left: calc(var(--space-lg) * -4);
+      content: "📔 Note";
+    }
   }
 }
