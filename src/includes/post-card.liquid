@@ -32,6 +32,13 @@
             {{ post.data.reply-context }}
             </blockquote>
         </section>
+    {% elsif post.data.layout == "post/reply" %}
+        <section class="p-name e-content">
+            {{ post.templateContent }}
+        </section>
+        <hr />
+        <p class="u-in-reply-to">In reply to <a href="{{ post.data.reply-to }}" class="u-url">{{ post.data.reply-to }}</a>.
+        </p>
     {% endif %}
 
 </article>
