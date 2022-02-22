@@ -15,6 +15,8 @@ content-description: Upset with Firefox's performance, I decided to trial other 
 author: 'jane-doe'
 ---
 
+[This post originally appeared on rusingh.com](https://rusingh.com/firefox-alternative-vivaldi/).
+
 I love Firefox, and I adore Mozilla as a company doing the right things for the health and longevity of an open web -- even when no one else seems to care.
 
 However, I have long complained of its performance on desktop (to myself, or publicly) for a [number](https://fosstodon.org/web/statuses/104312278659407479) of [times](https://fosstodon.org/web/statuses/104631969365245588) now. Pages render so slowly, and the whole affair seems janky at the least. It's probably the Gecko engine at play here, and [WebRender should help](https://hacks.mozilla.org/2017/10/the-whole-web-at-maximum-fps-how-webrender-gets-rid-of-jank/) matters.
