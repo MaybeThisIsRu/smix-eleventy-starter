@@ -14,7 +14,7 @@
         >{{ post.data.title -}}
         </h1>
     {% elsif post.data.layout == "post/note" %}
-        <p class="e-content">{{ post.templateContent }}</p>
+        <div class="e-content">{{ post.templateContent }}</div>
     {% endif %}
 
 </article>
