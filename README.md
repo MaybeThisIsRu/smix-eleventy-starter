@@ -41,16 +41,16 @@ Code blocks are made possible via [an Eleventy plugin](https://www.11ty.dev/docs
 
 For those pushing [#IndieWeb](https://www.smashingmagazine.com/2020/08/autonomy-online-indieweb/), some basic [Microformats2](https://indieweb.org/microformats2) support is included. From h-card to understand authorship, h-entry to understand a post, and h-feed to have Microformat feeds. This allows following a website in [Microsub readers](https://indieweb.org/Microsub).
 
-The following [post-types](https://indieweb.org/posts#Types_of_Posts) are (or will be) supported:
+The following [post-types](https://indieweb.org/posts#Types_of_Posts) are supported:
 
 - 📄 Article
 - 📔 Note
 - ↪ Reply
 - 📷 Photo
 
-A single microformats2 feeds will be offered via `h-feed`. This will include articles, notes, replies (with or without context), and image(s).
+A single microformats2 feeds will be offered via `h-feed`. This will include articles, notes, replies (with or without context), and image(s). These post types also seamlessly work in the Atom feed.
 
-To ease the publishing process for these post types, a [companion CLI utility is being developed](https://github.com/MaybeThisIsRu/smix-post-creator).
+To ease the publishing process for the aforementioned post types, a [companion CLI utility is being developed](https://github.com/MaybeThisIsRu/smix-post-creator).
 
 ## Future-ready.
 
