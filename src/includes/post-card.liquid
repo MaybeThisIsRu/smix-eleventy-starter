@@ -23,14 +23,15 @@
         </section>
         <div class="p-content">{{ post.templateContent }}</div>
     {% elsif post.data.layout == "post/reply-context" %}
-        <section class="u-in-reply-to h-cite">In reply to <a     href="{{ post.data.reply-to }}" class="u-url">{{ post.data.reply-to }}</a>:
+        <div class="p-name e-content">
+            {{ post.templateContent }}
+        </div>
+        <hr/>
+        <section class="u-in-reply-to h-cite">In reply to <a href="{{ post.data.reply-to }}" class="u-url">{{ post.data.reply-to }}</a>:
             <blockquote class="p-content">
             {{ post.data.reply-context }}
             </blockquote>
         </section>
-        <div class="p-name e-content">
-            {{ post.templateContent }}
-        </div>
     {% endif %}
 
 </article>
