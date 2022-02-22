@@ -32,7 +32,8 @@ Well, is two days enough for a judgement? Probably. I spend a lot of time on the
 * Customization. I really enjoyed having a proper menu bar at the top. I wish Firefox had this option.
 * Absolutely adorable was the browser changing its accent based on the tab open. It made the web feel a little more fun and personal. 😀
 
-  ![](/assets/img/2020/08/vivaldi_fosstodon.png)![](/assets/img/2020/08/vivaldo_plausible.png)
+  ![](/assets/img/vivaldi_fosstodon.png)
+  ![](/assets/img/vivaldi_plausible.png)
 * The way the visibility of hidden add-ons is handled! Click a toggle, and they pop up amongst the other permanently visible add-ons. No context loss. No searching in another menu.
 
 ## Dislikes

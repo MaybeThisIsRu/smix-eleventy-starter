@@ -217,6 +217,10 @@ pre {
   margin-bottom: calc(0.5rem * var(--multiplier));
 }
 
+img {
+  max-width: 100%;
+}
+
 @media screen and (--dm) {
   img {
     opacity: 0.85;
