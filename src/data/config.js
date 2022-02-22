@@ -4,10 +4,10 @@ module.exports = function() {
 	var src = {
 		default: {},
 		development: {
-			siteBaseUrl: "http://localhost:8080/"
+			siteBaseUrl: "http://localhost:8080"
 		},
 		production: {
-			siteBaseUrl: "https://rusingh.com/"
+			siteBaseUrl: "https://smix.netlify.app"
 		}
 	};
 

@@ -13,7 +13,7 @@ metadata:
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ metadata.title }}</title>
     <subtitle>{{ metadata.subtitle }}</subtitle>
-    <link href="{{ permalink | absoluteUrl(config.siteBaseUrl) }}" rel="self"/>
+    <link href="{{ permalink | absoluteUrl(config.siteBaseUrl + '/') }}" rel="self"/>
     <link href="{{ metadata.url }}"/>
     <id>{{ metadata.url }}</id>
     <author>
@@ -36,13 +36,13 @@ metadata:
             {% if post.data.photo %}
             <![CDATA[
     {% for photo in post.data.photo %}
-    <img src="{{ photo.src | absoluteUrl(config.siteBaseUrl + 'images/') }}" alt="{{ photo.alt }}">
+    <img src="{{ photo.src | absoluteUrl(config.siteBaseUrl + '/images/') }}" alt="{{ photo.alt }}">
     {% endfor %}
-    {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl) | safe }}
+    {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
 ]]>
             {% else %}
             <![CDATA[
-    {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl) | safe }}
+    {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
 ]]>
             {% endif %}
         </content>
