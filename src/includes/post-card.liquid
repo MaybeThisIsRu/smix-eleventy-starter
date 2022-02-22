@@ -1,4 +1,4 @@
-<article class="post h-entry">
+<article class="post h-entry" data-type="{% if post.data.layout == 'post/article' %}article{% elsif post.data.layout == 'post/note' %}note{% endif%}">
     <a class="u-url u-uid" href="{{ post.url }}">
         <time
             class="post__published-date dt-published"

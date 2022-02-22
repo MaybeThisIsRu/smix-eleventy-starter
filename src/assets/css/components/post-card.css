@@ -14,3 +14,25 @@
   margin-top: var(--space-xs);
   margin-bottom: 0;
 }
+
+.post[data-type^="article"] {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: calc(var(--space-xl) * -1);
+    content: "📄";
+  }
+}
+
+.post[data-type^="note"] {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: calc(var(--space-xl) * -1);
+    content: "📔";
+  }
+}
