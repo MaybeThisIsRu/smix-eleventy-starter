@@ -190,25 +190,18 @@ hr {
 }
 
 blockquote {
-  border-left-width: 1rem;
-  border-color: var(--gray-700);
-  padding-left: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  margin-left: -1.25rem;
-
-  & p {
-    color: var(--gray-700);
-  }
+  border-left-width: 0.25rem;
+  border-left-style: solid;
+  border-left-color: var(--gray-700);
+  padding-left: var(--space-lg);
+  margin-top: var(--space-base);
+  margin-bottom: var(--space-lg);
+  margin-left: calc(var(--space--xl) * -1);
 }
 
 @media screen and (--dm) {
   blockquote {
     border-color: var(--gray-300);
-
-    & p {
-      color: var(--gray-300);
-    }
   }
 }
 
