@@ -26,7 +26,6 @@
         <div class="p-name e-content">
             {{ post.templateContent }}
         </div>
-        <hr/>
         <section class="u-in-reply-to h-cite">In reply to <a href="{{ post.data.reply-to }}" class="u-url">{{ post.data.reply-to }}</a>:
             <blockquote class="p-content">
             {{ post.data.reply-context }}
@@ -36,7 +35,6 @@
         <section class="p-name e-content">
             {{ post.templateContent }}
         </section>
-        <hr />
         <p class="u-in-reply-to">In reply to <a href="{{ post.data.reply-to }}" class="u-url">{{ post.data.reply-to }}</a>.
         </p>
     {% endif %}

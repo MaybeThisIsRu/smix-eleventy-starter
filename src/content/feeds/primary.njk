@@ -40,6 +40,21 @@ metadata:
     {% endfor %}
     {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
 ]]>
+            {% elsif post.data.reply-context %}
+            <![CDATA[
+    {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
+    <hr />
+    <p>In reply to <a href="{{ reply-to }}">{{ reply-to }}</a>:</p>
+    <blockquote>
+        {{ post.data.reply-context }}
+    </blockquote>
+
+]]>
+            {% elsif post.data.reply-to %}
+            <![CDATA[
+    {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
+    <p>In reply to <a href="{{ post.data.reply-to }}">{{ post.data.reply-to }}</a>.</p>
+]]>
             {% else %}
             <![CDATA[
     {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
