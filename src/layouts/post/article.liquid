@@ -30,6 +30,10 @@ permalink: "/post/article/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
         {{ content }}
     </main>
     <footer>
+        {% assign emailSubject = title | prepend: "Comment on article: " %}
+
+        {% render 'comment-via-email', subject: emailSubject, url: page.url %}
+
         {% render 'author-card',
             authors: site.authors,
             slug: page.author,

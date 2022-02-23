@@ -18,6 +18,7 @@
 @import "./components/post.css";
 @import "./components/author-card.css";
 @import "./components/post-card.css";
+@import "./components/comment-box.css";
 
 @media screen and (--dm) {
   body {

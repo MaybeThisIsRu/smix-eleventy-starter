@@ -33,6 +33,8 @@ permalink: "/post/reply/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
         </p>
     </main>
     <footer>
+        {% render 'comment-via-email', subject: "Comment on reply.", url: page.url %}
+
         {% render 'author-card',
             authors: site.authors,
             slug: page.author,

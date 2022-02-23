@@ -1,7 +1,8 @@
 const { URL } = require("url");
+const config = require("../../src/data/config.js")();
 
 module.exports = {
-	absoluteUrl: (url, base) => {
+	absoluteUrl: (url, base = config.siteBaseUrl) => {
 		try {
 			return new URL(url, base).toString();
 		} catch (e) {

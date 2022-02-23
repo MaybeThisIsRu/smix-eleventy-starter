@@ -34,6 +34,8 @@ permalink: "/post/photo/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
         <div class="p-content">{{ content }}</div>
     </main>
     <footer>
+        {% render 'comment-via-email', subject: "Comment on photo.", url: page.url %}
+
         {% render 'author-card',
             authors: site.authors,
             slug: page.author,

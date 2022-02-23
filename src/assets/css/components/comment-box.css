@@ -1,0 +1,11 @@
+.comment-box {
+  margin-top: var(--space-lg);
+  padding: var(--space-base);
+  border: 1px dotted var(--gray-300);
+}
+
+@media screen and (--dm) {
+  .comment-box {
+    border-color: var(--gray-700);
+  }
+}
