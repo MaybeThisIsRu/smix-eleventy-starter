@@ -21,7 +21,7 @@
   &::before {
     position: absolute;
     top: 0;
-    left: calc(var(--space-lg) * -1);
+    left: calc(var(--space-xl) * -1);
     content: "📄";
   }
 }
@@ -41,7 +41,7 @@
   &::before {
     position: absolute;
     top: 0;
-    left: calc(var(--space-lg) * -1);
+    left: calc(var(--space-xl) * -1);
     content: "📔";
   }
 }
@@ -67,7 +67,7 @@
   &::before {
     position: absolute;
     top: 0;
-    left: calc(var(--space-lg) * -1);
+    left: calc(var(--space-xl) * -1);
     content: "📷";
   }
 }
@@ -98,8 +98,8 @@
   &::before {
     position: absolute;
     top: 0;
-    left: calc(var(--space-lg) * -1);
-    content: "📔";
+    left: calc(var(--space-xl) * -1);
+    content: "↪";
   }
 }
 

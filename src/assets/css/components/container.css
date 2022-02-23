@@ -1,7 +1,7 @@
 .container {
   max-width: 100%;
-  padding-left: var(--space-xl);
-  padding-right: var(--space-xl);
+  padding-left: var(--space-2xl);
+  padding-right: var(--space-2xl);
 }
 
 @media screen and (--lg) {
