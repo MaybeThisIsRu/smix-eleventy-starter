@@ -14,7 +14,11 @@ tags:
 content-description: "A brief post detailing how liquid and nunjucks templating languages differ in checking for a string in an array, as well as retriving properties with special characters on objects"
 ---
 
+<section class="notice notice--info">
+
 [This post originally appeared on rusingh.com](https://rusingh.com/check-string-in-array-liquid-vs-nunjucks/).
+
+</section>
 
 While incorporating more of IndieWeb into my website, I found myself implementing an identical logic in two templating languages: Liquid and Nunjucks.
 

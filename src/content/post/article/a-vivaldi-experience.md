@@ -15,7 +15,11 @@ content-description: Upset with Firefox's performance, I decided to trial other 
 author: 'jane-doe'
 ---
 
+<section class="notice notice--info">
+
 [This post originally appeared on rusingh.com](https://rusingh.com/firefox-alternative-vivaldi/).
+
+</section>
 
 I love Firefox, and I adore Mozilla as a company doing the right things for the health and longevity of an open web -- even when no one else seems to care.
 

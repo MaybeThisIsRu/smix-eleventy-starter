@@ -1,0 +1,28 @@
+.notice {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  color: var(--gray-700);
+}
+
+.notice--info,
+.notice--warn {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: calc(var(--space-lg) * -1);
+  }
+}
+
+.notice--info {
+  &::before {
+    content: "ℹ️";
+  }
+}
+
+.notice--warn {
+  &::before {
+    content: "⚠️";
+  }
+}

@@ -14,6 +14,7 @@
 @import "./modules/sticky-footer.css";
 
 /* Pre-built components in use. */
+@import "./components/notice.css";
 @import "./components/container.css";
 @import "./components/post.css";
 @import "./components/author-card.css";
