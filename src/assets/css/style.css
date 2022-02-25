@@ -19,7 +19,6 @@
 @import "./components/post.css";
 @import "./components/author-card.css";
 @import "./components/post-card.css";
-@import "./components/comment-box.css";
 
 @media screen and (--dm) {
   body {
@@ -32,7 +31,7 @@
   font-size: var(--text-base);
   color: var(--gray-800);
   line-height: 1.625;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-lg);
 }
 
 @media screen and (--dm) {

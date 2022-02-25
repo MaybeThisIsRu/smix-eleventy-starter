@@ -25,12 +25,13 @@ permalink: "/post/note/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
 				{% endfor %}
 			</div>
 		{%- endif -%}
-        {% render 'old-post-notice' date: page.date %}
     </header>
     <main class="e-content">
         {{ content }}
     </main>
     <footer>
+        {% render 'old-post-notice' date: page.date %}
+
         {% render 'comment-via-email', subject: "Comment on note.", url: page.url %}
 
         {% render 'author-card',

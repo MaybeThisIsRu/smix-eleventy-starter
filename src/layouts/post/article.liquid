@@ -25,12 +25,13 @@ permalink: "/post/article/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
 				{% endfor %}
 			</div>
 		{%- endif -%}
-        {% render 'old-post-notice' date: page.date %}
     </header>
     <main class="e-content">
         {{ content }}
     </main>
     <footer>
+        {% render 'old-post-notice' date: page.date %}
+
         {% assign emailSubject = title | prepend: "Comment on article: " %}
 
         {% render 'comment-via-email', subject: emailSubject, url: page.url %}
