@@ -45,5 +45,18 @@ module.exports = {
 		)[0];
 
 		return owner[key];
+	},
+	getPostType: layout => {
+		switch (layout) {
+			case "post/article":
+				return "article";
+			case "post/note":
+				return "note";
+			case "post/photo":
+				return "photo";
+			case "post/reply-context":
+			case "post/reply":
+				return "reply";
+		}
 	}
 };
