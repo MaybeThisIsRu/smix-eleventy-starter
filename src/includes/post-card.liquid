@@ -5,12 +5,12 @@
 
 
 <article
-    class="post h-entry"
+    class="post-card h-entry"
     data-type="{{ postType }}"
 >
     <a class="u-url u-uid" href="{{ post.url }}">
         <time
-            class="post__published-date dt-published"
+            class="post-card__published-date dt-published"
             datetime="{{ post.date | dateInISO8601 }}"
         >
             {{- post.date | friendlyDate -}}

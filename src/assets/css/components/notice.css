@@ -2,6 +2,22 @@
   margin-top: var(--space-lg);
   margin-bottom: var(--space-lg);
   color: var(--gray-700);
+  border-bottom: 2px dotted var(--gray-800);
+  border-top: 2px dotted var(--gray-800);
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+
+  & * {
+    font-size: var(--text-sm);
+  }
+
+  & :first-child {
+    margin-top: 0;
+  }
+
+  & :last-child {
+    margin-bottom: 0;
+  }
 }
 
 .notice--info,
@@ -10,7 +26,7 @@
 
   &::before {
     position: absolute;
-    top: 0;
+    top: var(--space-xs);
     left: calc(var(--space-lg) * -1);
   }
 }

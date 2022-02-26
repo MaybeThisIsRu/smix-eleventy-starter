@@ -3,7 +3,7 @@ layout: default
 permalink: "/post/article/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
 ---
 
-<article class="h-entry" data-type="article">
+<article class="h-entry post" data-type="article">
     <header class="mb-5 lg:mb-10">
         <h1 class="p-name">{{ title }}</h1>
         <p class="post-datetime">
@@ -25,13 +25,12 @@ permalink: "/post/article/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
 				{% endfor %}
 			</div>
 		{%- endif -%}
+        {% render 'old-post-notice' date: page.date %}
     </header>
     <main class="e-content">
         {{ content }}
     </main>
     <footer>
-        {% render 'old-post-notice' date: page.date %}
-
         {% assign emailSubject = title | prepend: "Comment on article: " %}
 
         {% render 'comment-via-email', subject: emailSubject, url: page.url %}

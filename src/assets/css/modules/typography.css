@@ -26,7 +26,7 @@ p,
   color: var(--gray-700);
   margin-top: 1rem;
   margin-bottom: 0.25rem;
-  font-family: var(--serif-fontset);
+  /* font-family: var(--serif-fontset); */
 }
 
 @media screen and (--lg) {

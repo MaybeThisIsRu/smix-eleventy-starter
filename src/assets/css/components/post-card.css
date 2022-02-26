@@ -1,21 +1,21 @@
-.post {
+.post-card {
   margin-top: 0;
   margin-bottom: var(--space-2xl);
 }
 
-.post__published-date {
+.post-card__published-date {
   font-size: var(--text-base);
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.post__title {
+.post-card__title {
   color: inherit;
   margin-top: var(--space-xs);
   margin-bottom: 0;
 }
 
-.post[data-type^="article"] {
+.post-card[data-type^="article"] {
   position: relative;
 
   &::before {
@@ -27,7 +27,7 @@
 }
 
 @media screen and (--lg) {
-  .post[data-type^="article"] {
+  .post-card[data-type^="article"] {
     &::before {
       left: calc(var(--space-lg) * -4);
       content: "📄 Article";
@@ -35,7 +35,7 @@
   }
 }
 
-.post[data-type^="note"] {
+.post-card[data-type^="note"] {
   position: relative;
 
   &::before {
@@ -47,7 +47,7 @@
 }
 
 @media screen and (--lg) {
-  .post[data-type^="note"] {
+  .post-card[data-type^="note"] {
     &::before {
       left: calc(var(--space-lg) * -4);
       content: "📔 Note";
@@ -55,7 +55,7 @@
   }
 }
 
-.post[data-type^="photo"] {
+.post-card[data-type^="photo"] {
   position: relative;
 
   & .u-photo {
@@ -73,8 +73,8 @@
 }
 
 @media screen and (--lg) {
-  .post[data-type^="photo"] {
-    & .post-photos {
+  .post-card[data-type^="photo"] {
+    & .post-card-photos {
       display: flex;
       flex-wrap: row;
       gap: var(--space-sm);
@@ -92,7 +92,7 @@
   }
 }
 
-.post[data-type^="reply"] {
+.post-card[data-type^="reply"] {
   position: relative;
 
   &::before {
@@ -104,7 +104,7 @@
 }
 
 @media screen and (--lg) {
-  .post[data-type^="reply"] {
+  .post-card[data-type^="reply"] {
     &::before {
       left: calc(var(--space-lg) * -4);
       content: "↪ Reply";
