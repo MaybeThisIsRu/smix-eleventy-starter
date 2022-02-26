@@ -1,4 +1,4 @@
----yaml
+---
 permalink: "/feed.xml"
 eleventyExcludeFromCollections: true
 metadata:
@@ -6,25 +6,28 @@ metadata:
   subtitle: "Site description/subtitle"
   url: "http://localhost:8080"
   author:
-    name: "Site author"
-    email: "Email"
+    name: "Jane Doe"
+    email: "smix@rusingh.com"
 ---
+{% assign imageBaseUrl = config.siteBaseUrl | append: '/assets/img/' %}
+{% assign siteUrl = config.siteBaseUrl | append: '/' %}
+
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ metadata.title }}</title>
     <subtitle>{{ metadata.subtitle }}</subtitle>
-    <link href="{{ permalink | absoluteUrl(config.siteBaseUrl + '/') }}" rel="self"/>
+    <link href="{{ permalink | absoluteUrl }}" rel="self"/>
     <link href="{{ metadata.url }}"/>
     <id>{{ metadata.url }}</id>
     <author>
         <name>{{ metadata.author.name }}</name>
         <email>{{ metadata.author.email }}</email>
     </author>
-    {% set collectionSize = collections.primary.length %}
+    {% assign collectionSize = collections.primary.length %}
     {% if collectionSize %}
     <updated>{{ collections.primary | rssLastUpdatedDate }}</updated>
     {% for post in collections.primary %}
-    {% set absolutePostUrl %}{{ post.url | absoluteUrl(config.siteBaseUrl) }}{% endset %}
+    {% capture absolutePostUrl %}{{ post.url | absoluteUrl }}{% endcapture %}
     <entry>
         {% if post.data.title %}
         <title>{{ post.data.title }}</title>
@@ -36,27 +39,30 @@ metadata:
             {% if post.data.photo %}
             <![CDATA[
     {% for photo in post.data.photo %}
-    <img src="{{ photo.src | absoluteUrl(config.siteBaseUrl + '/assets/img/') }}" alt="{{ photo.alt }}">
+    <img src="{{ photo.src | absoluteUrl: imageBaseUrl }}" alt="{{ photo.alt }}">
     {% endfor %}
-    {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
+    {{ post.templateContent | htmlToAbsoluteUrls: siteUrl }}
+    {% render 'comment-via-email', subject: "Comment on photo.", url: absolutePostUrl %}
 ]]>
-            {% elif post.data['reply-context'] %}
+            {% elsif post.data['reply-context'] %}
             <![CDATA[
-    {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
+    {{ post.templateContent | htmlToAbsoluteUrls: siteUrl }}
     <p>In reply to <a href="{{ post.data['reply-to'] }}">{{ post.data['reply-to'] }}</a>:</p>
     <blockquote>
         {{ post.data['reply-context'] }}
     </blockquote>
-
+    {% render 'comment-via-email', subject: "Comment on reply.", url: absolutePostUrl %}
 ]]>
-            {% elif post.data['reply-to'] %}
+            {% elsif post.data['reply-to'] %}
             <![CDATA[
-    {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
+    {{ post.templateContent | htmlToAbsoluteUrls: siteUrl }}
     <p>In reply to <a href="{{ post.data['reply-to'] }}">{{ post.data['reply-to'] }}</a>.</p>
+    {% render 'comment-via-email', subject: "Comment on reply.", url: absolutePostUrl %}
 ]]>
             {% else %}
             <![CDATA[
-    {{ post.templateContent | htmlToAbsoluteUrls(config.siteBaseUrl + '/') | safe }}
+    {{ post.templateContent | htmlToAbsoluteUrls: siteUrl }}
+    {% render 'comment-via-email', subject: "Comment on article/note.", url: absolutePostUrl %}
 ]]>
             {% endif %}
         </content>

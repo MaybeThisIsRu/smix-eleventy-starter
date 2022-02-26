@@ -14,7 +14,8 @@ module.exports = function(config) {
 	const env = require("./eleventy/env");
 
 	// *** Plugins
-	config.addPlugin(require("@11ty/eleventy-plugin-rss"));
+	const rssPlugin = require("@11ty/eleventy-plugin-rss");
+	config.addPlugin(rssPlugin);
 	// Syntax highlighting
 	config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
 	// Typeset
@@ -51,8 +52,8 @@ module.exports = function(config) {
 	// Absolute url
 	config.addFilter("absoluteUrl", urlFilters.absoluteUrl);
 	// Parse the date using our own date filters to account for any article updates; overriding 11ty's RSS plugin
-	config.addNunjucksFilter("rssLastUpdatedDate", dateFilters.lastUpdatedDate);
-	// config.addFilter("htmlToAbsoluteUrls", feedFilters.htmlToAbsoluteUrls);
+	config.addFilter("rssLastUpdatedDate", dateFilters.lastUpdatedDate);
+	config.addFilter("htmlToAbsoluteUrls", rssPlugin.convertHtmlToAbsoluteUrls);
 
 	// *** Collections
 	// Articles
