@@ -2,8 +2,8 @@
   margin-top: var(--space-lg);
   margin-bottom: var(--space-lg);
   color: var(--gray-700);
-  border-bottom: 2px dotted var(--gray-800);
-  border-top: 2px dotted var(--gray-800);
+  border-top: 2px dashed var(--gray-300);
+  border-bottom: 2px dashed var(--gray-300);
   padding-top: var(--space-xs);
   padding-bottom: var(--space-xs);
 
@@ -17,6 +17,13 @@
 
   & :last-child {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (--dm) {
+  .notice {
+    border-top: 2px dashed var(--gray-800);
+    border-bottom: 2px dashed var(--gray-800);
   }
 }
 
