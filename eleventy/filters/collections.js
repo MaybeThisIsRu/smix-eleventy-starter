@@ -28,12 +28,5 @@ module.exports = {
 		);
 
 		return collection;
-	},
-	sideProjects: item =>
-		item.data.tags
-			? item.data.tags.includes("side-project")
-				? true
-				: false
-			: false,
-	clientProjects: item => !module.exports.sideProjects(item)
+	}
 };
