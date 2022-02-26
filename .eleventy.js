@@ -46,14 +46,19 @@ module.exports = function(config) {
 	// *** Filters
 	// Dates
 	config.addFilter("friendlyDate", dateFilters.friendlyDate);
-	config.addFilter("dateInISO8601", dateFilters.dateInISO8601);
+	config.addFilter("dateToIso8601", dateFilters.dateToIso8601);
 	// Filter posts per tag
 	config.addFilter("byTag", collectionFilters.byTag);
 	// Absolute url
 	config.addFilter("absoluteUrl", urlFilters.absoluteUrl);
-	// Parse the date using our own date filters to account for any article updates; overriding 11ty's RSS plugin
-	config.addFilter("rssLastUpdatedDate", dateFilters.lastUpdatedDate);
+
+	// The official RSS plugin exports only Nunjucks filters. They can be used with Liquid like so.
 	config.addFilter("htmlToAbsoluteUrls", rssPlugin.convertHtmlToAbsoluteUrls);
+	config.addFilter("dateToRfc3339", rssPlugin.dateToRfc3339);
+	config.addFilter(
+		"getNewestCollectionItemDate",
+		rssPlugin.getNewestCollectionItemDate
+	);
 
 	// *** Collections
 	// Articles

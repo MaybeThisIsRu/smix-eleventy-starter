@@ -1,7 +1,7 @@
 ---
 layout: post/article
 date: 2020-08-06T11:19:22.000+05:30
-updated: 2021-02-19T19:55:00+0530
+updated: 2021-02-19T19:55:00+05:30
 draft: false
 changeFrequency: monthly
 slug: firefox-alternative-vivaldi

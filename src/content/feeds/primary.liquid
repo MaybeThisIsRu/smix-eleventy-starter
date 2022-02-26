@@ -25,15 +25,14 @@ metadata:
     </author>
     {% assign collectionSize = collections.primary.length %}
     {% if collectionSize %}
-    <updated>{{ collections.primary | rssLastUpdatedDate }}</updated>
+    <updated>{{ collections.primary | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
     {% for post in collections.primary limit: 25 %}
-    {% capture absolutePostUrl %}{{ post.url | absoluteUrl }}{% endcapture %}
     <entry>
         {% if post.data.title %}
         <title>{{ post.data.title }}</title>
         {% endif %}
-        <link href="{{ absolutePostUrl }}"/>
-        <updated>{% if post.data.updated %}{{ post.data.updated | dateInISO8601 }}{% else %}{{ post.date | dateInISO8601 }}{% endif %}</updated>
+        <link href="{{ post.url | absoluteUrl }}"/>
+        <updated>{% if post.data.updated %}{{ post.data.updated | dateToRfc3339 }}{% else %}{{ post.date | dateToRfc3339 }}{% endif %}</updated>
         <id>{{ absolutePostUrl }}</id>
         <content type="html">
             {% if post.data.photo %}

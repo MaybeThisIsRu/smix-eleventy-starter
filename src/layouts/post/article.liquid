@@ -7,12 +7,12 @@ permalink: "/post/article/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
     <header class="mb-5 lg:mb-10">
         <h1 class="p-name">{{ title }}</h1>
         <p class="post-datetime">
-            <a href="{{page.url}}" class="u-url u-uid"><time datetime="{{page.date | dateInISO8601}}" class="dt-published">{{ page.date | friendlyDate }}</time></a>
+            <a href="{{page.url}}" class="u-url u-uid"><time datetime="{{page.date | dateToIso8601}}" class="dt-published">{{ page.date | friendlyDate }}</time></a>
             {% if updated %}
                 {% assign publishDate = page.date | friendlyDate %}
                 {% assign updateDate = updated | friendlyDate %}
                 {% unless publishDate == updateDate %}
-                    <span class=" text-italic">(last updated on <time class="dt-updated" datetime="{{ updated | dateInISO8601 }}">{{ updated | friendlyDate }}</time>)</span>
+                    <span class=" text-italic">(last updated on <time class="dt-updated" datetime="{{ updated | dateToIso8601 }}">{{ updated | friendlyDate }}</time>)</span>
                 {% endunless %}
             {% endif %}
         </p>

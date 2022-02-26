@@ -11,7 +11,7 @@
     <a class="u-url u-uid" href="{{ post.url }}">
         <time
             class="post-card__published-date dt-published"
-            datetime="{{ post.date | dateInISO8601 }}"
+            datetime="{{ post.date | dateToIso8601 }}"
         >
             {{- post.date | friendlyDate -}}
         </time>

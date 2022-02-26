@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
     {% for page in collections.all %}
     <url>
         <loc>{{ page.url | absoluteUrl: config.siteBaseUrl + '/' }}</loc>
-        <lastmod>{% if page.updated %}{{ page.updated | dateInISO8601 }}{% else %}{{ page.date | dateInISO8601 }}{% endif %}</lastmod>
+        <lastmod>{% if page.updated %}{{ page.updated | dateToIso8601 }}{% else %}{{ page.date | dateToIso8601 }}{% endif %}</lastmod>
         {% if page.data.changeFrequency %}<changefreq>{{page.data.changeFrequency}}</changefreq>{% endif %}
     </url>
     {% endfor %}
