@@ -26,7 +26,7 @@ metadata:
     {% assign collectionSize = collections.primary.length %}
     {% if collectionSize %}
     <updated>{{ collections.primary | rssLastUpdatedDate }}</updated>
-    {% for post in collections.primary %}
+    {% for post in collections.primary limit: 25 %}
     {% capture absolutePostUrl %}{{ post.url | absoluteUrl }}{% endcapture %}
     <entry>
         {% if post.data.title %}
