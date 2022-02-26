@@ -41,7 +41,7 @@ metadata:
     <img src="{{ photo.src | absoluteUrl: imageBaseUrl }}" alt="{{ photo.alt }}">
     {% endfor %}
     {{ post.templateContent | htmlToAbsoluteUrls: siteUrl }}
-    {% render 'comment-via-email', subject: "Comment on photo.", url: absolutePostUrl %}
+    {% render 'comment-via-email', subject: "Comment on photo.", url: absolutePostUrl, feed: true %}
 ]]>
             {% elsif post.data['reply-context'] %}
             <![CDATA[
@@ -50,18 +50,18 @@ metadata:
     <blockquote>
         {{ post.data['reply-context'] }}
     </blockquote>
-    {% render 'comment-via-email', subject: "Comment on reply.", url: absolutePostUrl %}
+    {% render 'comment-via-email', subject: "Comment on reply.", url: absolutePostUrl, feed: true %}
 ]]>
             {% elsif post.data['reply-to'] %}
             <![CDATA[
     {{ post.templateContent | htmlToAbsoluteUrls: siteUrl }}
     <p>In reply to <a href="{{ post.data['reply-to'] }}">{{ post.data['reply-to'] }}</a>.</p>
-    {% render 'comment-via-email', subject: "Comment on reply.", url: absolutePostUrl %}
+    {% render 'comment-via-email', subject: "Comment on reply.", url: absolutePostUrl, feed: true %}
 ]]>
             {% else %}
             <![CDATA[
     {{ post.templateContent | htmlToAbsoluteUrls: siteUrl }}
-    {% render 'comment-via-email', subject: "Comment on article/note.", url: absolutePostUrl %}
+    {% render 'comment-via-email', subject: "Comment on article/note.", url: absolutePostUrl, feed: true %}
 ]]>
             {% endif %}
         </content>
