@@ -31,7 +31,9 @@
   font-size: var(--text-base);
   color: var(--gray-800);
   line-height: 1.625;
-  margin-bottom: var(--space-lg);
+  margin-inline: 0 initial;
+  margin-block: initial var(--space-lg);
+  padding-inline: 0;
 }
 
 @media screen and (--dm) {

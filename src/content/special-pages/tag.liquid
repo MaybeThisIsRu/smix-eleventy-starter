@@ -16,7 +16,7 @@ eleventyComputed:
 	{% include 'page-title' title:title %}
 	<main>
 		{% assign posts = collections.primary | byTag: tag %}
-		<ul class="articles">
+		<ul class="unstyled-list">
 			{% for post in posts %}
     			{% include 'post-card' post:post %}
 			{% endfor %}

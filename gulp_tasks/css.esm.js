@@ -9,7 +9,6 @@ import autoprefixer from "autoprefixer";
 import purgecss from "@fullhuman/postcss-purgecss";
 import cssnano from "cssnano";
 
-import { reload } from "./eleventy.esm";
 import { paths } from "../paths";
 
 function css() {
@@ -20,7 +19,8 @@ function css() {
 			features: {
 				"nesting-rules": true,
 				"custom-media-queries": true,
-				"custom-selectors": true
+				"custom-selectors": true,
+				"logical-properties-and-values": true
 			}
 		}),
 		autoprefixer
