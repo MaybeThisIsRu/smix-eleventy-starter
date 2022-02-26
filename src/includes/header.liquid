@@ -1,5 +1,5 @@
 {% capture isHomePage %}{% if url == "/" %}true{% else %}false{% endif %}{% endcapture %}
-<header class="text-center {% if isHomePage == 'true' %}mb-20{% endif %}">
+<header>
     {% unless isHomePage == "true" %}
     <div class="my-2">
         <h1 class="text-xl lg:text-2xl mt-0 lg:mt-0">{{title}}</h1>
@@ -10,7 +10,7 @@
     <nav>
         {% assign lastItem = navigation | last %}
         {% for item in navigation %}
-            <a class="{% unless item == lastItem %}mr-2{% endunless %}" href="{{ item.link }}">{{ item.title }}</a>
+            <a href="{{ item.link }}">{{ item.title }}</a>
         {% endfor %}
     </nav>
 </header>

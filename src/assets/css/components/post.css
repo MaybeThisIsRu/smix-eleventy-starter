@@ -9,7 +9,26 @@ article.post {
     }
   }
 
+  & .post-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  & header.post-header {
+    margin-bottom: var(--space-3xl);
+  }
+
   & main {
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
+  }
+}
+
+@media screen and (--lg) {
+  .article {
+    & .post-tags {
+      align-items: center;
+    }
   }
 }

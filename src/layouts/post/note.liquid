@@ -4,7 +4,7 @@ permalink: "/post/note/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
 ---
 
 <article class="post h-entry" data-type="note">
-    <header class="mb-5 lg:mb-10">
+    <header class="post-header">
         <h1 class="p-name"></h1>
         <p class="post-datetime">
             <a href="{{page.url}}" class="u-url u-uid"><time datetime="{{page.date | dateToIso8601}}" class="dt-published">{{ page.date | friendlyDate }}</time></a>
@@ -18,10 +18,10 @@ permalink: "/post/note/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
         </p>
         {%- if tags.size > 0 -%}
 			<div class="post-tags mb-4 flex flex-row flex-wrap items-top lg:items-center">
-				<span class="text-gray-800 dm:text-gray-300 text-sm mr-1">Tagged</span>
+				<span>Tagged</span>
 				{% for tag in tags %}
 				{% assign tag_name = tag | slugify %}
-					<a href="{{ '/archive/tag/' | append: tag_name }}" class="text-gray-600 dm:text-gray-400 text-sm hover:text-indiple-regular mr-1 p-category">#{{tag}}</a>
+					<a href="{{ '/archive/tag/' | append: tag_name }}" class="p-category">#{{tag}}</a>
 				{% endfor %}
 			</div>
 		{%- endif -%}
