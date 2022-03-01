@@ -55,6 +55,7 @@ module.exports = {
 			case "post/photo":
 				return "photo";
 			case "post/reply-context":
+				return "reply-context";
 			case "post/reply":
 				return "reply";
 		}
