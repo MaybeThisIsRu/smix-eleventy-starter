@@ -1,7 +1,6 @@
 .notice {
   margin-top: var(--space-lg);
   margin-bottom: var(--space-lg);
-  color: var(--gray-700);
   border-top: 2px dashed var(--gray-300);
   border-bottom: 2px dashed var(--gray-300);
   padding-top: var(--space-xs);
@@ -45,6 +44,10 @@
 }
 
 .notice--warn {
+  & * {
+    color: lch(64% 41 82); /* doesn't work, report to PostCSS? */
+  }
+
   &::before {
     content: "⚠️";
   }

@@ -20,7 +20,8 @@ function css() {
 				"nesting-rules": true,
 				"custom-media-queries": true,
 				"custom-selectors": true,
-				"logical-properties-and-values": true
+				"logical-properties-and-values": true,
+				"lab-function": true
 			}
 		}),
 		autoprefixer
