@@ -13,13 +13,10 @@ tags:
 content-description: Upset with Firefox's performance, I decided to trial other browsers on the market. Here's my experience with Vivaldi after having used it for 2 days.
 
 author: 'jane-doe'
+
+eleventyComputed:
+    featured-image: '{% image "./src/assets/img/vivaldi.jpg", "A screenshot of Vivaldi browser, showing its settings menu, with the theme configuration currently active." %}'
 ---
-
-<section class="notice notice--info">
-
-[This post originally appeared on rusingh.com](https://rusingh.com/firefox-alternative-vivaldi/).
-
-</section>
 
 I love Firefox, and I adore Mozilla as a company doing the right things for the health and longevity of an open web -- even when no one else seems to care.
 
@@ -36,8 +33,8 @@ Well, is two days enough for a judgement? Probably. I spend a lot of time on the
 * Customization. I really enjoyed having a proper menu bar at the top. I wish Firefox had this option.
 * Absolutely adorable was the browser changing its accent based on the tab open. It made the web feel a little more fun and personal. 😀
 
-  ![](/assets/img/vivaldi_fosstodon.png)
-  ![](/assets/img/vivaldi_plausible.png)
+  {% image './src/assets/img/vivaldi_fosstodon.png', 'What the header bar on Vivaldi looks like when on fosstodon.org' %}
+  {% image './src/assets/img/vivaldi_plausible.png', 'What the header bar on Vivaldi looks like when on plausible.io' %}
 * The way the visibility of hidden add-ons is handled! Click a toggle, and they pop up amongst the other permanently visible add-ons. No context loss. No searching in another menu.
 
 ## Dislikes
@@ -53,3 +50,9 @@ Well, is two days enough for a judgement? Probably. I spend a lot of time on the
 Unfortunately, no. Non-existent dark mode support and BitWarden's auto-fill keyboard shortcut not working are clear deal breakers.
 
 I've moved on to [Brave](https://brave.com/), something I had disqualified on account of their shenanigans in the recent past. While I dearly miss the dynamic accent color, I'm going to have to live without it. 😭
+
+<section class="notice notice--info">
+
+[This post originally appeared on rusingh.com](https://rusingh.com/firefox-alternative-vivaldi/).
+
+</section>

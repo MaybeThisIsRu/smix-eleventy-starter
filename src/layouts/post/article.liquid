@@ -25,6 +25,9 @@ permalink: "/post/article/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
 				{% endfor %}
 			</div>
 		{%- endif -%}
+        {% if featured-image %}
+            {{ featured-image }}
+        {% endif %}
         {% render 'old-post-notice' date: page.date %}
     </header>
     <main class="e-content">

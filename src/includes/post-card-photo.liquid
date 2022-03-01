@@ -1,6 +1,7 @@
 <section class="post-card-photos">
 {% for photo in post.data.photo %}
-    <img src="/assets/img/{{ photo.src }}" alt="{{ photo.alt }}" class="u-photo">
+    {% assign imageSrc = "./src/assets/img/" | append: photo.src %}
+    {% image imageSrc, photo.alt, 'class="u-photo"' %}
 {% endfor %}
 </section>
 <div class="p-content">{{ post.templateContent }}</div>
