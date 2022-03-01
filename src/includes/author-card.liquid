@@ -1,11 +1,9 @@
 {% assign author = authors | where: 'slug', slug | first %}
 <section class="author-card h-card {% if post %}p-author{% endif %} {% if hide %}hidden{% endif %}">
     <div class="author-picture-container">
-        <img
-            class="author-picture u-photo"
-            src="{{ author.picture }}"
-            alt="{{ author.name }}'s picture"
-        >
+        {% assign imageSrc = author.picture | prepend: "./src/assets/img/" %}
+        {% assign imageAlt = author.name | append: "'s picture."%}
+        {% image imageSrc, imageAlt, "class='author-picture u-photo'" %}
     </div>
     <h1 class="h2 author-name">
         <a href="/" class="p-name u-url">{{ author.name }}</a>
