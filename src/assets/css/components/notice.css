@@ -41,3 +41,17 @@
     content: "⚠️";
   }
 }
+
+@media screen and (--dm) {
+  .notice--info {
+    & * {
+      color: lch(65% 39 266);
+    }
+  }
+
+  .notice--warn {
+    & * {
+      color: lch(65% 41 82);
+    }
+  }
+}
