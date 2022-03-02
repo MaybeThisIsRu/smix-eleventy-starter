@@ -4,6 +4,7 @@
 	"description": "A gulp-based starter kit for @11ty/eleventy.",
 	"main": "",
 	"engines": {
+		"node": "^16",
 		"npm": "^8"
 	},
 	"scripts": {
