@@ -8,14 +8,16 @@
 	},
 	"scripts": {
 		"dev:clean": "rm -rf dist && mkdir -p dist/assets",
-		"dev:gulp": "gulp develop",
+		"dev:11ty": "eleventy --port 8080 --serve --incremental",
 		"dev:js": "esbuild --watch --bundle --sourcemap --outfile=dist/assets/js/index.js src/assets/js/index.js",
 		"dev:jsb": "esbuild --watch --bundle --sourcemap --outfile=dist/assets/js/$npm_config_out src/assets/js/$npm_config_in",
-		"dev": "run-s dev:clean dev:gulp dev:js",
-		"prod": "run-s prod:js prod:gulp",
-		"prod:gulp": "gulp production",
+		"dev:css": "postcss src/assets/css/style.css --output dist/assets/css/style.css --watch",
+		"dev:watchers": "run-p dev:js dev:css dev:11ty",
+		"dev": "run-s dev:clean dev:watchers",
+		"prod": "run-s prod:js prod:css prod:11ty",
+		"prod:css": "postcss src/assets/css/style.css --output dist/assets/css/style.css",
+		"prod:11ty": "eleventy",
 		"prod:js": "esbuild --minify --bundle --outfile=dist/assets/js/index.js src/assets/js/index.js",
-		"force-prod": "NODE_ENV=production gulp production",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"husky": {
@@ -55,7 +57,8 @@
 		"gulp-postcss": "^9.0.1",
 		"lodash.merge": "^4.6.2",
 		"npm-run-all": "^4.1.5",
-		"postcss": "^8.4.6",
+		"postcss": "^8.4.7",
+		"postcss-cli": "^9.1.0",
 		"postcss-import": "^12.0.1",
 		"postcss-preset-env": "^7.4.1"
 	},
