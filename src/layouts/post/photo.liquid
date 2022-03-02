@@ -28,7 +28,8 @@ permalink: "/post/photo/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
     <main>
         <section class="post-photos">
         {% for photo in photo %}
-            <img src="/assets/img/{{ photo.src }}" alt="{{ photo.alt }}" class="u-photo">
+            {% assign photoSrc = 'src/assets/img/' | append: photo.src %}
+            {% image photoSrc, photo.alt, "class='u-photo'" %}
         {% endfor %}
         </section>
         <div class="p-content">{{ content }}</div>
