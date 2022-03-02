@@ -2,8 +2,6 @@
 
 A standards-respecting starter kit for Eleventy. Go Indie.
 
-⚠️ Currently undergoing maintenance along with some updates. Pivoting to an opinionated starter kit.
-
 ## Reading.
 
 For nice text, there's [Typeset](https://www.npmjs.com/package/typeset). While it adds to the build time, it makes for a more polished reading experience.
@@ -109,6 +107,4 @@ My content here.
 
 * Feed per tag (this could easily go into 10s or 100s, but you know, choice is important!)
 * Scheduled blog posts.
-* Image pipeline.
-* Move PostCSS to its own npm script.
 * Re-do development and production docs as needed.
