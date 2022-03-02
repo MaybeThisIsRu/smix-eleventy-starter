@@ -18,7 +18,7 @@ permalink: "/post/article/{{ page.date | date: '%Y' }}/{{ page.fileSlug }}/"
         </p>
         {%- if tags.size > 0 -%}
 			<div class="post-tags">
-				<span">Tagged</span>
+				<span>Tagged&nbsp;</span>
 				{% for tag in tags %}
 				{% assign tag_name = tag | slugify %}
 					<a href="{{ '/archive/tag/' | append: tag_name }}/" class="p-category">#{{tag}}</a>
