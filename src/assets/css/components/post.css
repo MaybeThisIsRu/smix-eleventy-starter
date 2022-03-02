@@ -16,12 +16,18 @@ article.post {
     align-items: flex-start;
   }
 
-  & header.post-header {
-    margin-bottom: var(--space-3xl);
+  & > header,
+  & > main {
+    border-bottom: 1px dashed var(--gray-300);
   }
+}
 
-  & main {
-    margin-bottom: var(--space-3xl);
+@media screen and (--dm) {
+  article.post {
+    & > header,
+    & > main {
+      border-bottom: 1px dashed var(--gray-800);
+    }
   }
 }
 
