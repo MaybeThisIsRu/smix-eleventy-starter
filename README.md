@@ -2,6 +2,8 @@
 
 A standards-respecting starter kit for Eleventy. Go Indie.
 
+⚠️ This project is now considered more-or-less complete for the author's needs. Any further enhancements will require a pull request to come from the community.
+
 ## Reading.
 
 For nice text, there's [Typeset](https://www.npmjs.com/package/typeset). While it adds to the build time, it makes for a more polished reading experience.
@@ -108,3 +110,9 @@ My content here.
 * Feed per tag (this could easily go into 10s or 100s, but you know, choice is important!)
 * Scheduled blog posts.
 * Re-do development and production docs as needed.
+
+## Built off of
+
+Sites that took Smix Eleventy Starter and made something of their own:
+
+- [Ru Singh](#) [available soon]
