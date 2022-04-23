@@ -113,4 +113,4 @@ My content here.
 
 Sites that took Smix Eleventy Starter and made something of their own:
 
-- [Ru Singh](https://rusingh.com/)
+- [Add your site here]
