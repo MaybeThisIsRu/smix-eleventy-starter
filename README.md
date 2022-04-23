@@ -48,9 +48,7 @@ The following [post-types](https://indieweb.org/posts#Types_of_Posts) are suppor
 - ↪ Reply
 - 📷 Photo
 
-A single microformats2 feeds will be offered via `h-feed`. This will include articles, notes, replies (with or without context), and image(s). These post types also seamlessly work in the Atom feed.
-
-To ease the publishing process for the aforementioned post types, a [companion CLI utility is being developed](https://github.com/MaybeThisIsRu/smix-post-creator).
+A single microformats2 feeds is offered via `h-feed`. This includes articles, notes, replies (with or without context), and image(s). These post types also seamlessly work in the Atom feed.
 
 ## Future-ready.
 
